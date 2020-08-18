@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_list_selector_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.SettingsItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+        <ImageView
+            android:id="@+id/imgSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/zm_margin_medium"
+            android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+            android:src="@drawable/zm_group_type_select"
+             />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/zm_line_divider" />
+
+</LinearLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/giphy_content_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="3dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/giphy_avatar_name"
+            style="@style/ZMTextView.ExSmall.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_lbl_content_you" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/giphy_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            app:zm_avatarBorderSize="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/giphy_message_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello"
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.zipow.videobox.view.ZMGifView
+                            android:id="@+id/giphy_gifView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="150dp"
+                            android:maxHeight="300dp"
+                            android:minWidth="100dp"
+                            android:minHeight="100dp" />
+
+                        <LinearLayout
+                            android:id="@+id/giphy_panel_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/zm_chat_msg_bg_plain_normal_19884"
+                            android:gravity="center"
+                            android:minWidth="100dp"
+                            android:minHeight="100dp"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                style="@style/ZMProgressBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/giphy_panel_place_holder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/zm_chat_msg_bg_plain_normal_19884"
+                            android:gravity="center"
+                            android:minWidth="100dp"
+                            android:minHeight="100dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/zm_image_download_error" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/zm_mm_starred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/zm_mm_starred_message_icon"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imgStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@string/zm_description_mm_msg_failed"
+                        android:src="@drawable/zm_mm_msg_state_fail" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/zm_mm_giphy_logo"
+                    android:textColor="@color/zm_gray_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/giphy_btn_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/giphy_send_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/zm_mm_giphy_send_btn_bg"
+                    android:gravity="center"
+                    android:text="send"
+                    android:textColor="@android:color/holo_blue_bright" />
+
+                <TextView
+                    android:id="@+id/giphy_shuffle_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/zm_mm_giphy_normal_btn_bg"
+                    android:gravity="center"
+                    android:text="shuffle"
+                    android:textColor="@color/zm_black" />
+
+                <TextView
+                    android:id="@+id/giphy_cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/zm_mm_giphy_normal_btn_bg"
+                    android:gravity="center"
+                    android:text="cancel"
+                    android:textColor="@color/zm_black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/zm_message_reaction_labels_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp" />
+</LinearLayout>

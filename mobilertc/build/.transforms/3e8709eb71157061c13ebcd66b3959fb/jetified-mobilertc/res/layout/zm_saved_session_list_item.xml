@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="10dp"
+        android:duplicateParentState="true">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            zoom:zm_description_enable="false" />
+
+        <com.zipow.videobox.view.PresenceStateView
+            android:id="@+id/presenceStateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:paddingTop="3dp"
+            zoom:zm_subpresence_type="0"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <us.zoom.androidlib.widget.ZMEllipsisTextView
+                android:id="@+id/txtScreenName"
+                style="@style/UIKitTextView.CellTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtGroupNums"
+                style="@style/ZMTextView.Small.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtCustomMessage"
+                style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/waitApproval"
+                style="@style/ZMTextView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_mm_lbl_pending_68451"
+                android:textColor="@color/zm_ui_kit_color_gray_747487"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/imgBell"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@drawable/zm_bell"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/email"
+            android:visibility="gone"
+            android:text="110@qq.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageCall"
+        android:visibility="gone"
+        android:contentDescription="@string/zm_accessibility_sip_call_dial"
+        android:src="@drawable/zm_sip_directory_call"
+        android:padding="10dp"
+        />
+
+</LinearLayout>

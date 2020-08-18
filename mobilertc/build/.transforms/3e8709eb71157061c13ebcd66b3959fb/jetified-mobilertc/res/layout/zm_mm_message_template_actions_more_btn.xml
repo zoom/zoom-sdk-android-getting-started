@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    style="@style/UIKitButton.Small"
+    android:minWidth="50dp"
+    android:maxWidth="75dp"
+    android:textColor="@color/zm_msg_template_action_normal_btn_text_color"
+    android:text="@string/zm_mm_template_action_more_40639"
+    android:singleLine="true"
+    android:drawableRight="@drawable/zm_mm_template_more_arrow"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp"
+    android:layout_marginLeft="8dp"
+    android:gravity="center"
+    android:background="@drawable/zm_msg_template_action_btn_normal_bg"
+    android:id="@+id/template_action_btn_more">
+
+
+</TextView>

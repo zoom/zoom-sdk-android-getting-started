@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingRight="7dp"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_normal_linear"
+            android:orientation="vertical">
+            <com.zipow.videobox.markdown.RoundedSpanBgTextView
+                android:id="@+id/message"
+                android:textSize="14sp"
+                android:textColor="@color/zm_template_fields_txt_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/showMore"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/zm_template_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/zm_mm_template_message_show_more_68416"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/message_expend_linear"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <com.zipow.videobox.markdown.RoundedSpanBgTextView
+                android:id="@+id/message_expend"
+                android:textSize="14sp"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/zm_template_fields_txt_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showLess"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/zm_template_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_mm_template_message_show_less_68416"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:src="@drawable/zm_mm_message_template_fields_edit"/>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zm_ui_kit_color_gray_F7F7FA">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_titlebar_height">
+
+        <ImageView
+            android:id="@+id/zm_btn_close_whiteboards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:contentDescription="@string/zm_btn_back"
+            android:src="@drawable/zm_btn_close_multi_pages_for_whiteboard"
+             />
+
+        <TextView
+            android:id="@+id/id_wb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/zm_title_whiteboards_43757"
+            android:textColor="@color/zm_text_light_dark"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/zm_btn_edit_whiteboards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:text="@string/zm_btn_edit_43757"
+            android:textColor="@color/zm_ui_kit_color_blue_0E71EB"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/zm_show_whiteboards"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="32dp"
+        android:gravity="center"
+        android:listDivider="@color/zm_transparent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_transparent"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/zm_tips_whiteboards_43757"
+            android:textColor="@color/zm_gray_8"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+
+</LinearLayout>

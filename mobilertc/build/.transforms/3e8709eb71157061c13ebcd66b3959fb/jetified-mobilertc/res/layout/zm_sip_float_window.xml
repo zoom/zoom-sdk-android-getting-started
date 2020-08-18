@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/zm_sip_float_window_width"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:importantForAccessibility="yes"
+    android:background="@drawable/zm_sip_float_window_bkg"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/zm_sip_icon_pbx_inbackground"
+        android:scaleType="centerInside"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="right"
+        android:visibility="visible"
+        android:id="@+id/ivBackgroundState"
+        android:layout_marginBottom="-20dp"/>
+
+    <ImageView
+        android:id="@+id/ivUIState"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/zm_ic_meeting_blue"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/zm_sip_call_calling_503"
+        android:textColor="@color/zm_ui_kit_color_blue_0E71EB"
+        android:textSize="12sp"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/zm_ic_inmeeting_no_audio"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="-24dp"
+        android:visibility="visible"
+        android:id="@+id/ivMeetingNoAudio"/>
+
+</LinearLayout>

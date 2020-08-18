@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/panelNormalEndBO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnLeaveBO"
+                style="@style/UIKitItinactivatedBtn.BOLarge"
+                android:layout_width="match_parent"
+                android:text="@string/zm_bo_btn_leave_bo_151447" />
+
+            <Button
+                android:id="@+id/btnEndMeeting"
+                style="@style/UIKitButton.LeaveMeeting"
+                android:layout_width="match_parent"
+                android:text="@string/zm_sip_meet_inmeeting_dialog_end_108086" />
+
+            <Button
+                android:id="@+id/btnLeaveMeeting"
+                style="@style/UIKitButton.LeaveMeeting"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/zm_dialog_margin_24dp"
+                android:text="@string/zm_bo_btn_leave_meeting" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelConfirmEndMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/zm_padding_large"
+                android:paddingTop="@dimen/zm_margin_32dp"
+                android:paddingRight="@dimen/zm_padding_large">
+
+                <TextView
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/zm_confirm_end_all_bo" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConfirmEndMeeting"
+                style="@style/UIRedButton.EndMeeting"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/zm_dialog_margin_24dp"
+                android:text="@string/zm_sip_meet_inmeeting_dialog_end_108086" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

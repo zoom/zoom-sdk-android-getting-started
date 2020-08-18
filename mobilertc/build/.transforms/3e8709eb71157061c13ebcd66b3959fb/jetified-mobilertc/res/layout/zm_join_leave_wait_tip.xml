@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:lines="1"
+    android:text="Waiting for Blue Jeans Parrot Demo join..."
+    android:textColor="#bfbfbf"
+    android:textSize="@dimen/zm_ui_kit_text_size_12sp" />
+
+
+

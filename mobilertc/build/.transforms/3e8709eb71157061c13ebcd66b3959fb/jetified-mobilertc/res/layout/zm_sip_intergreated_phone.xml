@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/zm_window_bg" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_intergreated_phone_67420" />
+
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:id="@+id/panelOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <us.zoom.androidlib.widget.ZMSettingsLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="0dp"
+                android:paddingTop="@dimen/zm_setting_item_group_spacing"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/settingLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRegError"
+                    android:background="@color/zm_ui_kit_color_yellow_FAE280"
+                    style="@style/ZMTextView.Medium.OnLight"
+                    tools:text="error"
+                    android:padding="@dimen/zm_ui_kit_page_left_padding"
+                    android:visibility="gone"
+                    />
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|top"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_domain_74435" />
+
+                        <TextView
+                            android:id="@+id/txtDomain"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2"
+                        >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_register_server_74435" />
+
+                        <TextView
+                            android:id="@+id/txtRegisterServer"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_transport_protocol_74435" />
+
+                        <TextView
+                            android:id="@+id/txtTransportProtocol"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_proxy_server_74435" />
+
+                        <TextView
+                            android:id="@+id/txtProxyServer"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_registration_expiry_80317" />
+
+                        <TextView
+                            android:id="@+id/txtRegistrationExpiry"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_last_registration_74435" />
+
+                        <TextView
+                            android:id="@+id/txtLastRegistration"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_username_149054" />
+
+                        <TextView
+                            android:id="@+id/txtSipUsername"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_password_74435" />
+
+                        <TextView
+                            android:id="@+id/txtSipPassword"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:inputType="textPassword"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:importantForAccessibility="no"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_authorization_name_74435" />
+
+                        <TextView
+                            android:id="@+id/txtAuthorizationName"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_zoom_user_identity_74435" />
+
+                        <TextView
+                            android:id="@+id/txtUserIdentity"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_voicemail_74435" />
+
+                        <TextView
+                            android:id="@+id/txtVoicemail"
+                            style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/btnDiagnoistic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="1" >
+
+                        <TextView
+                            style="@style/UIKitTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_send_log_title_150295" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/zm_next_arrow" />
+                    </LinearLayout>
+
+
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+            </us.zoom.androidlib.widget.ZMSettingsLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

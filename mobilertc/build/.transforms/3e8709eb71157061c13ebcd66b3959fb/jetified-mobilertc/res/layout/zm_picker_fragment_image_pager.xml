@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_photos"
+        android:background="@color/zm_picker_pager_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <include layout="@layout/zm_picker_titlebar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_picker_bottom_bar_height"
+        android:background="@color/zm_picker_dark_title_bg"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomBar"
+        >
+
+        <CheckBox
+            android:id="@+id/rbSource"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/zm_picker_rb_bg"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/zm_picker_check_source"
+            android:textColor="@color/zm_picker_btn_text_color"
+            android:textSize="@dimen/zm_picker_text_size_normal"
+            android:visibility="gone"
+            />
+
+        <CheckBox
+            android:id="@+id/chkSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/zm_picker_select_photo"
+            android:textColor="@color/zm_picker_btn_text_color"
+            android:textSize="@dimen/zm_picker_text_size_normal"
+            android:button="@drawable/zm_picker_checkbox_bg"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/zm_picker_dark_line"
+        android:layout_above="@id/bottomBar"
+        android:id="@+id/line"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_picker_bottom_photo_bar_height"
+        android:background="@color/zm_picker_dark_title_bg"
+        android:layout_above="@id/bottomBar"
+        android:layout_marginBottom="1px"
+        android:id="@+id/photoHorizentalRecycler"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.zipow.videobox.MMEditMessageActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            style="@style/ZMTitleBar.Light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height" >
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                style="@style/ZMButton.NoBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="13dp"
+                android:text="@string/zm_btn_cancel" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/zm_mm_edit_message_19884"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/btn_done"
+                style="@style/ZMButton.NoBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="7dp"
+                android:text="@string/zm_btn_done" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/zm_mm_edit_message_divider" />
+
+        <com.zipow.videobox.view.CommandEditText
+            android:id="@+id/ext_content"
+            android:layout_width="match_parent"
+            android:gravity="top"
+            android:background="@android:color/white"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:maxLength="4096"
+            android:padding="13dp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="bottom"
+                     android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="8.5dp"
+            android:paddingRight="14dp" >
+
+            <ImageButton
+                android:id="@+id/btnSetModeKeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_description_mm_btn_mode_keyboard"
+                android:src="@drawable/zm_mm_setmode_keyboard_btn" />
+
+            <ImageButton
+                android:id="@+id/btnEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/zm_description_mm_btn_mode_voice"
+                android:src="@drawable/zm_mm_emoji_btn" />
+        </LinearLayout>
+
+        <com.zipow.videobox.view.mm.sticker.StickerInputView
+            android:id="@+id/panelEmojis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zm_white"
+            android:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>

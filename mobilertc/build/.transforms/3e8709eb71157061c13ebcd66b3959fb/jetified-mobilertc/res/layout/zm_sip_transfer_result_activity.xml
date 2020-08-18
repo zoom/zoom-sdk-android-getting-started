@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/zm_ui_kit_color_white_ffffff">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/zm_ic_selected_big"
+        android:layout_above="@id/tvResult"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivResult"
+        android:visibility="gone"
+        android:scaleType="centerInside"/>
+
+    <ProgressBar
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_above="@id/tvResult"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progress"
+        android:indeterminateDrawable="@drawable/zm_sip_transcript_loading"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_sip_transfer_success_61381"
+        style="@style/UIKitTextView.DialogTitle"
+        android:gravity="center"
+        android:id="@+id/tvResult"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.PrimaryText"
+        android:gravity="center"
+        android:layout_below="@id/tvResult"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:text="(9s)"/>
+
+</RelativeLayout>

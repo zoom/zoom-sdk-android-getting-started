@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:layout_height="match_parent">
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/viewRight"
+            android:layout_width="40dp"
+            android:text="@string/zm_btn_save"
+            android:textColor="@color/zm_white"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_height="match_parent" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_lbl_receive_notifications_add_keywords_31156" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <EditText
+        android:id="@+id/zm_notification_keywords_editText"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/zm_white"
+        android:layout_marginTop="37dp"
+        android:gravity="top|left"
+        android:paddingLeft="16dp"
+        android:paddingTop="14dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="16dp"
+        android:textSize="13sp"
+        android:textColor="@color/zm_notification_receive_add_keywords_describe"
+        android:text="@string/zm_lbl_receive_notifications_add_keywords_describe_31156"
+        android:layout_marginLeft="17dp"/>
+</LinearLayout>

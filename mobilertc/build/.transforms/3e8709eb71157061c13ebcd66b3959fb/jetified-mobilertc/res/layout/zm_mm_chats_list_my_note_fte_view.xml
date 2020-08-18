@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/zm_white"
+    >
+
+    <TextView
+        style="@style/ZMTextView.ExtremLarge.OnLight"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_lbl_your_personal_space_79032"
+        android:focusable="true"
+        />
+    <TextView
+        style="@style/ZMTextView.OnLight.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginRight="66dp"
+        android:gravity="center"
+        android:text="@string/zm_lbl_take_notes_desc_79032"
+        android:focusable="true"
+        />
+    <TextView
+        android:id="@+id/btn_show_me"
+        style="@style/ZMTextView.OnLight.Medium"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:gravity="center"
+        android:text="@string/zm_lbl_show_me_79032"
+        android:background="@drawable/zm_btn_stroke_rounded_rect_gray"
+        />
+</LinearLayout>

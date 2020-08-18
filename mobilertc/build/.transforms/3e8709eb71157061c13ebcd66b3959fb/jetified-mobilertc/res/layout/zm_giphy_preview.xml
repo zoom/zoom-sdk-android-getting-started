@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/zm_mm_giphy_preview_bg"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/giphy_preview_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/zm_btn_giphy_back_bg"/>
+        <EditText
+            android:id="@+id/giphy_preview_search_bar"
+            style="@style/ZMEditText.GlobalSearch"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/zm_mm_giphy_preview_search_icon"
+            android:drawablePadding="10dp"
+            android:paddingLeft="11dp"
+            android:textColor="@color/zm_black"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/zm_mm_giphy_preview_search_hint"
+            android:hint="@string/zm_mm_giphy_preview_search_hint_22379"
+            android:background="@drawable/zm_edit_giphy_prevew_search_bg"
+            />
+        <TextView
+            android:id="@+id/giphy_preview_search_btn"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/zm_im_search_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_search"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/giphy_preview_linear">
+
+        <GridView
+            android:id="@+id/giphy_preview_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4"
+            android:visibility="gone"
+            android:listSelector="@drawable/zm_transparent"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp">
+        </GridView>
+
+        <LinearLayout
+            android:id="@+id/giphy_preview_emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/giphy_preview_progress"
+                style="@style/ZMProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/giphy_preview_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zm_gray_3"
+                android:visibility="gone"
+                android:text="@string/zm_mm_giphy_preview_no_match_22379"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

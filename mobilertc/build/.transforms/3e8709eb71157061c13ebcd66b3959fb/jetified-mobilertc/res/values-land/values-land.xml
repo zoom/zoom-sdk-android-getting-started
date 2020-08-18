@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item format="integer" name="zm_content_max_images_each_line" type="integer">6</item>
+</resources>

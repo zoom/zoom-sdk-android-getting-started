@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="11dp"
+        android:duplicateParentState="true">
+
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:src="@drawable/zm_invite_phone_address" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtScreenName"
+        style="@style/UIKitTextView.CellTitle.blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/zm_lbl_invite_zoom_105180" />
+
+</LinearLayout>

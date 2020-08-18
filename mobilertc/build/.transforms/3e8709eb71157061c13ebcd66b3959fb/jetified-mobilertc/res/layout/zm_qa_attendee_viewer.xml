@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnAsk"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_close"
+            android:contentDescription="@string/zm_btn_close" />
+
+        <Button
+            android:id="@+id/btnAsk"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_qa_btn_ask_question_41047" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_qa_title_qa" />
+
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/panelTitleBar"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/zm_titlebar_dark_bg">
+        <us.zoom.androidlib.widget.segement.ZMSegmentTabLayout
+            android:id="@+id/zmSegmentTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            zoom:zm_tab_width="@dimen/zm_qa_tab_width"
+            zoom:zm_textsize = "16sp"
+            zoom:zm_textBold= "BOTH"
+            zoom:zm_textSelectColor="@color/zm_text_on_light"
+            zoom:zm_textUnselectColor="@color/zm_white"
+            zoom:zm_bar_color="@color/zm_transparent"
+            zoom:zm_indicator_color="@color/zm_white"
+            zoom:zm_indicator_corner_radius="4dp"
+            zoom:zm_tab_padding="4dp"/>
+        </LinearLayout>
+
+        <us.zoom.androidlib.widget.ZMViewPager
+            android:id="@+id/viewPager"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/zm_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/panelNoItemMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_centerInParent="true" >
+        <TextView
+            style="@style/ZMTextView.Title.OnLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNoMessageTitle"
+            android:gravity="center"
+            android:text="@string/zm_qa_msg_no_question_title_41047" />
+
+        <TextView
+            android:id="@+id/txtNoItemMsg"
+            style="@style/ZMTextView.Medium.Dimmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:text="@string/zm_qa_msg_no_question_41047" />
+    </LinearLayout>
+
+</RelativeLayout>

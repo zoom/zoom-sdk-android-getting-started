@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/zm_im_search_bar_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height">
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar.Dark"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            zoom:zm_leftButton="@+id/panelTitleLeft"
+            zoom:zm_rightButton="@+id/btnCancel"
+            zoom:zm_title="@+id/txtTitle">
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/ZMButton.TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/zm_btn_cancel" />
+
+            <LinearLayout
+                android:id="@+id/panelTitleLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                android:id="@+id/txtTitle"
+                android:layout_centerInParent="true"
+                style="@style/ZMTextView.Title.OnDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/zm_title_addrbook" />
+
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+        <com.zipow.videobox.view.ZMSearchBar
+            style="@style/ZMTitleBar"
+            android:id="@+id/panelSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            zoom:editTextHint="@string/zm_hint_search_im_18680"
+            zoom:imeOptions="actionDone"
+            zoom:noMargin="true"
+            />
+    </RelativeLayout>
+
+    <com.zipow.videobox.view.ZMSearchBar
+        android:id="@+id/panelSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        zoom:editTextHint="@string/zm_hint_search_im_18680"
+        zoom:imeOptions="actionDone"
+        zoom:cursorVisible="false"
+        />
+    <View
+        android:id="@+id/searchBarDivideLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_im_search_shadow"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mListContainer">
+
+        <com.zipow.videobox.view.sip.PBXDirectorySearchListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:background="@color/zm_white"
+            android:id="@+id/directoryListView">
+
+        </com.zipow.videobox.view.sip.PBXDirectorySearchListView>
+
+    <TextView
+        android:id="@+id/txtEmptyView"
+        style="@style/ZMTextView.SettingsItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/zm_white"
+        android:paddingTop="30dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/zm_lbl_search_result_empty"
+        android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

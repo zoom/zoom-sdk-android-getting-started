@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape>
+            <corners android:radius="10dp"/>
+            <solid android:color="@color/zm_pbx_sms_bg_sent"/>
+            <padding android:bottom="12dp" android:left="16dp" android:right="16dp" android:top="12dp"/>
+        </shape>
+    </item>
+
+    <item >
+        <shape>
+            <corners android:radius="10dp"/>
+            <solid android:color="@color/zm_pbx_sms_bg_sent"/>
+            <padding android:bottom="12dp" android:left="16dp" android:right="16dp" android:top="12dp"/>
+        </shape>
+
+    </item>
+</selector>

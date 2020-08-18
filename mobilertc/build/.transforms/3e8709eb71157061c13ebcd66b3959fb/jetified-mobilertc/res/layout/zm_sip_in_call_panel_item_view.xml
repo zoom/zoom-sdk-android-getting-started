@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/panelImage"
+        android:layout_width="@dimen/zm_sip_dialpad_key_width"
+        android:layout_height="@dimen/zm_sip_dialpad_key_width"
+        android:background="@drawable/zm_sip_dialpad_key_bg"
+        android:contentDescription="@string/zm_sip_add_call_61381"
+        android:scaleType="centerInside"
+        />
+
+    <TextView
+        android:id="@+id/panelText"
+        style="@style/UIKitTextView.Small.Normal.Gray.Selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:importantForAccessibility="no"
+        android:maxLines="1"/>
+</LinearLayout>

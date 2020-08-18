@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="0px"
+         android:layout_weight="1">
+         <RelativeLayout
+             android:id="@+id/panelEmoji"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/zm_gray_5"
+             android:visibility="gone"
+             android:orientation="vertical" >
+
+             <us.zoom.androidlib.widget.ZMViewPager
+                 android:id="@+id/emojiPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1" >
+             </us.zoom.androidlib.widget.ZMViewPager>
+
+             <LinearLayout
+                 android:id="@+id/panelEmojiIndicator"
+                 android:layout_width="match_parent"
+                 android:layout_height="10dp"
+                 android:layout_alignBottom="@id/emojiPager"
+                 android:gravity="center"
+                 android:orientation="horizontal" >
+             </LinearLayout>
+         </RelativeLayout>
+
+         <com.zipow.videobox.view.GiphyPreviewView
+             android:id="@+id/panelGiphyPreview"
+             android:visibility="gone"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </com.zipow.videobox.view.GiphyPreviewView>
+
+         <com.zipow.videobox.view.mm.sticker.CommonEmojiPanelView
+             android:id="@+id/panelCommonEmojisView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         </com.zipow.videobox.view.mm.sticker.CommonEmojiPanelView>
+     </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/panelType"
+        android:layout_width="match_parent"
+        android:background="@color/zm_white"
+        android:layout_height="42dp" >
+        <LinearLayout
+            android:id="@+id/panelEmojiType"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:contentDescription="@string/zm_accessibility_mm_btn_emoji_23159"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:padding="1dp"
+                android:background="@drawable/zm_mm_emoji_panle_type_bg"
+                android:src="@drawable/zm_mm_type_emoji" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/panelGiphyType"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:contentDescription="@string/zm_accessibility_mm_btn_gif_22379"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:padding="1dp"
+                android:background="@drawable/zm_mm_emoji_panle_type_bg"
+                android:src="@drawable/zm_mm_giphy_btn" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/panelStickerType"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:contentDescription="@string/zm_accessibility_mm_btn_sticker_9004"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:padding="1dp"
+                android:background="@drawable/zm_mm_emoji_panle_type_bg"
+                android:src="@drawable/zm_mm_sticker_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

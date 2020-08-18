@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/zm_sip_gray_search_corner_bg">
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="7dp"
+                android:src="@drawable/zm_ic_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/ZMEditText.GlobalSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imgSearch"
+                android:hint="@string/zm_sip_hint_search_message_117773"
+                android:imeOptions="actionSearch"
+                android:paddingEnd="30dp"
+                android:textColor="#909096"
+                android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+            <Button
+                android:id="@+id/btnClearSearchView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/zm_btn_clear_search_view"
+                android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMButton.TitleBar.Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/zm_btn_cancel"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

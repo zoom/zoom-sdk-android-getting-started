@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+    >
+
+    <TextView
+        android:id="@+id/txtLabel"
+        style="@style/UIKitTextView.BuddyName.Bold.Blue.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        tools:text="Name"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ivAction"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtLabel"
+        android:gravity="center_vertical"
+        android:layout_alignRight="@id/txtLabel"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/txtSubLabel"
+            style="@style/UIKitTextView.PrimaryText.Normal.Gray.Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="(+86)88888"
+            android:layout_marginRight="@dimen/zm_sip_call_state_margin"/>
+
+        <com.zipow.videobox.view.PresenceStateView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/presenceStateView"
+            android:layout_marginLeft="@dimen/zm_sip_presence_state_margin"
+            android:layout_toRightOf="@id/txtSubLabel"
+            android:layout_alignTop="@id/txtSubLabel"
+            ></com.zipow.videobox.view.PresenceStateView>
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/zm_sip_btn_tap_to_swap"
+        android:layout_alignTop="@id/txtLabel"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/zm_accessbility_sip_tap_to_swap_61394"
+        android:id="@+id/ivAction"
+        android:visibility="visible"
+        android:scaleType="centerInside"
+        />
+</RelativeLayout>

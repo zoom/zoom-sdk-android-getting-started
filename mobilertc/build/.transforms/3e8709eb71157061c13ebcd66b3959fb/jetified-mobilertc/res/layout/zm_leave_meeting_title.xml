@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelLeaveMeetingTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zm_btn_width_60dp"
+    android:background="@color/zm_v2_tab"
+    >
+    <Button
+        android:id="@+id/btnCancelLeaveMeeting"
+        style="@style/UIRedButton.Cancel"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/zm_margin_medium"
+        android:paddingLeft="@dimen/zm_margin_medium"
+        android:layout_marginEnd="@dimen/zm_margin_medium"
+        android:layout_marginStart="@dimen/zm_margin_medium"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="@string/zm_btn_cancel" />
+</RelativeLayout>

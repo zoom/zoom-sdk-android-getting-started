@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zm_top_radius_dialog_background"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+        app:tabIndicatorColor="@color/zm_ui_kit_color_blue_2D8CFF"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/zm_ui_kit_color_black_232333" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_ui_kit_color_gray_BABACC" />
+
+    <us.zoom.androidlib.widget.ZMViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

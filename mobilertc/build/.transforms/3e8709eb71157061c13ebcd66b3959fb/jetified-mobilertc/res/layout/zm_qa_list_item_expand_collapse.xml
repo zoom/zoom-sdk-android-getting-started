@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="2dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <com.zipow.videobox.view.PListNameRoleLayout
+        android:id="@+id/plMoreFeedback"
+        android:background="@drawable/zm_material_btn_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <us.zoom.androidlib.widget.ZMTextButton
+            android:id="@+id/txtMoreFeedback"
+            style="@style/ZMTextView.OnLight.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingRight="2dp"
+            android:text="@string/zm_qa_msg_count_feedbacks_41047"
+            android:textColor="@color/zm_text_light_blue"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imgDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zm_dropdown" />
+
+    </com.zipow.videobox.view.PListNameRoleLayout>
+
+</LinearLayout>

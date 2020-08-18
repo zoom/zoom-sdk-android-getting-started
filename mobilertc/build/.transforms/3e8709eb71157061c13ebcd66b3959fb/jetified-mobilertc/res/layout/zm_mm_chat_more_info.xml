@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/zm_btn_back"
+            android:text="" />
+
+        <View
+            android:id="@id/viewRight"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:visibility="invisible" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/zm_mm_title_chat_options" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <us.zoom.androidlib.widget.ZMSettingsLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp">
+
+        <com.zipow.videobox.view.mm.MMChatBuddiesGridView
+            android:id="@+id/gvBuddies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+            android:background="@drawable/zm_setting_option_item_normal"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:verticalSpacing="1dp" />
+    </us.zoom.androidlib.widget.ZMSettingsLayout>
+
+
+</LinearLayout>

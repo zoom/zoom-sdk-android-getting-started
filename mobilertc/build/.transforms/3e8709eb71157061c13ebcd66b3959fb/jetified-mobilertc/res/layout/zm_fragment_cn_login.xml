@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|bottom"
+    >
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+        <!--sso-->
+        <us.zoom.androidlib.widget.ZMLinearLayoutButton
+            android:id="@+id/linkSSOLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/zm_padding_btn"
+            android:paddingRight="@dimen/zm_padding_btn"
+             >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription=""
+                android:src="@drawable/ic_login_sso" />
+            <TextView
+                style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                android:padding="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_login_with_sso" />
+
+        </us.zoom.androidlib.widget.ZMLinearLayoutButton>
+
+        <!--wechat-->
+        <us.zoom.androidlib.widget.ZMLinearLayoutButton
+            android:id="@+id/linkWeChatLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/zm_padding_btn"
+            android:paddingRight="@dimen/zm_padding_btn"
+            android:layout_marginLeft="@dimen/zm_margin_login_btn" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription=""
+                android:src="@drawable/ic_login_wechat" />
+            <TextView
+                style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                android:padding="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_description_login_with_wechat_137212" />
+
+        </us.zoom.androidlib.widget.ZMLinearLayoutButton>
+
+        <!--qq-->
+        <us.zoom.androidlib.widget.ZMLinearLayoutButton
+            android:id="@+id/linkQQLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/zm_padding_btn"
+            android:paddingRight="@dimen/zm_padding_btn"
+            android:layout_marginLeft="@dimen/zm_margin_login_btn" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription=""
+                android:src="@drawable/ic_login_qq" />
+            <TextView
+                style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                android:padding="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_description_login_with_qq_137212" />
+
+        </us.zoom.androidlib.widget.ZMLinearLayoutButton>
+
+        <!--alipay-->
+        <us.zoom.androidlib.widget.ZMLinearLayoutButton
+            android:id="@+id/linkAliPayLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/zm_padding_btn"
+            android:paddingRight="@dimen/zm_padding_btn"
+            android:layout_marginLeft="@dimen/zm_margin_login_btn" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription=""
+                android:src="@drawable/ic_login_alipay" />
+            <TextView
+                style="@style/ZMTextView.OnLight.Small.DeepGrey"
+                android:padding="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_description_login_with_alipay_137212" />
+
+        </us.zoom.androidlib.widget.ZMLinearLayoutButton>
+</LinearLayout>
+    </LinearLayout>

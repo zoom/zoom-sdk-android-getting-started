@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_enabled="true" android:state_selected="true" android:drawable="@drawable/zm_msg_template_action_btn_normal_bg_pressed"></item>
+    <item  android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/zm_msg_template_action_btn_normal_bg_pressed"></item>
+    <item  android:state_enabled="true" android:state_focused="true" android:drawable="@drawable/zm_msg_template_action_btn_normal_bg_pressed"></item>
+    <item  android:state_enabled="true" android:drawable="@drawable/zm_msg_template_action_btn_normal_bg_default"></item>
+    <item  android:state_enabled="false" android:drawable="@drawable/zm_msg_template_action_btn_bg_disable"></item>
+</selector>

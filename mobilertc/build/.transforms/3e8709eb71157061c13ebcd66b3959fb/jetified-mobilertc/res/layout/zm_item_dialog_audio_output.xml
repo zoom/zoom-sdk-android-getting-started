@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/fr_left"
+        android:layout_height="16dp"
+        android:layout_width="16dp"
+        android:layout_marginRight="16dp">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/ZMProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+             />
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/zm_group_type_select" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ZMTextView.PopItem"
+        android:singleLine="true"
+        android:text="Email" />
+
+</LinearLayout>

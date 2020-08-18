@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llActionArea"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <com.zipow.videobox.view.PListNameRoleLayout
+        android:id="@+id/plMoreFeedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="6dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="12dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <us.zoom.androidlib.widget.ZMTextButton
+            style="@style/ZMTextView.OnLight.Medium"
+            android:id="@+id/txtMoreFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="2dp"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/zm_text_light_blue"
+            android:text="@string/zm_qa_msg_count_feedbacks_41047" />
+        <ImageView
+            android:id="@+id/imgDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/zm_dropdown"/>
+
+    </com.zipow.videobox.view.PListNameRoleLayout>
+    <us.zoom.androidlib.widget.ZMTextButton
+        android:id="@+id/btnAnswer"
+        android:background="@drawable/zm_btn_with_light_grey_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="@color/zm_text_blue"
+        android:text="@string/zm_qa_btn_comment_41047" />
+
+
+</LinearLayout>

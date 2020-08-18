@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:importantForAccessibility="no"
+    android:gravity="center_vertical"
+    android:paddingTop="1dp"
+    android:paddingEnd="5dp"
+    android:id="@+id/panelMoreReply"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="14sp"
+        style="@style/UIKitTextView.SecondaryText.Small.Blue"
+        android:id="@+id/moreReply"/>
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtDraft"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:duplicateParentState="true"
+        android:text="@string/zm_lbl_draft_88133"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"/>
+
+    <ImageView
+        android:importantForAccessibility="no"
+        android:id="@+id/imgErrorMessage"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/zm_error_message"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@string/zm_msg_delivery_error_70196"
+        android:visibility="gone"/>
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtErrorMsg"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:text="@string/zm_lbl_unsent_reply_129964"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtMarkUnread"
+        style="@style/ZMTextView.UnreadMessageCount.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:visibility="gone"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtMarkUnreadMsg"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_mm_lbl_mark_unread_14491"
+        android:textSize="14sp"
+        android:duplicateParentState="true"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:importantForAccessibility="no"
+        android:id="@+id/redBubble"
+        android:background="@drawable/zm_ic_red_dot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginStart="15dp"
+        android:visibility="gone"
+        android:text="" />
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtAtMe"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="14sp"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtAtAll"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:importantForAccessibility="no"
+        android:id="@+id/txtNewReply"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/zm_lbl_below_new_comment_88133"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <ImageView
+        android:importantForAccessibility="no"
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:paddingTop="4dp"
+        android:src="@drawable/zm_more_replies"
+        android:visibility="gone"
+        />
+</LinearLayout>

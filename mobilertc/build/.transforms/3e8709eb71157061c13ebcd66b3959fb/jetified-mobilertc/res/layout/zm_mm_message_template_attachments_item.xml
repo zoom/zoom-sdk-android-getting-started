@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/zm_msg_template_attachments_bg"
+    android:orientation="horizontal"
+    android:paddingRight="5dp"
+    android:paddingLeft="12dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/zm_mm_template_attachment_img" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/attachments_file_name"
+            style="@style/UIKitTextView.PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="middle"
+             />
+
+        <TextView
+            android:id="@+id/attachments_file_description"
+            style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/attachments_file_sub"
+            style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+             />
+    </LinearLayout>
+
+</LinearLayout>

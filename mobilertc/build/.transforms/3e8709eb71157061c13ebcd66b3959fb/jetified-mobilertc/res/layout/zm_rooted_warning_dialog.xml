@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingTop="24dp"
+    android:paddingRight="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_alert_rooted_warning_title_42807"
+        android:textColor="@color/zm_dialog_text_color_black"
+        android:textSize="@dimen/zm_ui_kit_text_size_20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_dialog_margin_12dp"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/zm_alert_rooted_warning_msg_42807"
+        android:textColor="@color/zm_dialog_text_color_gray"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rooted_warning_dialog_continue_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="21dp"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/zm_btn_continue_use_42807"
+            android:textColor="@color/zm_dialog_text_color_green_blue"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+        <TextView
+            android:id="@+id/rooted_warning_dialog_quit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/zm_btn_quit_42807"
+            android:textColor="@color/zm_dialog_text_color_green_blue"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

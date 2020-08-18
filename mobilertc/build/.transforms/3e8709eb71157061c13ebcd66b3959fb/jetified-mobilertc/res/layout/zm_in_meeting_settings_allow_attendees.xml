@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hostAllowAttendeesPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMSettingsCategory
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        zoom:zm_dividerHeight="1px"
+        zoom:zm_showTopDivider="false">
+
+        <TextView
+            android:id="@+id/txtAllowAttendeeTo"
+            style="@style/ZMTextView.SettingsItemDesc.MeetingSetting"
+            android:text="@string/zm_lbl_in_meeting_settings_allow_attendees_150183" />
+    </us.zoom.androidlib.widget.ZMSettingsCategory>
+    <!--Allow Attendee to Raise Hand option-->
+    <us.zoom.androidlib.widget.ZMSettingsCategory
+        android:id="@+id/optionAllowAttendeeRaiseHand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        zoom:zm_dividerHeight="1px"
+        zoom:zm_showTopDivider="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/zm_margin_normal"
+            android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+            <TextView
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/zm_btn_raise_hand" />
+
+            <us.zoom.androidlib.widget.ZMCheckedTextView
+                android:id="@+id/chkAllowAttendeeRaiseHand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="@drawable/zm_btn_toggle_default"
+                android:clickable="false" />
+        </LinearLayout>
+
+    </us.zoom.androidlib.widget.ZMSettingsCategory>
+    <!--allow attendee to chat option-->
+    <us.zoom.androidlib.widget.ZMSettingsCategory
+        android:id="@+id/panelAllowAttendeesChatWith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        zoom:zm_dividerHeight="1px"
+        zoom:zm_showTopDivider="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/zm_margin_normal"
+            android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+            <TextView
+                android:id="@+id/txtAttendeesControlAccess"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:gravity="start|center_vertical"
+                android:maxWidth="240dp"
+                android:paddingRight="0dp"
+                android:text="@string/zm_mi_allow_attendees_chat_with_147675" />
+
+            <TextView
+                android:id="@+id/txtCurAttendeesPrivildge"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:text="@string/zm_mi_no_one_11380"
+                android:textColor="@color/zm_gray_8"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/zm_accessibility_more_chat_65892"
+                android:focusable="true"
+                android:src="@drawable/zm_next_arrow" />
+        </LinearLayout>
+    </us.zoom.androidlib.widget.ZMSettingsCategory>
+</LinearLayout>

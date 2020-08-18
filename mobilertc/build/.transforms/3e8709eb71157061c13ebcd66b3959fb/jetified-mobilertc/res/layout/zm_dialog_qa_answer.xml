@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp"
+    >
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/zm_dialog_close"
+        android:contentDescription="@string/zm_btn_close"/>
+
+    <TextView android:id="@+id/txtQuestion"
+        style="@style/ZMTextView.OnLight.Medium.DeepGrey"
+        android:layout_below="@+id/imgClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="9dp"
+        android:scrollbars="vertical"
+        android:maxLines="@integer/zm_qa_question_show_max_lines"
+        android:text="Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes  enjoying themselves? "
+        />
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_below="@+id/txtQuestion"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="14dp"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider"/>
+    <EditText
+        android:id="@+id/edtContent"
+        android:layout_below="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColorHint="@color/zm_text_gray"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:hint="@string/zm_qa_hint_answer_question_41047"
+        android:gravity="top"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:maxLength="1000"
+        android:lines="@integer/zm_qa_question_input_max_lines"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/edtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/optionPrivately"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <CheckBox
+                android:id="@+id/chkPrivately"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/txtPrivately"
+                style="@style/ZMTextView.OnLight.Normal"
+                android:paddingLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/zm_qa_msg_send_privately_41047"/>
+        </LinearLayout>
+
+        <us.zoom.androidlib.widget.ZMTextButton
+            android:id="@+id/btnSend"
+            android:textColor="@drawable/zm_button_text_color"
+            android:background="@drawable/zm_btn_with_light_grey_frame"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/zm_btn_send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

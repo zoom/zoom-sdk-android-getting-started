@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/UIKitTextView.BuddyName.Normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tv_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Uber-Sophia Mosley Uber-Sophia Mosley Uber-Sophia Mosley" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        tools:text="Tue, October 15" />
+
+    <TextView
+        android:id="@+id/tv_brief"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="Hi there, hope all is well! Can we have a quick talk now? Hi there, hope all is well! Can we have a quick talk now?" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="iv_error,tv_unread_count"/>
+
+    <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+        android:id="@+id/tv_unread_count"
+        style="@style/ZMTextView.UnreadMessageCount.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tv_brief"
+        app:layout_constraintEnd_toEndOf="@id/tv_time"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@id/tv_brief"
+        android:visibility="gone"
+        tools:text="99+" />
+
+    <ImageView
+        android:id="@+id/iv_error"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/zm_ic_pbx_send_error"
+        app:layout_constraintBottom_toBottomOf="@id/tv_brief"
+        app:layout_constraintEnd_toEndOf="@id/tv_time"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@id/tv_brief"
+        android:visibility="gone"
+        android:contentDescription="@string/zm_sip_sms_session_alert_137657"/>
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/zm_pbx_message_session_item_title_margin_top_normal"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_brief" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

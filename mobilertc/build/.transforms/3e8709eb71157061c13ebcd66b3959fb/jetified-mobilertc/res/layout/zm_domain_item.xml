@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zm_item_height_normal">
+
+    <TextView
+        android:id="@+id/txtDomain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/zm_margin_normal"
+        android:layout_toLeftOf="@+id/ivDelete"
+        android:textColor="@color/zm_black"
+        android:textSize="@dimen/zm_ui_kit_text_size_17sp" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/zm_item_height_normal"
+        android:layout_height="@dimen/zm_item_height_normal"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/zm_padding_small"
+        android:paddingTop="@dimen/zm_padding_medium"
+        android:paddingRight="@dimen/zm_padding_normal"
+        android:paddingBottom="@dimen/zm_padding_medium"
+        android:src="@drawable/zm_ic_delete"
+        android:contentDescription="@string/zm_btn_delete" />
+
+</RelativeLayout>

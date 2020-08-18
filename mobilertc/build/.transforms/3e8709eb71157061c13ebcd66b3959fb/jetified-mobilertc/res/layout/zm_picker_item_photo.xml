@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zipow.videobox.view.photopicker.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <ImageView
+      android:padding="1dip"
+      android:layout_gravity="center"
+      android:id="@+id/iv_photo"
+      android:scaleType="centerCrop"
+      android:layout_width="match_parent"
+      android:background="@drawable/zm_picker_photo_bg"
+      android:layout_height="match_parent"
+      android:adjustViewBounds="true"
+      />
+
+  <ImageView
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:clickable="true"
+      android:paddingTop="5dp"
+      android:paddingRight="5dp"
+      android:paddingLeft="8dp"
+      android:paddingBottom="8dp"
+      android:id="@+id/v_selected"
+      android:src="@drawable/zm_picker_checkbox_bg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerInside"
+      android:scaleX="0.75"
+      android:scaleY="0.75"
+      />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cover"
+        android:background="@color/zm_half_translucent_white"
+        android:visibility="gone"/>
+
+
+</com.zipow.videobox.view.photopicker.SquareItemLayout>

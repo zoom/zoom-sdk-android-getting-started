@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnSave"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="55dp"
+            android:text="@string/zm_btn_done" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="@string/zm_mi_meeting_topic_title_105983" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <us.zoom.androidlib.widget.ZMSettingsLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/zm_setting_item_group_spacing"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp" >
+
+        <us.zoom.androidlib.widget.ZMSettingsCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            zoom:zm_showTopDivider="false" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/zm_setting_item_padding_left"
+                android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                <EditText
+                    android:id="@+id/edtMeetingTopic"
+                    style="@style/ZMEditText.SettingsItem"
+                    android:layout_width="0dp"
+                   	android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:hint="@string/zm_mi_meeting_topic_title_105983"
+                    android:textColorHint="@color/zm_im_search_text_hint"
+                    android:maxLength="100"
+                    android:imeOptions="actionGo"
+                    android:textColor="@color/zm_template_fields_txt_dark"
+                    >
+
+                    <requestFocus />
+                </EditText>
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/zm_accessibility_clear_105990"
+                    android:id="@+id/imgClear"
+                    android:visibility="invisible"
+                    android:src="@drawable/zm_btn_clear_search_view"/>
+            </LinearLayout>
+        </us.zoom.androidlib.widget.ZMSettingsCategory>
+    </us.zoom.androidlib.widget.ZMSettingsLayout>
+
+</LinearLayout>

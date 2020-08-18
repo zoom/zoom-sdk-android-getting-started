@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/panelSearchBarReal"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/zm_search_corner_bg"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/zm_ic_search"/>
+
+            <EditText
+                android:id="@+id/edtSearchReal"
+                style="@style/ZMEditText.GlobalSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgSearch"
+                android:hint="@string/zm_hint_search_call_14480"
+                android:imeOptions="actionDone"
+                android:paddingRight="30dp"/>
+
+            <Button
+                android:id="@+id/btnClearSearchView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/zm_sip_accessbility_delete_button_61381"
+                android:layout_centerVertical="true"
+                android:background="@drawable/zm_btn_clear_search_view"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.zipow.videobox.view.sip.ZoomSipPhoneListView
+        android:id="@+id/sipPhoneListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.zipow.videobox.view.sip.ZoomSipPhoneListView>
+
+</LinearLayout>

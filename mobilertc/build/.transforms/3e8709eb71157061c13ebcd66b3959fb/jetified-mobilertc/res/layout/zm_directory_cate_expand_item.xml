@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/rlGroup"
+    android:focusable="true"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/imgCateExpand"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/zm_directory_group_unexpand"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCateName"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imgCateExpand"
+        android:text=""
+        android:layout_marginRight="40dp"
+        style="@style/UIKitTextView.BuddyName"
+        android:padding="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCount"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text=""
+        style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+        android:padding="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/txtCateName"
+        android:background="@color/zm_ui_kit_color_gray_EDEDF4"/>
+</RelativeLayout>

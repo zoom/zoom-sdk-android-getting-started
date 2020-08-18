@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/panelCommonEmojis"
+    android:background="@color/zm_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+    <com.zipow.videobox.view.EmojiTextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+</LinearLayout>

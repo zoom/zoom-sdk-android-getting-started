@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnDone"
+        zoom:zm_title="@+id/txtTitle">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/zm_mm_lbl_notification_text_108993" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <TextView
+        android:id="@+id/txtGroupNotificationDes"
+        style="@style/ZMTextView.SettingsItemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/zm_lbl_receive_mobile_group_notifications_19898" />
+
+    <us.zoom.androidlib.widget.ZMSettingsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="20dp">
+
+        <us.zoom.androidlib.widget.ZMSettingsCategory
+            android:id="@+id/panelGroupNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/panelAllMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_notification_all_msg_19898" />
+
+                <ImageView
+                    android:id="@+id/imgAllMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                    android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                    android:src="@drawable/zm_group_type_select"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panelPrivateMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_notification_private_msg_in_group_19898" />
+
+                <ImageView
+                    android:id="@+id/imgPrivateMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                    android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                    android:src="@drawable/zm_group_type_select"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panelNoMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_notification_nothing_19898" />
+
+                <ImageView
+                    android:id="@+id/imgNoMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                    android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                    android:src="@drawable/zm_group_type_select"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </us.zoom.androidlib.widget.ZMSettingsCategory>
+    </us.zoom.androidlib.widget.ZMSettingsLayout>
+</LinearLayout>

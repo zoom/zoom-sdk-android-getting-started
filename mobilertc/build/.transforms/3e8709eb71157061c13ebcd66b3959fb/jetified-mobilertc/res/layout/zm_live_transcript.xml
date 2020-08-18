@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_list_bg_grey"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/zm_btn_back"
+            android:text="" />
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_live_transcript_82883" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <us.zoom.androidlib.util.ZMRecyclerView
+                android:id="@+id/show_transcript"
+                style="@style/MMChatListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        
+        <TextView
+            android:id="@+id/showEmptyTipView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/zm_live_transcript_tip_empty_82883"
+            android:gravity="center"/>
+    </FrameLayout>
+    
+    
+</LinearLayout>

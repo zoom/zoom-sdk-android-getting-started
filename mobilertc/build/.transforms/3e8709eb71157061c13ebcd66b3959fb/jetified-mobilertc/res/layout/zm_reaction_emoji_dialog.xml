@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floating_view_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/message_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:id="@+id/emoji_panel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.zipow.videobox.view.mm.ReactionEmojiSampleView
+            android:id="@+id/reaction_emoji_sample_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <View
+                android:id="@+id/blank"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                />
+
+            <ViewStub
+                android:id="@+id/emoji_panel_view_stub"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout="@layout/zm_reaction_emoji_panel_view"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

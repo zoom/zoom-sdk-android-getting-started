@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <us.zoom.androidlib.widget.ZMSettingsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="@dimen/zm_setting_item_group_spacing">
+
+        <us.zoom.androidlib.widget.ZMSettingsCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/panelAddGroup"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/ZMButton.SettingsItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/zm_white"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right"
+                    android:paddingLeft="@dimen/zm_setting_item_padding_left"
+                    android:textColor="@drawable/zm_button_text_color"
+                    android:gravity="left|center_vertical"
+                    android:clickable="false"
+                    android:text="@string/zm_lbl_notification_add_exception_group_59554" />
+
+            </RelativeLayout>
+        </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+        <TextView
+            style="@style/ZMTextView.SettingsItemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/zm_lbl_notification_exception_group_des_59554" />
+
+        <TextView
+            style="@style/ZMTextView.SettingsItemDesc"
+            android:textColor="@color/zm_text_on_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/txtExceptionGroups"
+            android:text="@string/zm_lbl_notification_section_exception_group_59554" />
+    </us.zoom.androidlib.widget.ZMSettingsLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/lineHeadDivider"
+        android:background="@drawable/zm_settings_top_divider"/>
+</LinearLayout>

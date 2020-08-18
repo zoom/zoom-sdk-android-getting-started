@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zipow.videobox.view.ReactionLabelView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/label_view"
+    style="@style/Widget.MaterialComponents.Chip.Filter"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:minWidth="48dp"
+    android:gravity="center"
+    android:textColor="@color/zm_ui_kit_color_gray_747487"
+    android:textSize="13sp"
+    android:checkable="true"
+    app:chipCornerRadius="12dp"
+    app:chipBackgroundColor="@color/zm_white"
+    app:chipStrokeColor="@color/zm_transparent"
+    app:chipStrokeWidth="1dp"
+    app:checkedIconVisible="false"
+    app:chipIcon="@drawable/zm_ic_add_reaction"
+    app:chipIconSize="20dp"
+    app:chipIconVisible="false"
+    app:chipIconEnabled="true"
+    />

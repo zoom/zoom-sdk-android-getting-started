@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/viewLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="4dp">
+
+        <ImageView
+            android:id="@+id/imgAudioSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:src="@drawable/zm_ic_speaker_off" />
+
+        <ImageView
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:focusable="true"
+            android:padding="4dp"
+            android:src="@drawable/zm_ic_switch_camera" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMeetingNumber"
+        style="@style/ZMTextView.Large.OnDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="breakout room 1"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:maxWidth="@dimen/zm_meeting_number_max_width"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:drawablePadding="10dp"
+        android:drawableEnd="@drawable/ic_drop_down"
+        android:drawableStart="@drawable/ic_encryption_gcm"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/rlQa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp">
+
+                <Button
+                    android:id="@+id/btnQA"
+                    style="@style/ZMButton.Small.OnLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:text="@string/zm_qa_title_qa"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txtQAOpenNumber"
+                    style="@style/ZMTextView.UnreadMessageCount.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="99+"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <com.zipow.videobox.view.PListNameRoleLayout
+                android:id="@+id/viewRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLeave"
+                    style="@style/ZMButton.TitleBar.Warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:text="@string/zm_btn_leave_meeting" />
+            </com.zipow.videobox.view.PListNameRoleLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

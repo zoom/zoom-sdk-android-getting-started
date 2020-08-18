@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zm_white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/topView"
+        >
+
+        <com.zipow.videobox.view.sip.SipEmergencyTopView
+            android:id="@+id/emergencyTopView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_sip_emergency_top_rect_height"
+            app:backgroundColor="@color/zm_v2_txt_desctructive"
+            app:foregroundColor="@color/zm_white" />
+
+        <TextView
+            android:id="@+id/txtEmergencyView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:maxLines="3"
+            android:textColor="@color/zm_white"
+            android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+            android:textStyle="bold"
+            tools:text="Emergency 911 Call"
+            android:layout_marginTop="-16dp"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvBuddyName"
+        style="@style/UIKitTextView.BuddyName.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/zm_margin_largest"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        tools:text="Jason ShenJason ShenJason ShenJason ShenJason ShenJason ShenJason Shen"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        />
+
+    <TextView
+        android:id="@+id/tvPeerNumber"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        tools:text="108032"
+        app:layout_constraintTop_toBottomOf="@id/tvBuddyName"
+        />
+
+    <include android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/zm_sip_call_emergency_addr"
+        app:layout_constraintVertical_bias="0.64"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_bias="0.74"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/UIKitTextView.PrimaryText.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:maxLines="1"
+            tools:text="@string/zm_sip_emergency_is_calling_131441"
+            />
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.PrimaryText.Normal"
+            android:id="@+id/txtTimer"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/panelCallBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:id="@+id/panelMonitorCall"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btnListenerCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:contentDescription="@string/zm_btn_sip_listen_131441"
+                android:scaleType="fitXY"
+                android:src="@drawable/zm_sip_listen_call" />
+
+            <TextView
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtListenerCall"
+                android:text="@string/zm_btn_sip_listen_131441"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

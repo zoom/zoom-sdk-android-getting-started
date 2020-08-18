@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:paddingBottom="0dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/zm_dialog_option_titlebg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:listSelector="@color/zm_transparent"
+    android:cacheColorHint="@color/zm_transparent">>
+
+    <TextView
+        android:id="@+id/txtName"
+        style="@style/ZMTextView.OptionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="Er" />
+
+    <ListView
+        android:id="@+id/headSmallTitles"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>

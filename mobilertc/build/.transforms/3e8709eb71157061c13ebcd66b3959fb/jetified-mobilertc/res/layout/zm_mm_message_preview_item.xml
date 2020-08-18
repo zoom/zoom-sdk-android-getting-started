@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    android:orientation="vertical">
+
+    <com.zipow.videobox.view.ZMGifView
+        android:id="@+id/imgLinkIcon"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/txtLinkTitle"
+        style="@style/ZMTextView.Normal.OnLight"
+        android:layout_width="match_parent"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/txtLinkDes"
+        style="@style/ZMTextView.Small.Dimmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgFavicon"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/txtSiteName"
+            style="@style/ZMTextView.Small.Dimmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:lines="1" />
+    </LinearLayout>
+</LinearLayout>

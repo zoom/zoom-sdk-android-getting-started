@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingTop="@dimen/zm_padding_medium"
+    android:paddingRight="5dp"
+    android:paddingBottom="@dimen/zm_padding_normal"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:descendantFocusability="blocksDescendants" >
+    
+    <TextView
+        style="@style/ZMTextView.Normal.OnLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_lbl_personal_meeting_id" />
+        
+    <TextView
+        style="@style/ZMTextView.ExtremLarge.OnLight"
+        android:id="@+id/txtMeetingNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="normal"
+        android:textColor="@color/zm_meetinglistitem_pmi_id"
+        android:text="111-111-111" />
+    
+    <TextView
+        style="@style/ZMTextView.Normal.OnLight"
+        android:id="@+id/txtVanityURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="@dimen/zm_margin_normal"
+        android:layout_marginRight="@dimen/zm_margin_normal"
+        android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/zm_text_light_dark" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_margin_small"
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/ZMButton.BlueRect"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/zm_btn_blue_r8_rect_state_bg"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+            android:duplicateParentState="false"
+            android:minWidth="@dimen/zm_btn_width_60dp"
+            android:minHeight="@dimen/zm_btn_height_32dp"
+            android:text="@string/zm_btn_start" />
+
+        <Button
+            android:id="@+id/btnInvite"
+            style="@style/ZMButton.BlueRect"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/zm_btn_blue_r8_rect_state_bg"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+            android:layout_marginLeft="10dp"
+            android:duplicateParentState="false"
+            android:minWidth="@dimen/zm_btn_width_160dp"
+            android:minHeight="@dimen/zm_btn_height_32dp"
+            android:text="@string/zm_btn_send_invitation" />
+        
+        <Button
+            android:id="@+id/btnEdit"
+            style="@style/ZMButton.BlueRect"
+            android:background="@drawable/zm_btn_blue_r8_rect_state_bg"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="4dp"
+            android:duplicateParentState="false"
+            android:minWidth="@dimen/zm_btn_width_60dp"
+            android:minHeight="@dimen/zm_btn_height_32dp"
+            android:text="@string/zm_btn_edit" />
+        
+    </LinearLayout>
+    
+</LinearLayout>
+

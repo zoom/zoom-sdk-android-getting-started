@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/first_item_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/zm_line_divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/zm_white">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:duplicateParentState="true">
+
+                <com.zipow.videobox.view.AvatarView
+                    android:id="@+id/avatarView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:duplicateParentState="true"
+                    zoom:zm_description_enable="false" />
+
+                <com.zipow.videobox.view.PresenceStateView
+                    android:id="@+id/presenceStateView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="3dp"
+                    zoom:zm_subpresence_type="0"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:paddingRight="5dp">
+
+                <us.zoom.androidlib.widget.ZMEllipsisTextView
+                    android:id="@+id/txtScreenName"
+                    style="@style/UIKitTextView.BuddyName.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    tools:text="Sophia Mosley (you)"/>
+
+                <TextView
+                    android:id="@+id/txtCustomMessage"
+                    style="@style/UIKitTextView.SecondaryText.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    tools:text="Direct Number: +1(123)456-7890" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_tip_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/zm_next_arrow"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_sip_sms_session_member_item_detail_desc_137657"/>
+        </LinearLayout>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_tip_arrow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="end|center_vertical"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:src="@drawable/zm_tip_right_arrow"-->
+<!--                android:visibility="gone"-->
+<!--                android:contentDescription="@string/zm_sip_sms_session_member_item_detail_desc_137657"/>-->
+
+        <View
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/zm_line_divider"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/last_item_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider"/>
+
+</LinearLayout>

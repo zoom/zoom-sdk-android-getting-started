@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <com.zipow.videobox.view.roundedview.RoundedImageView
+         android:id="@+id/attachments_img"
+         android:layout_width="match_parent"
+         android:layout_height="88dp"
+         android:scaleType="centerCrop"
+         android:background="@color/zm_template_attachments_img_bg"
+         app:riv_corner_radius_top_left="8dp"
+         app:riv_corner_radius_top_right="8dp"
+         app:riv_mutate_background="true"
+         android:visibility="gone"
+         app:riv_tile_mode="clamp"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="12dp"
+        android:id="@+id/attachments_img_content"
+        android:background="@drawable/zm_msg_template_attachments_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/zm_mm_template_attachment_img" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/attachments_file_name"
+                style="@style/UIKitTextView.PrimaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                />
+
+            <TextView
+                android:id="@+id/attachments_file_description"
+                style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/attachments_file_sub"
+                style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_audiocall_bg">
+
+    <FrameLayout
+        android:id="@+id/panelSurfaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone" >
+
+        <SurfaceView
+            android:id="@+id/svPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    
+    <LinearLayout
+        android:id="@+id/panelTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/zm_calling_top_bg" >
+        
+	    <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/zm_calling_titlebar" />
+	    
+    </LinearLayout>
+    
+    <com.zipow.videobox.view.AvatarView
+        android:id="@+id/avatarView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        zoom:zm_cornerRadiusRatio="0.32" >
+    </com.zipow.videobox.view.AvatarView>
+
+    <TextView
+        android:id="@+id/unlock_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zm_white"
+        android:textSize="20sp"
+        android:layout_below="@id/avatarView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:shadowColor="@color/zm_black"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:visibility="gone"
+        android:text="@string/zm_msg_calling_unlock_screen_7473"/>
+    
+    <include
+        android:id="@+id/panelBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/zm_calling_bottom_bar" />
+
+</RelativeLayout>

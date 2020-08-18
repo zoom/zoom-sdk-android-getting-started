@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/zm_annotation_popup_min_width"
+        android:orientation="vertical">
+
+
+        <!--clear my-->
+        <TextView
+            android:id="@+id/id_clear_tip_clear_my"
+            style="@style/ZMTextView.AnnoMoreItemAndText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_settings_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/id_more_tip_create"
+            android:gravity="center_vertical"
+            android:text="@string/zm_anno_clear_my_drawing_46296"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/zm_addon_action_bar_bg" />
+
+        <!--clear all-->
+        <TextView
+            android:id="@+id/id_clear_tip_clear_all"
+            style="@style/ZMTextView.AnnoMoreItemAndText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_settings_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/id_more_tip_save"
+            android:gravity="left|center_vertical"
+            android:text="@string/zm_anno_clear_all_drawings_46296"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/zm_addon_action_bar_bg" />
+
+        <!--clear others-->
+        <TextView
+            android:id="@+id/id_clear_tip_clear_others"
+            style="@style/ZMTextView.AnnoMoreItemAndText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_settings_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/id_more_tip_page_num_layout"
+            android:gravity="left|center_vertical"
+            android:text="@string/zm_anno_clear_others_drawings_46296" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.DialogTitle"
+        tools:text="xxxx"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:id="@+id/title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginTop="6dp"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        tools:text="@string/zm_sip_drop_heldcalls_msg_53992"
+        android:gravity="center"
+        android:id="@+id/message"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_ui_kit_large_button_height"
+        style="@style/UIKitItinactivatedBtn"
+        android:text="@string/zm_btn_ok"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginTop="46dp"
+        android:id="@+id/btnStartMeeting"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_ui_kit_large_button_height"
+        style="@style/UIKitItinactivatedBtn.GrayBorder.BlackText"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:id="@+id/btnCancel"
+        android:text="@string/zm_btn_cancel"
+        android:contentDescription="@string/zm_btn_cancel"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        />
+
+</LinearLayout>

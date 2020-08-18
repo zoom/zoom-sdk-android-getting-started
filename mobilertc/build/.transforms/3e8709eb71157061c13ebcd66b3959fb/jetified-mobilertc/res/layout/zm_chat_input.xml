@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/panelActions"
+    android:orientation="vertical"
+    android:background="#f0f0f0" >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photoHorizentalRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_picker_bottom_photo_bar_height"
+        android:layout_marginBottom="1px"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/panelSend"
+        android:background="@color/zm_white"
+        android:gravity="bottom" >
+
+        <ImageButton
+            android:id="@+id/btnMoreOpts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="4dp"
+            android:background="@null"
+            android:src="@drawable/zm_mm_more_btn"
+            android:contentDescription="@string/zm_description_mm_more_btn_show_115414" />
+
+        <RelativeLayout
+            android:id="@+id/panelSendText"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="7dp"
+            android:weightSum="1" >
+
+            <com.zipow.videobox.view.CommandEditText
+                style="@style/ZMEditText.Small"
+                android:id="@+id/edtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/panelSendbtns"
+                android:layout_marginRight="0dp"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="3"
+                android:text=""
+                android:hint="@string/zm_lbl_type_message_120867"
+                android:textColorHint="@color/zm_im_search_text_hint"
+                android:textSize="16sp"
+                android:maxLength="4096"
+                android:paddingBottom="9dp"
+                zoom:zm_edtNormalColor="#00000000"
+                zoom:zm_edtFocusColor="#00000000"
+                zoom:zm_edtDisableColor="#00000000" >
+
+                <!--
+                     Do not use requestFocus tag here. Else the soft keyboard cannot be opened
+                     by clicking this EditText on some Android 3.x Tablets.
+                -->
+                <!-- <requestFocus /> -->
+            </com.zipow.videobox.view.CommandEditText>
+
+            <ImageView android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/zm_e2e_flag"
+                android:id="@+id/imgE2EFlag"
+                android:visibility="gone"
+                android:layout_marginBottom="4dp"
+                android:layout_alignBottom="@+id/edtMessage"
+                android:layout_alignRight="@+id/edtMessage"/>
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/panelSendbtns"
+                android:gravity="bottom"
+                android:paddingBottom="4dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/edtMessage"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnEmoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:background="@null"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/zm_mm_emoji_btn"
+                    android:contentDescription="@string/zm_description_mm_btn_mode_emoji_23159" />
+
+                <ImageButton
+                    android:id="@+id/btnSend"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:src="@drawable/zm_mm_btn_send"
+                    android:contentDescription="@string/zm_btn_send" />
+
+                <ImageButton
+                    android:id="@+id/btnSetModeVoice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@null"
+                    android:src="@drawable/zm_mm_setmode_voice_btn"
+                    android:contentDescription="@string/zm_description_mm_btn_mode_voice" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCharatersLeft"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="8dp"
+                style="@style/UIKitTextView.SecondaryText.Small.warn"
+                android:layout_above="@id/panelSendbtns"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="invisible"
+                android:id="@+id/lineBelowSend"
+                android:layout_marginEnd="84dp"
+                android:layout_below="@+id/edtMessage"
+                android:background="@color/zm_ui_kit_color_blue_2D8CFF" />
+
+        </RelativeLayout>
+
+        <Button
+            style="@style/ZMButton.VoiceRecord"
+            android:id="@+id/btnHoldToTalk"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/zm_mm_btn_hold_to_talk"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btnSetModeKeyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:background="@null"
+            android:src="@drawable/zm_mm_setmode_keyboard_btn"
+            android:contentDescription="@string/zm_description_mm_btn_mode_keyboard" />
+    </LinearLayout>
+
+    <com.zipow.videobox.view.mm.sticker.StickerInputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/zm_white"
+        android:id="@+id/panelEmojis"/>
+
+    <TableLayout
+        android:id="@+id/panelMoreOpts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_white" >
+
+        <TableRow
+            android:id="@+id/panelMoreOptsRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="0.2dp"
+                android:layout_marginBottom="0.2dp"
+                android:layout_weight="1"
+                android:background="@color/zm_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/imgOptVideoCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/zm_mm_opt_panel_videocall_icon" />
+
+                    <TextView
+                        android:id="@+id/txtOptVideoCall"
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:importantForAccessibility="no"
+                        android:gravity="center"
+                        android:text="@string/zm_mm_opt_video_call" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnVideoCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zm_mm_opt_btn_overlay"
+                    android:contentDescription="@string/zm_mm_opt_video_call" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0.2dp"
+                android:layout_marginRight="0.2dp"
+                android:layout_marginBottom="0.2dp"
+                android:layout_weight="1"
+                android:background="@color/zm_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/imgOptVoiceCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/zm_mm_opt_panel_voicecall_icon" />
+
+                    <TextView
+                        android:id="@+id/txtOptVoiceCall"
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:importantForAccessibility="no"
+                        android:gravity="center"
+                        android:text="@string/zm_mm_opt_voice_call" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnVoiceCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/zm_mm_opt_voice_call"
+                    android:src="@drawable/zm_mm_opt_btn_overlay" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0.2dp"
+                android:layout_marginBottom="0.2dp"
+                android:layout_weight="1"
+                android:id="@+id/panelCamera"
+                android:background="@color/zm_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/zm_mm_opt_panel_camera_icon" />
+
+                    <TextView
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:importantForAccessibility="no"
+                        android:gravity="center"
+                        android:text="@string/zm_mm_opt_camera" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zm_mm_opt_btn_overlay"
+                    android:contentDescription="@string/zm_mm_opt_camera" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/panelMoreOptsRow2" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="0.2dp"
+                android:layout_marginTop="0.2dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/zm_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/zm_mm_opt_panel_pic_icon" />
+
+                    <TextView
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:importantForAccessibility="no"
+                        android:gravity="center"
+                        android:text="@string/zm_mm_opt_photo" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnSendPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zm_mm_opt_btn_overlay"
+                    android:contentDescription="@string/zm_mm_opt_photo" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelSendFile"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0.2dp"
+                android:layout_marginRight="0.2dp"
+                android:layout_marginTop="0.2dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/zm_white" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/zm_mm_opt_panel_file_icon" />
+
+                    <TextView
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:importantForAccessibility="no"
+                        android:gravity="center"
+                        android:text="@string/zm_mm_opt_file" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnSendFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zm_mm_opt_btn_overlay"
+                    android:contentDescription="@string/zm_mm_opt_file" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0.2dp"
+                android:layout_marginTop="0.2dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/zm_white" >
+            </FrameLayout>
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

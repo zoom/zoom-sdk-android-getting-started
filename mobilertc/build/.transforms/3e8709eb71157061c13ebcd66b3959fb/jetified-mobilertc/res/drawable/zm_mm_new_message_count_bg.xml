@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+   <corners android:topLeftRadius="5dp" android:bottomLeftRadius="5dp"></corners>
+    <solid android:color="@color/zm_mm_unread_message_count_bg_14491"></solid>
+</shape>

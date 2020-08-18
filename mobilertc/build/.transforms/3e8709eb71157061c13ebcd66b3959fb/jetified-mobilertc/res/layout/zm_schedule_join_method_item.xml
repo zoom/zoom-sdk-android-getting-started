@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ZMTickMenuItemLayout">
+
+    <TextView
+        android:id="@+id/txtContent"
+        style="@style/ZMTickMenuItemTextView"
+        android:text="text" />
+
+    <ImageView
+        android:id="@+id/imgSelect"
+        style="@style/ZMTickMenuItemImageView" />
+</LinearLayout>

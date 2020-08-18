@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/zm_window_bg">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_intergreated_phone_67420" />
+
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:id="@+id/panelOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <us.zoom.androidlib.widget.ZMSettingsLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="0dp"
+                android:paddingTop="@dimen/zm_setting_item_group_spacing"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp">
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/btnDirectNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|top"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtTitleDirectNumber"
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_title_direct_number_31439" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/directContainer"
+                            android:orientation="vertical"
+                            android:layout_marginRight="@dimen/zm_setting_item_padding_top"
+                            android:layout_marginTop="@dimen/zm_setting_item_padding_bottom"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1">
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnCompanyNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2"
+                        >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_title_company_number_31439" />
+
+                        <TextView
+                            android:id="@+id/txtCompanyNumber"
+                            style="@style/UIKitTextView.SecondaryText.Dimmed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnLocalDialing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_title_local_dialing_31439" />
+
+                        <TextView
+                            android:id="@+id/txtLocalDialing"
+                            style="@style/UIKitTextView.SecondaryText.Dimmed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnAreaCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="2" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_title_area_code_31439" />
+
+                        <TextView
+                            android:id="@+id/txtAreaCode"
+                            style="@style/UIKitTextView.SecondaryText.Dimmed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_intergeated_phone_not_set_31439"
+                            android:ellipsize="start"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+                <TextView
+                    android:id="@+id/txtTips"
+                    style="@style/ZMTextView.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+                    android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:text="@string/zm_intergeated_phone_tips_31439"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:id="@+id/catReceiveCallsFromCallQueues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/optionReceiveCallsFromCallQueues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/zm_title_receive_calls_from_call_queues" />
+
+                        <us.zoom.androidlib.widget.ZMCheckedTextView
+                            android:id="@+id/chkReceiveCallsFromCallQueues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:checkMark="@drawable/zm_btn_toggle_default" />
+                    </LinearLayout>
+
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:id="@+id/catReceiveCallsFromSLG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/optionReceiveCallsFromSLG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/zm_title_receive_calls_from_SLG" />
+
+                        <us.zoom.androidlib.widget.ZMCheckedTextView
+                            android:id="@+id/chkReceiveCallsFromSLG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:checkMark="@drawable/zm_btn_toggle_default" />
+                    </LinearLayout>
+
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/btnDiagnoistic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:weightSum="1" >
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="left"
+                            android:text="@string/zm_sip_send_log_title_150295" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/zm_next_arrow" />
+                    </LinearLayout>
+
+
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+            </us.zoom.androidlib.widget.ZMSettingsLayout>
+
+
+            <TextView
+                style="@style/ZMTextView.SettingsItemDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-25dp"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:text="@string/zm_sip_battery_optimization_category_title"
+                android:visibility="gone"
+                android:id="@+id/titleBatteryOpt"/>
+
+            <us.zoom.androidlib.widget.ZMSettingsLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="@dimen/zm_setting_item_group_spacing"
+                android:visibility="gone"
+                android:id="@+id/settingsBatteryOpt">
+
+                <us.zoom.androidlib.widget.ZMSettingsCategory
+                    android:id="@+id/panelBatteryOpt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/optionBatteryOpt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+                        <CheckedTextView
+                            android:id="@+id/chkIgnoreBatteryOpt"
+                            style="@style/ZMTextView.SettingsItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkMark="@drawable/zm_btn_toggle_default"
+                            android:focusable="true"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/zm_sip_ignore_battery_optimization" />
+                    </LinearLayout>
+                </us.zoom.androidlib.widget.ZMSettingsCategory>
+            </us.zoom.androidlib.widget.ZMSettingsLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

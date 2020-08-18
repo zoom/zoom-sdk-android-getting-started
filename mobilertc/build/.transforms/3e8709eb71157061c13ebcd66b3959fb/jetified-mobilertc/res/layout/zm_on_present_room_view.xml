@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/waitingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zm_white"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_hint_connecting_to_share_52777"
+                android:textColor="@color/zm_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="@style/ZMProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/zm_hint_connecting_to_share_52777"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:clickable="true"
+            android:padding="16dp"
+            android:src="@drawable/zm_icon_close"
+            android:contentDescription="@string/zm_btn_stop_share"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frSharingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zm_white"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_hint_sharing_screen_52777"
+                android:textColor="@color/zm_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/btnStopShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:clickable="false"
+                    android:src="@drawable/zm_ic_stop_share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/zm_btn_stop_share"
+                    android:textColor="@color/zm_ui_kit_color_gray_8E8E93"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="12dp"
+              android:paddingTop="12dp"
+    >
+
+    <TextView
+        android:id="@+id/txtLabel"
+        style="@style/UIKitTextView.BuddyName.Bold.Blue.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        tools:text="Namefdasfeafeawfefsdfewtrfafdashfiudhsaifhidshaiufsedhfaisueufsdfasfasdfe"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ivSelect"/>
+
+    <TextView
+        android:id="@+id/txtSubLabel"
+        style="@style/UIKitTextView.PrimaryText.Normal.Gray.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        tools:text="(+86)88888"
+        android:layout_below="@id/txtLabel"
+        android:layout_alignRight="@id/txtLabel"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/zm_ic_selected"
+        android:layout_alignTop="@id/txtLabel"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+        android:id="@+id/ivSelect"
+        android:visibility="visible"
+        />
+</RelativeLayout>

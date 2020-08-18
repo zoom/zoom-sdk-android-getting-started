@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ZMReportPrivacyDeclaration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/zm_lbl_report_participant_issue_privacy_declaration_150328"
+        android:textColor="#8F040413"
+        android:textSize="13sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/ZMReportIssueTitle"
+            android:text="@string/zm_lbl_report_participant_issue_title_150328" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueItemShare"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_share_150328" />
+
+        <ImageView
+            android:id="@+id/shareTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueVideo"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_video_150328" />
+
+        <ImageView
+            android:id="@+id/videoTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueUninvited"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_uninvited_150328" />
+
+        <ImageView
+            android:id="@+id/uninvitedTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueAbusive"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_abusive_151495" />
+
+        <ImageView
+            android:id="@+id/abusiveTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueIntellectual"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_intellectual_150328" />
+
+        <ImageView
+            android:id="@+id/intellectualTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <FrameLayout
+        android:id="@+id/ZMReportIssueOther"
+        style="@style/ZMReportIssueItem">
+
+        <TextView
+            style="@style/ZMReportIssueItemText"
+            android:text="@string/zm_lbl_report_participant_issue_other_150328" />
+
+        <ImageView
+            android:id="@+id/otherTick"
+            style="@style/ZMReportIssueItemTick" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp">
+
+        <EditText
+            android:id="@+id/ZMReportIssueBrief"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="@string/zm_sip_send_log_brief_hint_101987"
+            android:minHeight="180dp"
+            android:padding="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#8F040413"
+            android:textSize="16sp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:src="#C8C7CB" />
+
+    <TextView
+        android:id="@+id/ZMReportBriefMaximum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/zm_sip_send_log_brief_limit_101987"
+        android:textColor="#DE2828"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/btnAttachPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="18dp"
+        android:text="@string/zm_lbl_report_participant_issue_attach_photo_150328"
+        android:textColor="#0E72ED"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+    <FrameLayout
+        android:id="@+id/previewContainer"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <com.zipow.videobox.view.roundedview.RoundedImageView
+            android:id="@+id/previewImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@drawable/zm_in_meeting_report_round_bg"
+            android:padding="1dip"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius_bottom_left="8dp"
+            app:riv_corner_radius_bottom_right="8dp"
+            app:riv_corner_radius_top_left="8dp"
+            app:riv_corner_radius_top_right="8dp" />
+
+        <ImageView
+            android:id="@+id/previewDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_pic_delete" />
+
+    </FrameLayout>
+
+</LinearLayout>

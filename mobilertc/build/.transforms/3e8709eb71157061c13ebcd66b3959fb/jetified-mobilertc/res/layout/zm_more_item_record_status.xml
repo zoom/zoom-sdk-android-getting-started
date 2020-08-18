@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/llRecordStatus"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/zm_setting_item_padding_left"
+    android:paddingRight="@dimen/zm_setting_item_padding_right"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+        android:layout_height="26dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/zm_btn_round_dark">
+    <ImageView
+        android:id="@+id/imgRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="4dp"
+        android:src="@drawable/zm_ic_cmr_recording" />
+
+    <ProgressBar
+        android:id="@+id/progressStartingRecord"
+        style="@style/ZMProgressBar.Small"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/txtRecordStatus"
+        style="@style/ZMTextView.Normal.OnDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_record_status_recording" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/zm_setting_item_padding_left"
+        android:layout_weight="2"
+        >
+        <ImageView
+            android:id="@+id/btn_pause_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@null"
+            android:focusable="false"
+            android:contentDescription="@string/zm_record_btn_pause"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/zm_btn_record_pause" />
+        <ImageView
+            android:id="@+id/btn_stop_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:focusable="false"
+            android:contentDescription="@string/zm_record_btn_stop_record"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/zm_btn_record_stop" />
+        </RelativeLayout>
+
+</LinearLayout>

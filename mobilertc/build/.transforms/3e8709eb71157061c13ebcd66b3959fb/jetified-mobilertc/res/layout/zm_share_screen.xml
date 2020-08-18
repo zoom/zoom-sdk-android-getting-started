@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ZMTextView.Medium.OnLight"
+        android:text="@string/zm_content_share_desc_52777"
+        android:labelFor="@+id/edtShareId"/>
+
+    <EditText
+        android:id="@+id/edtShareId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/zm_hint_share_screen_id_52777"
+        android:textColorHint="@color/zm_im_search_text_hint"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:focusable="true"
+        android:maxLength="50"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:inputType="textCapCharacters|textVisiblePassword"
+        android:text="" />
+    
+</LinearLayout>

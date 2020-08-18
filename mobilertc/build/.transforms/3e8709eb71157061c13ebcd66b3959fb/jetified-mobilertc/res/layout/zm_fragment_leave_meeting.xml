@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnEndMeeting"
+            style="@style/UIRedButton.EndMeeting"
+            android:layout_width="match_parent"
+            android:text="@string/zm_sip_meet_inmeeting_dialog_end_108086" />
+
+        <Button
+            android:id="@+id/btnLeaveWithCall"
+            style="@style/UIRedButton.EndMeeting"
+            android:layout_width="match_parent"
+            android:text="@string/zm_btn_leave_conf_with_call" />
+
+        <Button
+            android:id="@+id/btnLeaveMeeting"
+            style="@style/UIKitButton.LeaveMeeting"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/zm_dialog_margin_24dp"
+            android:text="@string/zm_btn_leave_conference" />
+
+
+    </LinearLayout>
+
+</ScrollView>

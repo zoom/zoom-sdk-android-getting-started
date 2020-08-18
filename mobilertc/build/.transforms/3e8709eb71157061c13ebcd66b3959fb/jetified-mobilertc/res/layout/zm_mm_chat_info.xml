@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/zm_btn_close"
+            android:contentDescription="@string/zm_btn_close" />
+
+        <LinearLayout
+            android:id="@+id/viewRight"
+            android:gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/starredBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/zm_mm_starred_title_bar_icon_normal"
+                />
+        </LinearLayout>
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:textStyle="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/zm_mm_title_chat_options" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg">
+
+        <us.zoom.androidlib.widget.ZMSettingsLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingTop="24dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="20dp">
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/one_chat_info_panel"
+                android:visibility="gone">
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/avatar_layout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:layout_marginRight="0dp"-->
+                    <!--android:clickable="true"-->
+                    <!--android:focusable="true"-->
+                    <!--android:minHeight="46dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingRight="@dimen/zm_setting_item_padding_right" >-->
+                <LinearLayout
+                    android:id="@+id/one_chat_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/zm_setting_item_padding_left"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right"
+                    android:paddingTop="@dimen/zm_setting_item_padding_top"
+                    android:paddingBottom="@dimen/zm_setting_item_padding_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal" >
+
+                    <com.zipow.videobox.view.AvatarView
+                        android:id="@+id/avatarView"
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        zoom:zm_description_enable="false" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right">
+                        <us.zoom.androidlib.widget.ZMEllipsisTextView
+                            android:id="@+id/txtScreenName"
+                            style="@style/UIKitTextView.CellTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="" />
+                        <us.zoom.androidlib.widget.ZMEllipsisTextView
+                            android:id="@+id/txtCustomMessage"
+                            style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="@dimen/zm_ui_kit_text_size_13sp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/one_chat_invite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/one_chat_invite_tv"
+                        android:text="@string/zm_mm_lbl_group_members_invite_108993"
+                        android:textColor="@color/zm_ui_kit_color_blue_0E71EB"/>
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/topic_and_desc_panel">
+
+                <LinearLayout
+                    android:id="@+id/optionTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:id="@+id/lblGroupInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/txtTopic"
+                            style="@style/ZMTextView.OnLight.Normal.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:id="@+id/imgTopicArrow"
+                            android:src="@drawable/zm_next_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:id="@+id/description_lbl_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:text="@string/zm_mm_lbl_description_text_108993" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <us.zoom.androidlib.widget.ZMEllipsisTextView
+                            android:id="@+id/description_info_tv"
+                            style="@style/ZMTextView.OnLight.Normal.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:hint="@string/zm_mm_description_not_add_hint_108993"
+                            android:textColorHint="@color/zm_text_deep_grey"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:id="@+id/imgDescriptionArrow"
+                            android:src="@drawable/zm_next_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionSaveSession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_mm_lbl_saved_session" />
+
+                    <us.zoom.androidlib.widget.ZMCheckedTextView
+                        android:id="@+id/chkSaveSession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/panelMembers"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/members_count_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/members_count_tv"
+                        android:text="@string/zm_mm_lbl_group_members_count_108993" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/members_invite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/members_invite_tv"
+                        android:text="@string/zm_mm_lbl_group_members_invite_108993"
+                        android:textColor="@color/zm_ui_kit_color_blue_0E71EB"/>
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/panelShareFiles"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/optionShareImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtShareImages"
+                        android:text="@string/zm_mm_lbl_group_images" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionShareFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtShareFiles"
+                        android:text="@string/zm_mm_lbl_group_files" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:layout_gravity="center_vertical"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionStarredMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtStarredMessage"
+                        android:text="@string/zm_mm_lbl_group_starred_message_owp40" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <!--<TextView-->
+                <!--style="@style/ZMTextView.SettingsItemDesc"-->
+                <!--android:id="@+id/txtUnreadMessageCount"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="-25dp"-->
+                <!--android:layout_marginTop="@dimen/zm_setting_item_group_spacing"-->
+                <!--android:text="@string/zm_lbl_unread_msg_count_58475" />-->
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/unread_and_notification"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/unread_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/ZMTextView.SettingsItem"
+                            android:id="@+id/unreadLabel"
+                            android:paddingRight="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/zm_lbl_show_unread_msg_58475" />
+
+                        <TextView
+                            android:id="@+id/txtNoteBubble"
+                            android:layout_toRightOf="@id/unreadLabel"
+                            style="@style/ZMTextView.UnreadMessageCount.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="-20dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="1"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <us.zoom.androidlib.widget.ZMCheckedTextView
+                        android:id="@+id/chkUnreadCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:paddingRight="@dimen/zm_setting_item_padding_right"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notification_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:id="@+id/notification_lbl_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:text="@string/zm_mm_lbl_notification_text_108993" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:duplicateParentState="true"
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/group_notification_info_tv"
+                            style="@style/ZMTextView.OnLight.Normal.DeepGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:text="@string/zm_lbl_notification_all_msg_19898" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:focusable="false"
+                            android:id="@+id/imgNotificationArrow"
+                            android:src="@drawable/zm_next_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/one_chat_option_panel"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/optionNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_mm_lbl_show_session_notification" />
+
+                    <us.zoom.androidlib.widget.ZMCheckedTextView
+                        android:id="@+id/chkNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panelAlertAvailable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+                    <TextView
+                        android:id="@+id/alertTextView"
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_mm_lbl_alert_when_available_65420" />
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/imgAlertAvailable"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginRight="@dimen/zm_setting_item_padding_right"-->
+                        <!--android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"-->
+                        <!--android:src="@drawable/zm_group_type_select"-->
+                        <!--android:visibility="gone" />-->
+                    <us.zoom.androidlib.widget.ZMCheckedTextView
+                        android:id="@+id/chkAlertAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionBlockUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_mi_block_user" />
+
+                    <us.zoom.androidlib.widget.ZMCheckedTextView
+                        android:id="@+id/chkBlockUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnClearHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:contentDescription="@string/zm_mm_btn_clear_chat_history" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtClearHistory"
+                        android:text="@string/zm_mm_btn_clear_chat_history" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionCopyGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtCopyGroup"
+                        android:text="@string/zm_msg_add_contact_group_68451" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/panelMoreOptions"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/optionMoreOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="46dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/zm_setting_item_padding_right" >
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:focusable="false"
+                        android:id="@+id/txtMoreOptions"
+                        android:text="@string/zm_mm_lbl_more_options_text_108993" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_gravity="center_vertical"
+                        android:focusable="false"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+        </us.zoom.androidlib.widget.ZMSettingsLayout>
+    </ScrollView>
+
+</LinearLayout>

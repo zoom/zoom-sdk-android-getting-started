@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        android:text="@string/zm_lbl_report_participant_issue_result_dialog_msg_151495" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C8C7CB" />
+
+        <LinearLayout
+            android:id="@+id/btnRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_btn_dialog_highlight_bg"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtRemove"
+                style="@style/ZMTextView.DialogItem.highligt"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/zm_lbl_report_participant_issue_result_dialog_remove_all_reported_150328" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C8C7CB" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_btn_dialog_bg"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/ZMTextView.DialogItem"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/zm_btn_done" />
+        </LinearLayout>
+
+</LinearLayout>

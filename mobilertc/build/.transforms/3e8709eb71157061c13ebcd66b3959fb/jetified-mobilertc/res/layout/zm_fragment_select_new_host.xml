@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBarNoBackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            zoom:zm_leftButton="@+id/btnBack"
+            zoom:zm_rightButton="@+id/viewRight"
+            zoom:zm_title="@+id/txtTitle">
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/ZMBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/viewRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/ZMTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="19sp"
+                android:paddingLeft="@dimen/zm_sip_income_avatar_padding"
+                android:paddingRight="@dimen/zm_sip_income_avatar_padding"
+                android:text="@string/zm_assign_new_host_title_151447" />
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+        <EditText
+            android:id="@+id/edtSearch"
+            style="@style/ZMEditText.ContextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_btn_height_32dp"
+            android:layout_marginLeft="@dimen/zm_margin_normal"
+            android:layout_marginRight="@dimen/zm_margin_normal"
+            android:background="@drawable/zm_search_bar_gray_bg"
+            android:cursorVisible="true"
+            android:drawableLeft="@drawable/zm_ic_im_search_new"
+            android:drawablePadding="@dimen/zm_share_toolbar_margin"
+            android:hint="@string/zm_hint_search"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/zm_sip_income_avatar_padding"
+            android:textColor="@color/zm_white"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <us.zoom.androidlib.widget.QuickSearchListView
+                    android:id="@+id/attendeesListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/zm_height_64dp" />
+
+                <TextView
+                    android:id="@+id/tipNoParticipants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/zm_lbl_no_participants_150328"
+                    android:textColor="@color/zm_white"
+                    android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnAssign"
+                style="@style/UIRedButton.EndMeeting"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/zm_margin_medium"
+                android:text="@string/zm_assign_and_leave_151447"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

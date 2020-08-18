@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zm_font_size_medium">16dp</dimen>
+    <dimen name="zm_font_size_normal">18dp</dimen>
+    <dimen name="zm_meeting_number_max_width">260dp</dimen>
+    <dimen name="zm_mm_bubble_file_width">415dp</dimen>
+    <dimen name="zm_mm_bubble_width">405dp</dimen>
+    <dimen name="zm_msg_addon_width">415dp</dimen>
+    <dimen name="zm_msg_template_screen_name_max_width">264dp</dimen>
+    <dimen name="zm_msg_template_width">415dp</dimen>
+    <dimen name="zm_preview_width_margin">36dp</dimen>
+    <dimen name="zm_qa_btn_max_width">72dp</dimen>
+    <dimen name="zm_qa_tab_width">120dp</dimen>
+</resources>

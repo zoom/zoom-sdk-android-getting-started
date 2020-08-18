@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/zm_simple_anim_close_radius"/>
+            <solid android:color="@color/zm_ui_kit_color_gray_press_747487"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/zm_simple_anim_close_radius"/>
+            <solid android:color="@color/zm_ui_kit_color_gray_747487"/>
+        </shape>
+    </item>
+</selector>

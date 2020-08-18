@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_ui_leave_dialog_bg" >
+
+    <com.zipow.videobox.view.panel.ZmLeavePanel
+        android:id="@+id/normalMeetingLeave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <com.zipow.videobox.view.panel.ZmLeaveBoPanel
+        android:id="@+id/boMeetingLeave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <com.zipow.videobox.view.panel.ZmLeaveAssignHostPanel
+        android:id="@+id/assignHostLeavePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<vector android:autoMirrored="true" android:height="30dp"
+    android:viewportHeight="30" android:viewportWidth="30"
+    android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h30v30h-30z M 0,0"/>
+        <path android:fillColor="@color/zm_v2_txt_secondary" android:fillType="evenOdd" android:pathData="M20.1457,10.915C20.4386,10.6221 20.4386,10.1472 20.1457,9.8543C19.8529,9.5614 19.378,9.5614 19.0851,9.8543L15,13.9394L10.915,9.8543C10.6221,9.5614 10.1472,9.5614 9.8543,9.8543C9.5614,10.1472 9.5614,10.6221 9.8543,10.915L13.9394,15L9.8543,19.0851C9.5614,19.378 9.5614,19.8528 9.8543,20.1457C10.1472,20.4386 10.6221,20.4386 10.915,20.1457L15,16.0607L19.0851,20.1457C19.378,20.4386 19.8529,20.4386 20.1457,20.1457C20.4386,19.8529 20.4386,19.378 20.1457,19.0851L16.0607,15L20.1457,10.915Z"/>
+        <path android:fillColor="#00000000"
+            android:pathData="M9.9,0.75L20.1,0.75A9.15,9.15 0,0 1,29.25 9.9L29.25,20.1A9.15,9.15 0,0 1,20.1 29.25L9.9,29.25A9.15,9.15 0,0 1,0.75 20.1L0.75,9.9A9.15,9.15 0,0 1,9.9 0.75z"
+            android:strokeColor="@color/zm_v2_txt_secondary" android:strokeWidth="1.5"/>
+    </group>
+</vector>

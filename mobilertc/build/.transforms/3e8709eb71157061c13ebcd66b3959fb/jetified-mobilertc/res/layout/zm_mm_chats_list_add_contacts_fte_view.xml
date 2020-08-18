@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/zm_white"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zm_ic_no_conversation"
+        />
+    <TextView
+        style="@style/ZMTextView.OnLight.Medium"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/zm_lbl_find_people_and_start_chat_79032"
+        android:focusable="true"
+        />
+    <TextView
+        android:id="@+id/btn_add_contacts"
+        style="@style/ZMTextView.OnLight.Medium"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:gravity="center"
+        android:text="@string/zm_lbl_add_contacts_79032"
+        android:background="@drawable/zm_btn_stroke_rounded_rect_gray"
+        />
+</LinearLayout>

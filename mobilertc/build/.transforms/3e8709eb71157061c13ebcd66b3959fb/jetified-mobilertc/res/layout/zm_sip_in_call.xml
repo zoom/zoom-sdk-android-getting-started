@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/zm_white">
+
+    <TextView
+        android:id="@+id/btnHideKeyboard"
+        style="@style/UIKitButton.White.BlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_btn_hide_61381"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/zm_btn_back_blue"
+        android:drawablePadding="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/panelMultiBuddy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="@dimen/zm_ui_kit_sip_page_left_padding_large"
+        android:layout_marginRight="@dimen/zm_ui_kit_sip_page_left_padding_large"
+        android:layout_above="@id/keyboard"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/panelMultiCall2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/zm_ui_kit_btn_normal_round_white_selector"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="3dp"
+            >
+
+            <TextView
+                android:id="@+id/txtMultiBuddyName2"
+                style="@style/UIKitTextView.BuddyName.Bold.Blue.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Jason Shenddddddddddddddddddddddddddddd"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/linearMultiActions2"
+                android:ellipsize="none"
+                android:requiresFadingEdge="horizontal"
+                android:fadingEdgeLength="36dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtMultiBuddyName2"
+                android:layout_toLeftOf="@+id/linearMultiActions2"
+                android:gravity="center_vertical"
+                android:importantForAccessibility="no">
+                <Chronometer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/UIKitTextView.PrimaryText.Normal"
+                    android:id="@+id/txtMultiDialTimer2"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtMultiDialState2"
+                    style="@style/UIKitTextView.PrimaryText.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="@string/zm_phone_calls_on_hold_31368"
+                    android:layout_marginRight="@dimen/zm_sip_call_state_margin"
+                    />
+
+                <com.zipow.videobox.view.PresenceStateView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/multiPresenceStateView2"
+                    android:layout_marginLeft="@dimen/zm_sip_presence_state_margin"
+                    ></com.zipow.videobox.view.PresenceStateView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/linearMultiActions2"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/zm_sip_btn_merge_call"
+                    android:id="@+id/btnMultiAction2"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/zm_accessbility_sip_merge_call_61394"/>
+
+                <ImageView
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:src="@drawable/zm_ic_sip_arrow_down"
+                    android:id="@+id/btnMultiMore2"
+                    android:scaleType="centerInside"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:contentDescription="@string/zm_accessbility_sip_more_action_61394"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View style="@style/ZMLightLine"
+            />
+
+        <RelativeLayout
+            android:id="@+id/panelMultiCall1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/zm_ui_kit_btn_normal_round_white_selector"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="3dp">
+
+            <TextView
+                android:id="@+id/txtMultiBuddyName1"
+                style="@style/UIKitTextView.BuddyName.Bold.Blue.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Jason Shenddddddddddddddddddddddddddddd"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/linearMultiActions1"
+                android:ellipsize="none"
+                android:requiresFadingEdge="horizontal"
+                android:fadingEdgeLength="36dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtMultiBuddyName1"
+                android:layout_toLeftOf="@+id/linearMultiActions1"
+                android:gravity="center_vertical"
+                android:importantForAccessibility="no">
+<!--                <TextView-->
+<!--                    android:id="@+id/txtMultiDialState1"-->
+<!--                    style="@style/UIKitTextView.PrimaryText.Normal.Gray.Selector"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    tools:text="HOLD"-->
+<!--                    android:importantForAccessibility="no"-->
+<!--                    android:layout_marginRight="@dimen/zm_sip_call_state_margin"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:maxLines="1"-->
+<!--                    />-->
+
+                <Chronometer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/UIKitTextView.PrimaryText.Normal"
+                    android:id="@+id/txtMultiDialTimer1"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtMultiDialState1"
+                    style="@style/UIKitTextView.PrimaryText.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="@string/zm_phone_calls_on_hold_31368"
+                    android:layout_marginRight="@dimen/zm_sip_call_state_margin"
+                    />
+
+                <com.zipow.videobox.view.PresenceStateView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/multiPresenceStateView1"
+                    android:layout_marginLeft="@dimen/zm_sip_presence_state_margin"
+                    ></com.zipow.videobox.view.PresenceStateView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/linearMultiActions1"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/zm_sip_btn_merge_call"
+                    android:id="@+id/btnMultiAction1"
+                    android:contentDescription="@string/zm_accessbility_sip_merge_call_61394"
+                    android:scaleType="centerInside"/>
+
+                <ImageView
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:src="@drawable/zm_ic_sip_arrow_down"
+                    android:id="@+id/btnMultiMore1"
+                    android:scaleType="centerInside"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:contentDescription="@string/zm_accessbility_sip_more_action_61394"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/panelOneBuddy"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_height="match_parent"
+        android:layout_above="@id/keyboard"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtOneBuddyName"
+            style="@style/UIKitTextView.BuddyName.Large"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_height="wrap_content"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            tools:text="Jingssrearedafawrfeardadfsafdasfdsafasdfseaerassss"
+            android:ellipsize="none"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdgeLength="48dp"/>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/zm_ic_sip_arrow_down"
+            android:id="@+id/btnOneMore"
+            android:layout_marginLeft="-36dp"
+            android:layout_toRightOf="@id/txtOneBuddyName"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/zm_accessbility_sip_more_action_61394"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtOneDialState"-->
+<!--            style="@style/UIKitTextView.PrimaryText.Normal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:singleLine="true"-->
+<!--            android:gravity="center"-->
+<!--            android:importantForAccessibility="no"-->
+<!--            tools:text="3:30"-->
+<!--            android:layout_below="@id/txtOneBuddyName"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginRight="@dimen/zm_sip_call_state_margin"-->
+<!--            />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/txtOneBuddyName"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearOneDialState"
+            android:importantForAccessibility="no"
+            >
+
+            <TextView
+                android:id="@+id/txtOneE911DialState"
+                style="@style/UIKitTextView.PrimaryText.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                tools:text="Emergency Call"
+                android:importantForAccessibility="yes"
+                />
+
+            <Chronometer
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/UIKitTextView.PrimaryText.Normal"
+                android:id="@+id/txtOneDialTimer"
+                android:gravity="right"
+                android:maxLines="1"
+                tools:visibility="visible"
+                android:importantForAccessibility="yes"
+                />
+
+            <TextView
+                android:id="@+id/txtOneDialState"
+                style="@style/UIKitTextView.PrimaryText.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                tools:text="abcdefghijklmnopqrstuvwxyz"
+                android:gravity="center_vertical"
+                android:importantForAccessibility="yes"
+                />
+            <com.zipow.videobox.view.PresenceStateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/onePresenceStateView"
+                android:layout_alignRight="@id/txtOneDialState"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ViewStub android:layout="@layout/zm_sip_call_emergency_addr"
+        android:layout_below="@id/panelOneBuddy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/panelEmergencyInfoStub"
+        android:layout_marginTop="-20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/panelCallBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/zm_ui_kit_sip_page_left_padding_large"
+        android:paddingRight="@dimen/zm_ui_kit_sip_page_left_padding_large"
+        android:layout_below="@id/keyboard"
+        >
+
+        <ImageView
+            android:id="@+id/btnEndCall"
+            android:layout_width="@dimen/zm_sip_dialpad_key_width"
+            android:layout_height="@dimen/zm_sip_dialpad_key_width"
+            android:contentDescription="@string/zm_accessbility_btn_end_call_14480"
+            android:src="@drawable/zm_sip_end_call"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/panelTransferOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <Button
+                android:id="@+id/btnCompleteTransfer"
+                style="@style/UIKitItinactivatedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zm_ui_kit_large_button_height"
+                android:contentDescription="@string/zm_sip_btn_complete_transfer_61381"
+                android:text="@string/zm_sip_btn_complete_transfer_61381"
+                />
+
+            <TextView
+                android:id="@+id/btnCancelTransfer"
+                style="@style/UIKitTextView.Large.Normal.Gray"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zm_ui_kit_large_button_height"
+                android:contentDescription="@string/zm_sip_btn_cancel_transfer_61381"
+                android:text="@string/zm_sip_btn_cancel_transfer_61381"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/zm_ui_kit_btn_big_round_white_selector"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.zipow.videobox.view.sip.DialKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/>
+
+    <com.zipow.videobox.view.sip.SipInCallPanelView
+        android:id="@+id/panelInCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/zm_sip_dialpad_content_margin_left"
+        android:layout_marginRight="@dimen/zm_sip_dialpad_content_margin_left"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        />
+
+    <LinearLayout
+        android:id="@+id/panelSipError"
+        android:layout_width="match_parent"
+        android:background="@color/zm_v2_star"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtSipError"
+            style="@style/UIKitTextView.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:gravity="start"
+            android:textColor="@color/zm_v2_txt_primary_light"
+            android:text="@string/zm_sip_error_data_99728" />
+
+    </LinearLayout>
+
+    <include layout="@layout/zm_snackbar_toast"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/panelTips"/>
+
+</RelativeLayout>

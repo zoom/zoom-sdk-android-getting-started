@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:zoom="http://schemas.android.com/apk/res-auto"
+	android:background="@color/zm_white"
+	android:gravity="center_vertical"
+	android:orientation="horizontal"
+	android:paddingBottom="15dp"
+	android:paddingRight="10dp"
+	android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtRoomName"
+            style="@style/UIKitTextView.CellTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="" />
+    </LinearLayout>
+	<com.zipow.videobox.view.PresenceStateView
+		android:id="@+id/presenceStateView"
+		android:layout_marginLeft="5dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        zoom:zm_subpresence_type="0"
+		>
+
+	</com.zipow.videobox.view.PresenceStateView>
+</LinearLayout>

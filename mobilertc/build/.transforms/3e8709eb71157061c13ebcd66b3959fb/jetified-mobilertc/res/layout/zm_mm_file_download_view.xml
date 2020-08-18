@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zm_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zm_more" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgFile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="125dp"
+        android:src="@drawable/zm_ic_filetype_zip" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center"
+        android:textColor="#232333"
+        android:textSize="18sp"
+        tools:text="DesignGuidelines.zip" />
+
+    <TextView
+        android:id="@+id/txtTranslateSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#747487"
+        android:textSize="12sp"
+        tools:text="91 KB/782 KB (26.9 KB/s)" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/PollingPercentBar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp" />
+<!--style="?android:progressBarStyleHorizontal"-->
+    <Button
+        android:id="@+id/btnMain"
+        style="@style/UIKitItinactivatedBtn.Large"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="80dp"
+        android:text="@string/zm_btn_download"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="@string/zm_btn_cancel"
+        android:textColor="#0E71EB"
+        android:textSize="16sp" />
+</LinearLayout>

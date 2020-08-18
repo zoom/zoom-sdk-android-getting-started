@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panelMsgLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="3dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="3dp">
+    <com.zipow.videobox.view.PListNameRoleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="@dimen/zm_dimen_smallest">
+        <TextView
+            android:id="@+id/txtScreenName"
+            style="@style/ZMTextView.ExSmall.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingRight="@dimen/zm_dimen_smallest"/>
+        <TextView
+            android:id="@+id/txtExternalUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ZMTextView.Label.Small"
+            android:paddingLeft="@dimen/zm_dimen_smallest"
+            android:paddingRight="@dimen/zm_dimen_smallest"
+            android:gravity="center"
+            android:background="@drawable/zm_lbl_external_user_bg"
+            android:text="@string/zm_lbl_external_128508"
+            android:contentDescription="@string/zm_lbl_external_acc_128508"
+            android:visibility="gone"/>
+    </com.zipow.videobox.view.PListNameRoleLayout>
+    <include
+        layout="@layout/zm_mm_starred_message_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:layout_marginRight="8dp"
+            app:zm_avatarBorderSize="0dp"/>
+
+        <LinearLayout
+            android:id="@+id/panelMessage"
+            style="@style/ZMTextView.MMMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/zm_chatfrom_bg"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCallType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/zm_mm_msg_call_from" />
+
+            <TextView
+                android:id="@+id/txtMessage"
+                style="@style/ZMTextView.MMMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/zm_mm_starred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/zm_mm_starred_message_icon"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zm_mm_msg_state_fail"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
+

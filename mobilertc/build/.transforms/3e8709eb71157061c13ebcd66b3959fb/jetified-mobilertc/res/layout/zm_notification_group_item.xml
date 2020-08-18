@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_list_selector_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/panelNotificationInstant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/zm_setting_item_padding_top"
+        android:paddingBottom="@dimen/zm_setting_item_padding_bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtGroupName"
+            style="@style/ZMTextView.Normal.OnLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_setting_item_padding_left"
+            android:layout_weight="1"
+            android:paddingBottom="3dp"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txtNotifyDes"
+            style="@style/ZMTextView.Small.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_setting_item_padding_left"
+            android:paddingBottom="5dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/listDivider"/>
+</LinearLayout>

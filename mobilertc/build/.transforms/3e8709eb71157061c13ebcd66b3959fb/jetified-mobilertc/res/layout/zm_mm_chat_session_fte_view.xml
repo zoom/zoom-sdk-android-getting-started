@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <com.zipow.videobox.view.EmojiTextView
+        android:id="@+id/txtMessage"
+        style="@style/ZMTextView.MMMessage.OnDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="#233333"
+        />
+    <TextView
+        android:id="@+id/btnSayHi"
+        android:layout_width="wrap_content"
+        style="@style/ZMTextView"
+        android:layout_height="40dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/zm_lbl_say_hi_79032"
+        android:textSize="14sp"
+        android:textColor="@color/zm_white"
+        android:background="@drawable/zm_btn_rounded_rect_blue"
+        />
+</LinearLayout>

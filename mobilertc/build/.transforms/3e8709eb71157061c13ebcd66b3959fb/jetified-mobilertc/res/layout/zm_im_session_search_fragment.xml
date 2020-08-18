@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/ZMTitleBar.Dark"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        android:paddingTop="8dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/panelSearchBar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:layout_alignWithParentIfMissing="true"
+            android:background="@drawable/zm_search_corner_bg" >
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                android:src="@drawable/zm_ic_search" />
+
+            <EditText
+                style="@style/UIKitSearchBar"
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgSearch"
+                android:drawableLeft="@null"
+                android:hint="@string/zm_hint_search"
+                android:maxLines="1"
+                android:inputType="text"
+                android:contentDescription="@string/zm_description_mm_btn_search"
+                android:imeOptions="actionSearch"
+                android:paddingRight="30dp" />
+
+            <ImageButton
+                android:id="@+id/btnClearSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/zm_btn_clear_search_view"
+                android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+                android:background="@null"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/ZMButton.TitleBar.OnDark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zm_btn_cancel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelTitleBar"
+        android:background="@color/zm_title_bar_dark_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/panelFiles"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtTabFilesLabel"
+                style="@style/ZMTextView.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:duplicateParentState="true"
+                android:text="@string/zm_tab_content_search_contents_115433"
+                android:textColor="@drawable/zm_title_tab_text_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/zm_title_tab_indicator_color"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelMessages"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtTabMessagesLabel"
+                style="@style/ZMTextView.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:duplicateParentState="true"
+                android:text="@string/zm_tab_content_search_messages"
+                android:textColor="@drawable/zm_title_tab_text_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/zm_title_tab_indicator_color"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:background="@color/zm_dimmed_forground"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.zipow.videobox.view.mm.MMContentSearchFilesListView
+            android:id="@+id/listViewContentFiles"
+            android:background="@color/zm_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/panel_sort_by"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/zm_ui_kit_color_gray_F7F7FC"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/sort_by_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/zm_im_search_text_hint"
+                    android:text="@string/zm_lbl_search_sort_by_relevant_119637"
+                    android:drawableRight="@drawable/zm_ic_down_arrow_gray"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <com.zipow.videobox.view.mm.MMContentSearchMessagesListView
+                android:id="@+id/listViewContentMessages"
+                android:background="@color/zm_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtEmptyView"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/zm_lbl_content_search_result_empty"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtLoadingError"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/zm_lbl_content_load_error"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtContentLoading"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/zm_ic_conent_loading"
+                android:gravity="center"
+                android:text="@string/zm_lbl_pull_down_refresh_list_loading" />
+
+            <TextView
+                android:id="@+id/txtBlockedByIBMsg"
+                android:textSize="13sp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:textColor="@color/zm_black_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/zm_mm_information_barries_search_message_115072" />
+            <TextView
+                android:id="@+id/txtBlockedByIBFile"
+                android:textSize="13sp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:textColor="@color/zm_black_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/zm_mm_information_barries_search_files_115072" />
+
+        </LinearLayout>
+        <ImageView android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/zm_ic_titlebar_shadow"/>
+    </FrameLayout>
+
+</LinearLayout>

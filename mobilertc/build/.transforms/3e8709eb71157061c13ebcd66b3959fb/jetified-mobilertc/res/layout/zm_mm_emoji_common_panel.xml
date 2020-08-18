@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/panelInstall"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/panelZoomEmojis"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/panelEmojiOneUninstall"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/panelEmojiOne"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_1"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_2"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_3"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_4"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_5"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_6"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_7"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_8"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_9"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_10"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_11"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_12"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_13"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_14"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_15"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_16"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_17"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_18"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_19"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:alpha="0.15"
+                        android:src="@drawable/zm_emoji_one_20"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/panelNoInstall"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ZMTextView.Small.OnLight"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/zm_lbl_more_emoji_23626" />
+
+                <Button
+                    android:id="@+id/btnStartUse"
+                    style="@style/ZMButton.Material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="@string/zm_btn_download" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/panelInstallIng"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingTop="40dp"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    style="@style/ZMProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    style="@style/ZMTextView.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/zm_lbl_wait_moment_23626" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/panelDownloadIng"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ZMTextView.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/txtProcess"
+                    android:text="@string/zm_lbl_download_emoji_process_23626" />
+
+                <ProgressBar
+                    android:layout_width="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="3dp"
+                    style="@style/ZMProgressBar.Horizontal"
+                    android:id="@+id/progressBar"/>
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/ZMButton.Small"
+                    android:textSize="15sp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/zm_btn_cancel" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/panelDownloadError"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/ZMTextView.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/txtDownloadError"
+                    android:text="@string/zm_lbl_emoji_download_error_23626" />
+
+                <Button
+                    style="@style/ZMButton.Material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/txtDownloadError"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/btnRetry"
+                    android:text="@string/zm_btn_retry"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/panelEmojis"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="10000dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:lines="1"
+                style="@style/UIKitTextView.Small.Gray"
+                android:id="@+id/txtCategoryAnchor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:lines="1"
+                android:ellipsize="none"
+                style="@style/UIKitTextView.Small.Gray"
+                android:id="@+id/txtCategoryRight"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:lines="1"
+                android:ellipsize="none"
+                style="@style/UIKitTextView.Small.Gray"
+                android:id="@+id/txtCategoryLeft"/>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/panelEmojiRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/panelEmojiCategories"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

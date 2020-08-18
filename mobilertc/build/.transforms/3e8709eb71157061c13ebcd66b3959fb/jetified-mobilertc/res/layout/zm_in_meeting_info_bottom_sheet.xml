@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/in_meeting_info_bg"
+    android:paddingLeft="@dimen/zm_dialog_margin_24dp"
+    android:paddingTop="30dp"
+    android:paddingRight="@dimen/zm_dialog_margin_24dp"
+    android:paddingBottom="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtMeetingTtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:letterSpacing="0.02"
+            android:maxLines="3"
+            android:text="Hana Song’s Personal Meeting Room"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/zm_ui_kit_text_size_20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/encryptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgEncryption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_encryption_gcm_on_dark" />
+
+            <TextView
+                android:id="@+id/txtEncryption"
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:layout_marginLeft="10dp"
+                android:text="@string/zm_lbl_encryption_gcm_155209" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/zm_dialog_margin_24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtMeetingIdTitle"
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:text="@string/zm_lbl_meeting_id2" />
+
+            <TextView
+                android:id="@+id/txtMeetingIdContent"
+                style="@style/ZMInMeetingInfoItemContent"
+                android:text="888 966 8888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtHostTitle"
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:text="@string/zm_lbl_waiting_room_chat_title_host" />
+
+            <TextView
+                android:id="@+id/txtHostContent"
+                style="@style/ZMInMeetingInfoItemContent"
+                android:text="Hana Song" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passwordContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:text="@string/zm_lbl_password" />
+
+            <TextView
+                android:id="@+id/txtPasswordContent"
+                style="@style/ZMInMeetingInfoItemContent"
+                android:text="124599" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inviteLinkContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:text="@string/zm_lbl_invite_link_151880" />
+
+            <TextView
+                android:id="@+id/txtInviteLinkContent"
+                style="@style/ZMInMeetingInfoItemContent"
+                android:text="https://success.zoom.us/j/92330808057?pwd=bUpqeG5TcU11WDZwV1Z2UzhMQ2NaZz09" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/participantIdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ZMInMeetingInfoItemTitle"
+                android:text="@string/zm_lbl_participant_id" />
+
+            <TextView
+                android:id="@+id/txtParticipantIdContent"
+                style="@style/ZMInMeetingInfoItemContent"
+                android:text="18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDataCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/zm_dialog_margin_24dp"
+            android:letterSpacing="-0.01"
+            android:text="You are connected to the Zoom global network via a data center in the United States."
+            android:textColor="@color/zm_v2_txt_secondary_ondark"
+            android:textSize="@dimen/zm_ui_kit_text_size_13sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

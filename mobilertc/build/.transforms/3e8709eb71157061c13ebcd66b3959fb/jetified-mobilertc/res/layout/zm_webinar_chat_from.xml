@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="16dp">
+
+    <LinearLayout
+        android:id="@+id/layoutMsgHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="65dp"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="20dp" >
+
+        <TextView
+            android:id="@+id/txtMsgLabel"
+            style="@style/ZMTextView.ExSmall.ForInMeetingChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="From Andy to Everyone" />
+
+        <TextView
+            android:id="@+id/txtPrivateStatus"
+            style="@style/ZMTextView.Small.Warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/zm_webinar_txt_private_label" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/txtMsgContainer"
+        android:layout_width="wrap_content"
+        android:background="@drawable/zm_webinar_message_in"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="65dp"
+        android:layout_height="wrap_content">
+        <us.zoom.androidlib.widget.ZMTextView
+            android:id="@+id/txtMsgValue"
+            style="@style/ZMTextView.MMMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="false"
+            app:showLink="true"
+            android:text="This is webinar messageddddddddddddddddddddddddd\nThis is webinar message" />
+    </FrameLayout>
+
+</LinearLayout>

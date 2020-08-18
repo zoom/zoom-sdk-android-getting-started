@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/slash_command_item_top_blank"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/slash_command_item_owner_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="24dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/slash_command_item_owner_avatar"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            >
+        </com.zipow.videobox.view.AvatarView>
+
+        <TextView
+            android:id="@+id/slash_command_item_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/zm_ui_kit_color_gray_747487"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Giphy"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/zm_slash_popup_item_bg"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/slash_command_item_command_profix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/UIKitTextView.CellTitle"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:text="/giphy"
+                />
+            <TextView
+                android:id="@+id/slash_command_item_command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                style="@style/UIKitTextView.CellTitle"
+                android:singleLine="true"
+                android:text="test"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/slash_command_item_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+            android:layout_marginTop="3dp"
+            android:text="post a random gif"/>
+    </LinearLayout>
+</LinearLayout>

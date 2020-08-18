@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/llUserItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_btn_width_48dp"
+        android:layout_marginLeft="@dimen/zm_margin_normal"
+        android:layout_marginTop="@dimen/zm_margin_small_6dp"
+        android:layout_marginRight="@dimen/zm_margin_normal"
+        android:layout_marginBottom="@dimen/zm_margin_small_6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="@dimen/zm_view_height_40dp"
+            android:layout_height="@dimen/zm_view_height_40dp"
+            android:layout_margin="@dimen/zm_margin_small" />
+
+        <com.zipow.videobox.view.PListNameRoleLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/zm_sip_income_avatar_padding">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                style="@style/UIKitTextView.CellTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/zm_margin_normal"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/zm_picker_dropdown_text_color_normal" />
+        </com.zipow.videobox.view.PListNameRoleLayout>
+
+        <ImageView
+            android:id="@+id/imUserSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/zm_margin_normal"
+            android:contentDescription="@string/zm_btn_select"
+            android:src="@drawable/ic_item_select" />
+    </LinearLayout>
+
+
+</LinearLayout>

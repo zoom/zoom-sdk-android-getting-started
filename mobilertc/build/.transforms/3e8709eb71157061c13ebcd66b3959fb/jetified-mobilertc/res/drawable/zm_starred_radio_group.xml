@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="10dp"></corners>
+    <solid android:color="@color/zm_starred_radio_group_bg"> </solid>
+    <size android:height="26dp" android:width="240dp"></size>
+</shape>

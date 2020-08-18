@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zm_picker_bottom_bar_height"
+    android:background="@color/zm_picker_dark_title_bg"
+    >
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/zm_picker_dropdown_bg"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:text="@string/zm_picker_all_image"
+        android:textColor="@color/zm_picker_dropdown_text_color"
+        android:textSize="@dimen/zm_picker_text_size_normal"
+        />
+
+    <CheckBox
+        android:id="@+id/rbSource"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/zm_picker_rb_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/zm_picker_check_source"
+        android:textColor="@color/zm_picker_btn_text_color"
+        android:textSize="@dimen/zm_picker_text_size_normal"
+        />
+
+    <TextView
+        android:id="@+id/btnPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/zm_picker_preview_with_count"
+        android:textColor="@color/zm_picker_btn_text_color"
+        android:textSize="@dimen/zm_picker_text_size_normal"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/zm_ui_kit_color_white_ffffff"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/zm_ic_selected_big"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_sip_transfer_success_61381"
+        style="@style/UIKitTextView.DialogTitle"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        />
+</LinearLayout>

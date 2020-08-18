@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelDeleteAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F8F8"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/zm_sip_select_all_61381"
+        android:textColor="#0E71EB"
+        android:layout_marginBottom="15dp"
+        android:textSize="17sp"
+        android:layout_marginLeft="16dp"/>
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/delete"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="12dp"
+        android:contentDescription="@string/zm_btn_delete"
+        android:src="@drawable/zm_sip_delete_button" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/zm_white"
+    android:minHeight="50dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp" >
+    <com.zipow.videobox.view.PListNameRoleLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp">
+           <TextView
+            android:id="@+id/txtGroupName"
+            style="@style/UIKitTextView.CellTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:id="@+id/txtJoined"
+            style="@style/UIKitTextView.CellTitle"
+            android:textColor="@color/zm_ui_kit_color_gray_747487"
+            android:textSize="@dimen/zm_ui_kit_text_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/zm_description_mm_joined_69826" />
+    </com.zipow.videobox.view.PListNameRoleLayout>
+
+
+</LinearLayout>

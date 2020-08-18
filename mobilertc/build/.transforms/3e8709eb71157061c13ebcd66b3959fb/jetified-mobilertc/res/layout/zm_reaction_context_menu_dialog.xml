@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/emoji_panel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
+
+        <ViewStub
+            android:id="@+id/emoji_panel_view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout="@layout/zm_reaction_emoji_panel_view"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <com.zipow.videobox.view.mm.ReactionEmojiContextMenuHeaderView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        />
+</RelativeLayout>

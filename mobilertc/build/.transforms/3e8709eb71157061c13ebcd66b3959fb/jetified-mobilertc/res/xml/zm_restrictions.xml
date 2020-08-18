@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- all items in this section are saved to app setting file, and then discarded, users can not change them in app/web later-->
+    <restriction
+        android:title="@string/zm_mdm_mandatory_options_51221"
+        android:description="@string/zm_restrictions_mandatory_des_117199"
+        android:key="ZoomMandatoryOptions"
+        android:restrictionType="string"
+        android:defaultValue = "@string/zm_restrictions_mandatory_des_117199"
+        />
+    <!--mandatory zPolicy_PrefillSSOHost-->
+    <restriction
+        android:title="@string/zm_restrictions_set_sso_url_policy"
+        android:description="@string/zm_restrictions_mandatory_set_sso_url_explain"
+        android:key="mandatory:SetSSOURL"
+        android:restrictionType="string"
+        />
+
+    <!--mandatory zPolicy_ForceSSOHost-->
+    <restriction
+        android:title="@string/zm_restrictions_force_sso_url_policy"
+        android:description="@string/zm_restrictions_force_sso_url_explain"
+        android:key="mandatory:ForceSSOURL"
+        android:restrictionType="string"
+        />
+    <!--mandatory zPolicy_DefaultLoginWithSSO-->
+    <restriction
+        android:title="@string/zm_restrictions_force_login_with_sso_policy"
+        android:description="@string/zm_restrictions_mandatory_force_login_with_sso_explain"
+        android:key="mandatory:choice:ForceLoginWithSSO"
+        android:entries="@array/zm_mdm_three_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableVideoCamera-->
+    <restriction
+        android:title="@string/zm_restrictions_turnoff_video_camera_on_join_policy"
+        android:description="@string/zm_restrictions_mandatory_turnoff_video_camera_on_join_explain"
+        android:key="mandatory:choice:TurnOffVideoCameraOnJoin"
+        android:entries="@array/zm_mdm_three_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableLoginWithSSO-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_login_with_sso_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_login_with_sso_explain"
+        android:key="mandatory:choice:DisableLoginWithSSO"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableGoogleLogin-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_google_login_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_google_login_explain"
+        android:key="mandatory:choice:DisableGoogleLogin"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableFacebookLogin-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_facebook_login_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_facebook_login_explain"
+        android:key="mandatory:choice:DisableFacebookLogin"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableScreenShare-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_share_screen_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_share_screen_explain"
+        android:key="mandatory:choice:DisableShareScreen"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableDirectShare-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_direct_share_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_direct_share_explain"
+        android:key="mandatory:choice:DisableDirectShare"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableDesktopShare-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_desktop_share_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_desktop_share_explain"
+        android:key="mandatory:choice:DisableDesktopShare"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableWhiteBoard-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_whiteboard_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_whiteboard_explain"
+        android:key="mandatory:choice:DisableWhiteBoard"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableSendVideo-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_video_camera_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_video_camera_explain"
+        android:key="mandatory:choice:DisableVideoCamera"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableReceiveVideo-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_receive_video_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_receive_video_explain"
+        android:key="mandatory:choice:DisableReceiveVideo"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_DisableComputerAudio-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_device_audio_policy"
+        android:description="@string/zm_restrictions_mandatory_disable_device_audio_explain"
+        android:key="mandatory:choice:DisableComputerAudio"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+
+
+    <!--mandatory zPolicy_EnableCloudSwitch-->
+    <restriction
+        android:title="@string/zm_restrictions_enable_cloud_switch_policy"
+        android:description="@string/zm_restrictions_mandatory_enable_cloud_switch_explain"
+        android:key="mandatory:choice:EnableCloudSwitch"
+        android:entries="@array/zm_mdm_three_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_ShowConfirmDialogWhenWebJoin-->
+    <restriction
+        android:title="@string/zm_restrictions_show_confirm_dialog_when_web_join_policy"
+        android:description="@string/zm_restrictions_mandatory_show_confirm_dialog_when_web_join_explain"
+        android:key="mandatory:choice:ShowConfirmDialogWhenWebJoin"
+        android:entries="@array/zm_mdm_three_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+    <!--mandatory zPolicy_AutoHideNoVideoUsers-->
+    <restriction
+        android:title="@string/zm_restrictions_auto_hide_no_video_users_policy"
+        android:description="@string/zm_restrictions_mandatory_auto_hide_no_video_users_explain"
+        android:key="mandatory:choice:AutoHideNoVideoUsers"
+        android:entries="@array/zm_mdm_three_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+    <!--mandatory zPolicy_DomainsThatCanLoginWith-->
+    <restriction
+        android:title="@string/zm_restrictions_domains_that_can_login_with_policy"
+        android:description="@string/zm_restrictions_mandatory_domains_that_can_login_with_explain"
+        android:key="mandatory:SetEmailDomainsRestrictedToLogin"
+        android:restrictionType="string"
+        />
+    <!--mandatory zPolicy_EnforceSignInToJoin-->
+    <restriction
+        android:title="@string/zm_restrictions_enforce_sign_in_to_join_policy"
+        android:description="@string/zm_restrictions_mandatory_enforce_sign_in_to_join_explain"
+        android:key="mandatory:choice:EnforceSignInToJoin"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+    <!--mandatory zPolicy_CanOnlyJoinMeetingOfAccountID-->
+    <restriction
+        android:title="@string/zm_restrictions_can_only_join_meeting_of_account_ID"
+        android:description="@string/zm_restrictions_mandatory_can_only_join_meeting_of_account_ID_explain"
+        android:key="mandatory:SetAccountIDsRestrictedToJoin"
+        android:restrictionType="string"
+        />
+    <!--mandatory zPolicy_EnableAutoUploadDumps -->
+    <restriction
+        android:title="@string/zm_restrictions_enable_auto_upload_dumps"
+        android:description="@string/zm_restrictions_mandatory_enable_auto_upload_dumps_explain"
+        android:key="mandatory:choice:EnableAutoUploadDumps"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+
+
+    <!-- all items in this section are saved to app setting file, and then discarded, users can change them in app/web later-->
+    <restriction
+        android:title="@string/zm_mdm_recommend_options_51221"
+        android:description="@string/zm_restrictions_des_117199"
+        android:key="ZoomRecommendOptions"
+        android:restrictionType="string"
+        android:defaultValue = "@string/zm_restrictions_des_117199"
+        />
+    <!--recommend zPolicy_PrefillSSOHost-->
+    <restriction
+        android:title="@string/zm_restrictions_set_sso_url_policy"
+        android:description="@string/zm_restrictions_set_sso_url_explain"
+        android:key="recommend:SetSSOURL"
+        android:restrictionType="string"
+        />
+        <!--recommend zPolicy_ForceSSOHost-->
+    <restriction
+        android:title="@string/zm_restrictions_force_sso_url_policy"
+        android:description="@string/zm_restrictions_mandatory_force_sso_url_explain"
+        android:key="recommend:ForceSSOURL"
+        android:restrictionType="string"
+        />
+    <!--recommend zPolicy_DefaultLoginWithSSO-->
+    <restriction
+        android:title="@string/zm_restrictions_force_login_with_sso_policy"
+        android:description="@string/zm_restrictions_force_login_with_sso_explain"
+        android:key="recommend:choice:ForceLoginWithSSO"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+    <!--recommend zPolicy_DisableVideoCamera-->
+    <restriction
+        android:title="@string/zm_restrictions_turnoff_video_camera_on_join_policy"
+        android:description="@string/zm_restrictions_turnoff_video_camera_on_join_explain"
+        android:key="recommend:choice:TurnOffVideoCameraOnJoin"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+    <!--recommend zPolicy_AutoHideNoVideoUsers-->
+    <restriction
+        android:title="@string/zm_restrictions_auto_hide_no_video_users_policy"
+        android:description="@string/zm_restrictions_auto_hide_no_video_users_explain"
+        android:key="recommend:choice:AutoHideNoVideoUsers"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+
+    <!--recommend zPolicy_DisableDirectShare-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_direct_share_policy"
+        android:description="@string/zm_restrictions_disable_direct_share_explain"
+        android:key="recommend:choice:DisableDirectShare"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+
+    <!--recommend zPolicy_DisableDesktopShare-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_desktop_share_policy"
+        android:description="@string/zm_restrictions_disable_desktop_share_explain"
+        android:key="recommend:choice:DisableDesktopShare"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+
+    <!--recommend zPolicy_DisableWhiteBoard-->
+    <restriction
+        android:title="@string/zm_restrictions_disable_whiteboard_policy"
+        android:description="@string/zm_restrictions_disable_whiteboard_explain"
+        android:key="recommend:choice:DisableWhiteBoard"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+    <!--recommend zPolicy_DomainsThatCanLoginWith-->
+    <restriction
+        android:title="@string/zm_restrictions_domains_that_can_login_with_policy"
+        android:description="@string/zm_restrictions_domains_that_can_login_with_explain"
+        android:key="recommend:SetEmailDomainsRestrictedToLogin"
+        android:restrictionType="string"
+        />
+    <!--recommend zPolicy_EnforceSignInToJoin-->
+    <restriction
+        android:title="@string/zm_restrictions_enforce_sign_in_to_join_policy"
+        android:description="@string/zm_restrictions_enforce_sign_in_to_join_explain"
+        android:key="recommend:choice:EnforceSignInToJoin"
+        android:entries="@array/zm_mdm_three_choice_able_entry_51221"
+        android:entryValues="@array/zm_mdm_three_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_default_value_51221"
+        />
+    <!--recommend zPolicy_CanOnlyJoinMeetingOfAccountID-->
+    <restriction
+        android:title="@string/zm_restrictions_can_only_join_meeting_of_account_ID"
+        android:description="@string/zm_restrictions_can_only_join_meeting_of_account_ID_explain"
+        android:key="recommend:SetAccountIDsRestrictedToJoin"
+        android:restrictionType="string"
+        />
+    <!--recommend zPolicy_EnableAutoUploadDumps-->
+    <restriction
+        android:title="@string/zm_restrictions_enable_auto_upload_dumps"
+        android:description="@string/zm_restrictions_enable_auto_upload_dumps_explain"
+        android:key="recommend:choice:EnableAutoUploadDumps"
+        android:entries="@array/zm_mdm_two_choice_entry_51221"
+        android:entryValues="@array/zm_mdm_two_choice_entry_values_51221"
+        android:restrictionType="choice"
+        android:defaultValue = "@string/zm_mdm_choice_entry_no_value_51221"
+        />
+
+
+</restrictions>

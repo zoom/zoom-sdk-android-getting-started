@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/id_mobile_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/zm_annotate_bar_color">
+
+        <TextView
+            android:id="@+id/id_mobile_close"
+            android:layout_width="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/zm_anno_wb_mobile_close_normal"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/id_mobile_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/id_mobile_redo"
+            android:drawableLeft="@drawable/zm_anno_undo_mobile"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/id_mobile_redo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/zm_anno_redo_mobile"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.zipow.annotate.AnnotateView
+            android:id="@+id/annotateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="#00FFFFFF" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_anno_edit_bg"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLength="500"
+            android:minWidth="30dp"
+            android:minHeight="40dp"
+            android:padding="5dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/annotate_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/annotate_bar_height"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/zm_annotate_bar_color">
+
+        <TextView
+            android:id="@+id/id_wb_undo"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/zm_anno_undo_wb"
+            android:gravity="center"
+            android:contentDescription="@string/zm_bnt_undo"/>
+
+        <TextView
+            android:id="@+id/id_wb_redo"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/id_wb_undo"
+            android:drawableLeft="@drawable/zm_anno_redo_wb"
+            android:gravity="center"
+            android:contentDescription="@string/zm_bnt_redo"/>
+
+        <LinearLayout
+            android:id="@+id/id_wb_annotate_control_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center|center_horizontal|center_vertical">
+
+            <TextView
+                android:id="@+id/id_wb_pen"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_pen_wb"
+                android:focusable="true"
+                android:contentDescription="@string/zm_btn_pen"/>
+
+            <TextView
+                android:id="@+id/id_wb_erase"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_erase_wb"
+                android:focusable="true"
+                android:contentDescription="@string/zm_btn_erase"/>
+
+            <TextView
+                android:id="@+id/id_wb_black_color"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_black_color_selector"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_black_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_red_color"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_red_color_selector"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_red_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_yellow_color"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_yellow_color_selector"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_yellow_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_green_color"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_green_color_selector"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_green_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_blue_color"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_blue_color_selector"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_blue_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_text"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_text_wb"
+                android:focusable="true"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_btn_text_15986"/>
+
+            <TextView
+                android:id="@+id/id_wb_lineWidth"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_line_width_wb"
+                android:focusable="true"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_msg_line_width"/>
+
+            <TextView
+                android:id="@+id/id_wb_Spotlight"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_spolight"
+                android:focusable="true"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_btn_spotlight"/>
+
+            <TextView
+                android:id="@+id/id_wb_shrink"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_shrink"
+                android:focusable="true"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_anno_accessibility_hide_advanced_tools_46296"/>
+
+            <TextView
+                android:id="@+id/id_wb_extend"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_extend"
+                android:focusable="true"
+                android:contentDescription="@string/zm_anno_accessibility_more_tools_46296"/>
+
+            <TextView
+                android:id="@+id/id_mobile_clean"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_clean"
+                android:focusable="true"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_bnt_clear"/>
+
+            <TextView
+                android:id="@+id/id_mobile_more"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_more"
+                android:visibility="gone"
+                android:contentDescription="@string/zm_btn_more_no_dot"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/cleanBtn"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/pageManagementLayout"
+            android:drawableLeft="@drawable/zm_anno_clean"
+            android:focusable="true" />
+
+        <RelativeLayout
+            android:id="@+id/pageManagementLayout"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/newPageBtn"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_view_all_whiteboards_46296">
+
+            <TextView
+                android:id="@+id/pageManagementBtn"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/zm_anno_page_num"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/pageNumTextView"
+                android:layout_width="15dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="12"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/newPageBtn"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/moreBtn"
+            android:drawableLeft="@drawable/zm_anno_new_page"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_new_whiteboard_46296"/>
+
+        <TextView
+            android:id="@+id/moreBtn"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/zm_anno_more" />
+
+
+    </RelativeLayout>
+
+    <us.zoom.androidlib.widget.ZMToolbarLayout
+        android:id="@+id/drawingtools"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/zm_annoter_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/shareEditBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/zm_description_btn_share_stop_draw"
+            android:src="@drawable/zm_share_drawing_btn_pressed2x" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnSpotlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_spotlight"
+            zoom:zm_text="@string/zm_btn_spotlight" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnPen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            zoom:zm_icon="@drawable/zm_anno_pen"
+            zoom:zm_text="@string/zm_btn_pen" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnHighlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            zoom:zm_icon="@drawable/zm_anno_highlight"
+            zoom:zm_text="@string/zm_btn_highlight" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnAutoLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_line"
+            zoom:zm_text="@string/zm_btn_autoLine" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_arrow"
+            zoom:zm_text="@string/zm_btn_arrow" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_rectangle"
+            zoom:zm_text="@string/zm_btn_rectangle" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnOval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_oval"
+            zoom:zm_text="@string/zm_btn_oval" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            zoom:zm_icon="@drawable/zm_anno_text"
+            zoom:zm_text="@string/zm_btn_text_15986" />
+
+        <RelativeLayout
+            android:id="@+id/btnColorIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+            <com.zipow.videobox.share.ColorSelectedImage
+                android:id="@+id/colorImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:duplicateParentState="true"
+                android:src="@drawable/zm_anno_circle" />
+
+            <TextView
+                style="@style/ZMTextView.ToolbarBtnLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/colorImage"
+                android:layout_centerHorizontal="true"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/zm_btn_color" />
+        </RelativeLayout>
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnErase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            zoom:zm_icon="@drawable/zm_anno_erase"
+            zoom:zm_text="@string/zm_btn_erase" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_undo"
+            zoom:zm_text="@string/zm_bnt_undo" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnRedo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_redo"
+            zoom:zm_text="@string/zm_bnt_redo" />
+
+        <com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            zoom:zm_icon="@drawable/zm_anno_clear"
+            zoom:zm_text="@string/zm_bnt_clear" />
+    </us.zoom.androidlib.widget.ZMToolbarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/drawingTexttools"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/annotate_bar_height"
+        android:paddingLeft="12dp"
+        android:background="@color/zm_annoter_background">
+
+        <TextView
+            android:id="@+id/id_anno_text_bold"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:drawableLeft="@drawable/zm_anno_text_bold_default"
+            android:contentDescription="@string/zm_anno_accessibility_bold_46296"/>
+
+        <TextView
+            android:id="@+id/id_anno_text_italic"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="164dp"
+            android:focusable="true"
+            android:drawableLeft="@drawable/zm_anno_text_italic_default"
+            android:contentDescription="@string/zm_anno_accessibility_italic_46296"/>
+
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/zm_annotate_bar_color"
+            android:textSize="24px" />
+
+        <SeekBar
+            android:id="@+id/id_anno_text_font_size_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="200dp"
+            android:layout_gravity="center_vertical"
+            android:max="36"
+            android:progress="0"/>
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/zm_annotate_bar_color"
+            android:textSize="34px" />
+
+        <TextView
+            android:id="@+id/id_anno_text_black"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/zm_anno_text_black_color_selector"
+            android:focusable="true"
+            android:minWidth="36dp"
+            android:contentDescription="@string/zm_anno_accessibility_black_46296"/>
+
+        <TextView
+            android:id="@+id/id_anno_text_red"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/zm_anno_text_red_color_selector"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_accessibility_red_46296"/>
+
+        <TextView
+            android:id="@+id/id_anno_text_yellow"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/zm_anno_text_yellow_color_selector"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_accessibility_yellow_46296"/>
+
+        <TextView
+            android:id="@+id/id_anno_text_green"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/zm_anno_text_green_color_selector"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_accessibility_green_46296"/>
+
+        <TextView
+            android:id="@+id/id_anno_text_blue"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/zm_anno_text_blue_color_selector"
+            android:focusable="true"
+            android:contentDescription="@string/zm_anno_accessibility_blue_46296"/>
+    </LinearLayout>
+
+</LinearLayout>
+

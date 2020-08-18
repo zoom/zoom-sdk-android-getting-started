@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <bitmap android:src="@drawable/zm_sip_ic_mute_off_normal" android:alpha="@integer/zm_sip_ic_diable_alpha"/>
+    </item>
+    <item android:state_selected="true" android:drawable="@drawable/zm_sip_ic_mute_on"/>
+    <item android:drawable="@drawable/zm_sip_ic_mic_volume"/>
+</selector>

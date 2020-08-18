@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.DialogTitle.17SP"
+        android:text="@string/zm_pbx_switch_to_carrier_title_102668"
+        android:gravity="center"
+        android:layout_marginTop="23dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.SecondaryText.Medium"
+        android:text="@string/zm_pbx_switch_to_carrier_message_102668"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="@style/UIKitTextView.CellTitle"
+        android:layout_marginTop="22dp"
+        android:id="@+id/editNumber"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:inputType="phone"
+        android:textCursorDrawable="@drawable/zm_material_edittext_cursor"
+        android:hint="@string/zm_pbx_switch_to_carrier_number_hint_102668"
+        android:gravity="center_horizontal"
+        android:background="@null"
+        android:maxLength="16"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/zm_highlight"
+        android:layout_marginTop="3dp"/>
+</LinearLayout>

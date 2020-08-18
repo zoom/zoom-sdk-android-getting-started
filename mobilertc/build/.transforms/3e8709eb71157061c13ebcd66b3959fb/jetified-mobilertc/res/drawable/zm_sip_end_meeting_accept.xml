@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/zm_sip_end_meeting_accept_normal" android:alpha="0.75"/>
+    </item>
+    <item android:drawable="@drawable/zm_sip_end_meeting_accept_normal"/>
+</selector>

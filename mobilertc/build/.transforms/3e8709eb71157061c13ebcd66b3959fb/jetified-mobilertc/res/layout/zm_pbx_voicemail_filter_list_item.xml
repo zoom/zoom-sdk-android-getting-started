@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/txtLabel"
+        style="@style/UIKitTextView.BuddyName.Bold.Blue.Selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        tools:text="Namefdsaffffffffffffffffffffffffffffffffffffffffffew"
+        android:layout_marginRight="18dp"/>
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/zm_ic_selected"
+        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+        android:id="@+id/ivSelect"
+        android:visibility="visible"
+        />
+
+</LinearLayout>

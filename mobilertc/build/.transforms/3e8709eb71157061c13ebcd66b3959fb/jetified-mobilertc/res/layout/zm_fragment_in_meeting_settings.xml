@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_close" />
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_setting_meeting" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <us.zoom.androidlib.widget.ZMSettingsLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="10dp"
+            zoom:zm_settingsCategorySpacing="0dp">
+            <include
+                layout="@layout/zm_in_meeting_settings_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Add watermark to share content option-->
+<!--            <us.zoom.androidlib.widget.ZMSettingsCategory-->
+<!--                android:id="@+id/optionWatermark"-->
+<!--                android:visibility="visible"-->
+<!--                zoom:zm_showTopDivider="false"-->
+<!--                zoom:zm_dividerHeight="1px"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:orientation="vertical"-->
+<!--                >-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:focusable="true"-->
+<!--                    android:gravity="left|center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingRight="@dimen/zm_setting_item_padding_right">-->
+
+<!--                    <TextView-->
+<!--                        style="@style/ZMTextView.SettingsItem"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="left|center_vertical"-->
+<!--                        android:text="@string/zm_lbl_in_meeting_settings_add_watermark_147675" />-->
+
+<!--                    <us.zoom.androidlib.widget.ZMCheckedTextView-->
+<!--                        android:id="@+id/chkWatermark"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checkMark="@drawable/zm_btn_toggle_default"-->
+<!--                        android:clickable="false" />-->
+<!--                </LinearLayout>-->
+<!--            </us.zoom.androidlib.widget.ZMSettingsCategory>-->
+            <include
+                layout="@layout/zm_in_meeting_settings_content_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/zm_in_meeting_settings_host_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <include
+                layout="@layout/zm_in_meeting_settings_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </us.zoom.androidlib.widget.ZMSettingsLayout>
+
+    </ScrollView>
+</LinearLayout>

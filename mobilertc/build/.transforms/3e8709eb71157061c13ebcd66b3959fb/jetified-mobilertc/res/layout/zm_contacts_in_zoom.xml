@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="-1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="-1dp"
+        android:layout_height="@dimen/zm_pt_titlebar_height">
+
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:weightSum="1"
+            zoom:zm_leftButton="@+id/btnCancel"
+            zoom:zm_rightButton="@+id/btnNext"
+            zoom:zm_title="@+id/txtTitle">
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/ZMBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_cancel" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                android:id="@+id/txtTitle"
+                style="@style/ZMTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/zm_title_my_phone_contacts_33300" />
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+        <RelativeLayout
+            android:id="@+id/panelSearchBarReal"
+            style="@style/ZMTitleBar"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/zm_search_corner_bg"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/zm_ic_search" />
+
+                <EditText
+                    android:id="@+id/edtSearchReal"
+                    style="@style/ZMEditText.GlobalSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgSearch"
+                    android:hint="@string/zm_hint_search_call_14480"
+                    android:imeOptions="actionDone"
+                    android:paddingRight="30dp" />
+
+                <Button
+                    android:id="@+id/btnClearSearchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/zm_btn_clear_search_view"
+                    android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/panelSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            style="@style/ZMEditText.ContextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/zm_hint_search"
+            android:imeOptions="actionDone" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/zm_btn_clear_search_view"
+            android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/zm_ic_titlebar_shadow" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/panelListViews">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/zm_listview_bg">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <us.zoom.androidlib.widget.QuickSearchListView
+                    android:id="@+id/contactListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/zm_white"
+                    android:id="@+id/emptyView"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ZMTextView.Normal.Dimmed747487"
+                        android:text="@string/zm_lbl_search_result_empty"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnInviteZoom"
+                        android:padding="10dp"
+                        style="@style/ZMTextView.Normal.OnDark"
+                        android:background="@drawable/zm_btn_add_buddy_invite"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/zm_lbl_invite_zoom_33300"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/zm_fragment_starred_contact_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/zm_fragment_starred_contact_emptyView"
+        android:visibility="gone"
+        android:gravity="center">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="16sp"
+             android:textColor="@color/zm_text_light_dark"
+             android:singleLine="true"
+             android:text="@string/zm_mm_starred_channel_empty_title_owp40"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/zm_starred_empty_text"
+            android:text="@string/zm_mm_starred_channel_empty_owp40"/>
+    </LinearLayout>
+</LinearLayout>

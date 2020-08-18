@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/panelMsgLayout"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="20dp" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/lable"
+        android:background="@color/zm_ui_kit_color_red_E02828"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.SecondaryText.Small.warn"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/lable"
+        android:text="@string/zm_lbl_below_new_comment_88133"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/lable"
+        android:layout_marginRight="40dp"
+        android:background="@color/zm_ui_kit_color_red_E02828"
+        />
+</RelativeLayout>

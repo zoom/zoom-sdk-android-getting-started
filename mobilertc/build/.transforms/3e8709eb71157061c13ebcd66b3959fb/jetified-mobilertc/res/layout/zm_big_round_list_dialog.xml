@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:paddingTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.DialogTitle"
+            android:text="@string/zm_sip_title_my_caller_id_61381"
+            android:id="@+id/tv_title"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+            android:id="@+id/tv_subtitle"
+            tools:text="Your Ext. 12345"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="6dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/zm_dialog_close"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:contentDescription="@string/zm_btn_close"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:id="@+id/iv_close"-->
+        <!--/>-->
+
+    <View
+        style="@style/ZMLightLine"
+        android:layout_marginTop="20dp"
+        android:id="@+id/line1"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/listview"
+        android:divider="@drawable/zm_list_divider"
+        android:dividerHeight="1px"
+        android:listSelector="@drawable/zm_picker_material_item_bg"
+        android:layout_marginLeft="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:scrollbars="none"></ListView>
+
+    <View
+        style="@style/ZMLightLine"
+        android:id="@+id/line2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UIKitTextView.LargeTitle.Clickable"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/btn_close"
+        android:text="@string/zm_btn_close"
+        android:contentDescription="@string/zm_btn_close"
+        android:background="@drawable/zm_ui_kit_big_round_dialog_bottom_btn_transparent_selector"
+        />
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zm_white"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/imgAudioConnected"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/zm_audio_connected"
+            android:visibility="gone"
+            android:layout_marginRight="6dp"
+           />
+       <TextView
+        android:id="@+id/txtTitle"
+        style="@style/ZMTextView.Large.DialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="@string/zm_title_audio_not_connected_45416" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtMsg"
+        style="@style/ZMTextView.Normal.DialogMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:text="@string/zm_msg_audio_not_connected_45416" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:paddingTop="0.5dip"
+        android:background="@color/zm_split_bg"
+        android:paddingBottom="0dip">
+        <Button
+            android:id="@+id/btCancel"
+            style="@style/ZMButton.Dialog"
+            android:layout_width="0dip"
+            android:padding="15dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/zm_btn_cancel" />
+
+        <Button
+            android:id="@+id/btRaiseHand"
+            style="@style/ZMButton.Dialog.HappyPath"
+            android:layout_width="0dip"
+            android:textColor="@color/zm_popitem_text_color"
+            android:padding="15dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/zm_btn_raise_hand" />
+    </LinearLayout>
+
+</LinearLayout>

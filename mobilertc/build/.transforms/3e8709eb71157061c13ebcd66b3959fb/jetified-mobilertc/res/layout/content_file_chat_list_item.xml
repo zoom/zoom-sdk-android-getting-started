@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:weightSum="1"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:baselineAligned="false"
+    android:background="@drawable/zm_list_selector_background">
+
+    <RelativeLayout
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:duplicateParentState="true" >
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:duplicateParentState="true"
+            zoom:zm_cornerRadiusRatio="0.32"
+            zoom:zm_description_enable="false"/>
+
+        <com.zipow.videobox.view.PresenceStateView
+            android:id="@+id/imgPresence"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            zoom:zm_subpresence_type="0">
+        </com.zipow.videobox.view.PresenceStateView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:id="@+id/imgE2EFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:visibility="gone"
+                    android:src="@drawable/zm_e2e_flag" />
+
+                <us.zoom.androidlib.widget.ZMEllipsisTextView
+                    android:id="@+id/txtTitle"
+                    style="@style/UIKitTextView.CellTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:ellipsize="end"
+                    android:drawablePadding="5dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTime"
+                style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <com.zipow.videobox.view.EmojiTextView
+                android:id="@+id/txtMessage"
+                style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/hint_layout"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="" />
+            <LinearLayout
+                android:id="@+id/hint_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/unreadBubble"
+                    android:background="@drawable/zm_ic_red_dot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:duplicateParentState="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text=""
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgBell"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:src="@drawable/zm_bell"/>
+
+                <TextView
+                    android:id="@+id/txtNoteBubble"
+                    style="@style/ZMTextView.UnreadMessageCount.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_call_incall_bg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    >
+
+    <com.zipow.videobox.view.SimpleAnimCloseView
+        android:id="@+id/btn_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/zm_ui_kit_page_left_padding"
+        android:layout_marginTop="10dp"/>
+
+    <com.zipow.videobox.view.sip.SipIncomeAvatar
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/zm_sip_income_avatar_bg1_size"
+        android:layout_height="@dimen/zm_sip_income_avatar_bg1_size"
+        android:layout_above="@id/tvBuddyName"
+        android:layout_marginBottom="27dp"
+        app:backgroundStyle="light"
+        android:layout_centerHorizontal="true"
+        ></com.zipow.videobox.view.sip.SipIncomeAvatar>
+
+    <TextView
+        android:id="@+id/tvBuddyName"
+        style="@style/UIKitTextView.BuddyName.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        tools:text="Jason ShenJason ShenJason ShenJason ShenJason ShenJason ShenJason Shen"
+        android:layout_centerInParent="true"
+        android:paddingBottom="30dp"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBuddyName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="-26dp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        tools:text="@string/zm_sip_income_status_text_26673"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/panelCallType"
+        android:layout_below="@+id/tvStatus"
+        android:layout_above="@+id/panelCallBtns"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvCallingForTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/zm_ui_kit_text_size_11sp"
+            android:textColor="@color/zm_ui_kit_color_gray_747487"
+            android:text="FOR"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:id="@+id/tvCallingFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/zm_ui_kit_text_size_20sp"
+                android:gravity="center"
+                android:textColor="@color/zm_ui_kit_color_black_232333"
+                android:lineSpacingExtra="2sp"
+                android:visibility="visible"
+                android:textStyle="bold"
+                tools:text="Boss Line1"
+                android:ellipsize="end"/>
+
+            <com.zipow.videobox.view.PresenceStateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/presenceStateView"
+                android:visibility="visible"></com.zipow.videobox.view.PresenceStateView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvCallingForNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:gravity="center"
+            android:textColor="@color/zm_ui_kit_color_black_232333"
+            android:lineSpacingExtra="2sp"
+            android:visibility="visible"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            tools:text="123123123"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/panelCallBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:id="@+id/panelEndAcceptCall"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btnEndAcceptCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:src="@drawable/zm_sip_end_accept"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/zm_sip_end_accept_61381"
+                />
+
+            <TextView
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtEndAcceptCall"
+                android:text="@string/zm_sip_end_accept_61381"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:id="@+id/panelEndCall"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btnEndCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:contentDescription="@string/zm_btn_decline"
+                android:scaleType="fitXY"
+                android:src="@drawable/zm_sip_end_call" />
+
+            <TextView
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtEndCall"
+                android:text="@string/zm_btn_decline"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:id="@+id/panelAcceptCall"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btnAcceptCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:src="@drawable/zm_sip_start_call_nodisable"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/zm_btn_accept_call_14480"
+                />
+
+            <TextView
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtAccpetCall"
+                android:gravity="center"
+                android:text="@string/zm_btn_accept_sip_61381"
+                android:importantForAccessibility="no"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llActionArea"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_bg_blue"
+    android:paddingLeft="20dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="12dp"
+    android:paddingTop="18dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <TextView
+        style="@style/ZMTextView.OnLight.Normal"
+        android:id="@+id/txtWaitingLiveAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zm_white"
+        android:text="@string/zm_qa_msg_waiting_live_answer_41047" />
+
+    <us.zoom.androidlib.ZMMaterialActionButtonLayout
+        android:id="@+id/zmMaterialActionButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zoom:zm_visible_negative="false"
+        zoom:zm_visible_positive="true"
+        zoom:zm_visible_neutral="false"
+        zoom:zm_text_negative="@string/zm_btn_cancel"
+        zoom:zm_text_positive="@string/zm_btn_done"
+        zoom:zm_text_size="17sp"/>
+</LinearLayout>

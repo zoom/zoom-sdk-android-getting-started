@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text=""
+            android:id="@+id/txtContactName"
+            style="@style/ZMTextView.Normal.OnLight"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:id="@+id/txtContactNumber"
+            style="@style/ZMTextView.Small.Dimmed"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+
+
+    <us.zoom.androidlib.widget.ZMCheckedTextView
+        android:id="@+id/checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtInZoom"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        style="@style/ZMTextView.Normal.Dimmed"/>
+
+
+</RelativeLayout>

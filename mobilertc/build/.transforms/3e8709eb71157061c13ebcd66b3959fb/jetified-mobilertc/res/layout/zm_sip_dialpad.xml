@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/zm_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/content"
+        android:paddingTop="40dp">
+
+        <com.zipow.videobox.view.sip.DialKeyboardView
+            android:id="@+id/panelKeybord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:id="@+id/panelCallBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_sip_dialpad_content_margin_left"
+            android:layout_marginRight="@dimen/zm_sip_dialpad_content_margin_left"
+            android:layout_marginTop="@dimen/zm_sip_dialpad_row_space"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@id/panelKeybord"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/zm_sip_ic_keyboard_search"
+                    android:contentDescription="@string/zm_sip_dial_search_hint_31432"/>
+
+                <ImageView
+                    android:id="@+id/btnDial"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zm_sip_start_call"
+                    android:contentDescription="@string/zm_accessibility_sip_call_dial"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/zm_sip_ic_keyboard_del"
+                    android:contentDescription="@string/zm_btn_delete"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/panelRegisterSipNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/content">
+
+        <TextView
+            android:id="@+id/txtRegisterSipNo"
+            style="@style/UIKitTextView.IconLabel.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/zm_sip_ic_outbound_dropdown"
+            android:gravity="center"
+            android:singleLine="true"
+            tools:text="+12345565"
+            android:textSize="@dimen/zm_sip_register_num_text_size"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_above="@id/content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="-40dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            tools:text="Transfer to"
+            />
+
+        <EditText
+            android:id="@+id/txtDialNum"
+            style="@style/ZMTextView.Dialpad.Num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:layout_marginRight="54dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:singleLine="true"
+            tools:text="2222222"
+            android:inputType="text"
+            android:digits="*+#,0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+            android:background="@color/zm_transparent"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@color/zm_color_accent"
+            />
+
+        <TextView
+            android:id="@+id/txtDialUserName"
+            style="@style/UIKitTextView.PrimaryText.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            tools:text="Jason"
+            android:textSize="12sp"
+            android:layout_marginTop="-4dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnCloseInSip"
+        style="@style/UIKitButton.White.BlueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="6dp"
+        android:text="@string/zm_btn_back_to_call_61381"
+        android:visibility="visible"
+        />
+
+    <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+        android:id="@+id/txtSipUnavailable"
+        style="@style/ZMTextView.Medium.OnLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/zm_notification_background"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/zm_sip_error_network_unavailable_99728"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/iv_out_of_range"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/zm_sip_ic_out_of_range"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</RelativeLayout>
+

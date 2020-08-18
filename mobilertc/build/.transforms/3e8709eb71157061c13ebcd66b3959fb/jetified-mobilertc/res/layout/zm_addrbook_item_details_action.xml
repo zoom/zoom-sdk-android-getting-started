@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="@dimen/zm_addrbook_item_details_action_item_height">
+    <ImageView
+        android:id="@+id/actionImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true" />
+
+    <TextView
+        style="@style/ZMTextView.SettingsItem.NoPadding"
+        android:id="@+id/actionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"
+        android:duplicateParentState="true"
+        android:textColor="@color/zm_addrbook_item_details_action_text_color"
+        android:text="@string/zm_btn_meet_109011" />
+
+</LinearLayout>

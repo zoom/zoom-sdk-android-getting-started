@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/zm_setting_item_padding_bottom"
+        android:focusable="true"
+        android:layout_weight="1">
+
+        <us.zoom.androidlib.widget.ZMToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.zipow.videobox.view.ToolbarButton
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                zoom:zm_icon="@drawable/zm_ic_big_start_meeting"
+                zoom:zm_text="@string/zm_btn_mm_start_meeting_21854"
+                zoom:zm_textSize="13sp"
+                zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+                zoom:zm_vertical_divide_icon_text="6dp" />
+
+            <com.zipow.videobox.view.ToolbarButton
+                android:id="@+id/btnJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                zoom:zm_icon="@drawable/zm_ic_big_join_meeting"
+                zoom:zm_text="@string/zm_bo_btn_join_bo"
+                zoom:zm_textSize="13sp"
+                zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+                zoom:zm_vertical_divide_icon_text="6dp" />
+
+
+        </us.zoom.androidlib.widget.ZMToolbarLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/zm_setting_item_padding_top"
+        android:focusable="true"
+        android:layout_weight="1">
+
+        <us.zoom.androidlib.widget.ZMToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <com.zipow.videobox.view.ToolbarButton
+                android:id="@+id/btnSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                zoom:zm_icon="@drawable/zm_ic_big_schedule_meeting"
+                zoom:zm_text="@string/zm_btn_schedule"
+                zoom:zm_textSize="13sp"
+                zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+                zoom:zm_vertical_divide_icon_text="6dp" />
+
+            <com.zipow.videobox.view.ToolbarButton
+                android:id="@+id/btnShareScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                zoom:zm_icon="@drawable/zm_ic_big_share_screen"
+                zoom:zm_text="@string/zm_btn_mm_share_screen_52777"
+                zoom:zm_textSize="13sp"
+                zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+                zoom:zm_vertical_divide_icon_text="6dp" />
+        </us.zoom.androidlib.widget.ZMToolbarLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vCallRoom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/zm_setting_item_padding_top"
+        android:focusable="true"
+        android:layout_weight="1">
+
+        <us.zoom.androidlib.widget.ZMToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <com.zipow.videobox.view.ToolbarButton
+                android:id="@+id/btnCallRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                zoom:zm_icon="@drawable/zm_ic_big_call_a_room"
+                zoom:zm_text="@string/zm_btn_call_room_71390"
+                zoom:zm_textSize="13sp"
+                zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+                zoom:zm_vertical_divide_icon_text="6dp" />
+        </us.zoom.androidlib.widget.ZMToolbarLayout>
+
+        <!--<com.zipow.videobox.view.ToolbarButton
+            android:id="@+id/btnCallRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:focusable="true"
+            zoom:zm_icon="@drawable/zm_ic_call_room"
+            zoom:zm_text="@string/zm_btn_call_room_71390"
+            zoom:zm_textColor="@color/zm_ui_kit_color_gray_747487"
+            zoom:zm_vertical_divide_icon_text="6dp"
+            zoom:zm_titleSingleLine="false"
+            zoom:zm_titlePaddingLeftRight="6dp" />-->
+    </RelativeLayout>
+</LinearLayout>

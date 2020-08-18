@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp"
+     >
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/zm_dialog_close"
+        android:contentDescription="@string/zm_btn_close"/>
+    <EditText
+        android:id="@+id/edtQuestion"
+        android:layout_below="@+id/imgClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:hint="@string/zm_qa_hint_ask_question_41047"
+        android:gravity="top"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:maxLength="1000"
+        android:lines="@integer/zm_qa_question_input_max_lines"
+       />
+
+    <LinearLayout
+        android:layout_below="@+id/edtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/optionAnonymously"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <CheckBox
+                android:id="@+id/chkAnonymously"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/txtAnonymously"
+                style="@style/ZMTextView.OnLight.Normal"
+                android:paddingLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/zm_qa_msg_send_anonymousely_41047"/>
+        </LinearLayout>
+
+        <us.zoom.androidlib.widget.ZMTextButton
+            android:id="@+id/btnSend"
+            android:textColor="@drawable/zm_button_text_color"
+            android:background="@drawable/zm_btn_with_light_grey_frame"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/zm_btn_send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

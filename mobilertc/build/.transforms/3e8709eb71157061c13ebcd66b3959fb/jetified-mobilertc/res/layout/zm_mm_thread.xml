@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!--
+     You must set android:windowSoftInputMode="stateHidden|adjustResize" in the activity
+     to make sure ZMKeyboardDetector can work properly.
+    -->
+    <us.zoom.androidlib.widget.ZMKeyboardDetector
+        android:id="@+id/keyboardDetector"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            zoom:zm_leftButton="@+id/btnBack"
+            zoom:zm_rightButton="@+id/panelTitleRight"
+            zoom:zm_title="@+id/panelTitleCenter"
+            zoom:zm_fillOthers="true"
+            >
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/ZMBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:contentDescription="@string/zm_btn_back" />
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/panelTitleRight"
+                android:orientation="horizontal">
+
+                <ImageButton android:id="@+id/btnVideoCall"
+                    style="@style/ZMButton.TitleBar"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/zm_mm_opt_video_call"
+                    android:src="@drawable/zm_ic_video_ondark"/>
+
+                <ImageButton android:id="@+id/btnPhoneCall"
+                    style="@style/ZMButton.TitleBar"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/zm_mm_opt_voice_call"
+                    android:src="@drawable/zm_ic_phone_ondark"/>
+
+                <Button android:id="@+id/btnJump"
+                    style="@style/ZMButton.TitleBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/zm_btn_jump"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panelTitleCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical">
+                    <com.zipow.videobox.view.PresenceStateView
+                        android:id="@+id/imgPresence"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:focusable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        zoom:zm_subpresence_type="0"
+                        >
+                    </com.zipow.videobox.view.PresenceStateView>
+
+                    <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                        android:id="@+id/txtTitle"
+                        style="@style/ZMTextView.Title"
+                        android:textStyle="normal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text="" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:id="@+id/imgTitleInfo"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/zm_content_filter_arrow_down"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/presence_status_sharing_screen_view"
+                    style="@style/ZMTextView.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="2dp"
+                    android:text="@string/zm_title_hint_sharing_screen_text_93141"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/zm_white_search_corner_bg"
+                style="@style/ZMEditText.GlobalSearch"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@null"
+                android:alpha="0"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:paddingLeft="8dp"
+                android:hint="@string/zm_btn_search"
+                android:contentDescription="@string/zm_description_mm_btn_search"
+                android:id="@+id/btnSearch"
+                />
+
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+        <com.zipow.videobox.view.mm.MMConnectAlertView
+            android:id="@+id/panelConnectionAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zm_white"
+            android:id="@+id/myNotesPanel"
+            android:visibility="gone"
+            android:padding="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/zm_my_notes_title"
+                android:text="@string/zm_mm_msg_my_notes_title_45169"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/zm_my_notes_sub_title"
+                android:text="@string/zm_mm_msg_my_notes_sub_title_45169"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/panelTimedChatHint"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:background="#fff1c3"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtTimedChatHintMsg"
+                        style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/btnTimedChatHintClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:src="@drawable/zm_btn_time_chat_hint_closed" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_below="@+id/panelTimedChatHint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.zipow.videobox.view.mm.MMThreadsRecyclerView
+                    android:id="@+id/commentsRecyclerView"
+                    style="@style/MMChatListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null" >
+                </com.zipow.videobox.view.mm.MMThreadsRecyclerView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/panelBottomHint"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtMarkUnread"
+                        android:visibility="gone"
+                        android:drawablePadding="5dp"
+                        android:padding="13dp"
+                        android:background="@drawable/zm_corner_bg_red"
+                        android:drawableRight="@drawable/zm_ic_arrow_white_down"
+                        style="@style/UIKitTextView.PrimaryText.Normal.White"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/zm_mm_lbl_mark_unread_14491"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtBottomReplyDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:visibility="gone"
+                        android:background="@drawable/zm_corner_bg_red"
+                        android:drawableRight="@drawable/zm_ic_arrow_white_down"
+                        android:padding="13dp"
+                        style="@style/UIKitTextView.PrimaryText.Normal.White" />
+
+                    <TextView
+                        android:id="@+id/txtBottomReplyUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:visibility="gone"
+                        android:background="@drawable/zm_corner_bg_red"
+                        android:drawableRight="@drawable/zm_ic_arrow_white_up"
+                        android:padding="13dp"
+                        style="@style/UIKitTextView.PrimaryText.Normal.White" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtMention"
+                        android:drawablePadding="5dp"
+                        android:padding="13dp"
+                        android:visibility="gone"
+                        android:background="@drawable/zm_corner_bg_red"
+                        style="@style/UIKitTextView.PrimaryText.Normal.White"
+                        android:drawableRight="@drawable/zm_ic_arrow_white_down"
+                        android:layout_marginRight="10dp"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNewMsgMark"
+                        android:drawablePadding="5dp"
+                        android:padding="13dp"
+                        android:visibility="gone"
+                        android:background="@drawable/zm_corner_bg_white"
+                        style="@style/UIKitTextView.PrimaryText.Normal"
+                        android:drawableRight="@drawable/zm_ic_arrow_red_down"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/zm_lbl_jump_latest_68444"/>
+
+                    <TextView
+                        android:id="@+id/txtBottomHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:visibility="gone"
+                        android:background="@drawable/zm_corner_bg_red"
+                        android:drawableRight="@drawable/zm_ic_arrow_white_down"
+                        android:padding="13dp"
+                        style="@style/UIKitTextView.PrimaryText.Normal.White" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/panelServerError"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zm_notification_background"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtServerError"
+                    style="@style/ZMTextView.Medium.OnLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/zm_list_divider" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/panelWarnMsg"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/zm_dim" />
+
+                <TextView
+                    android:id="@+id/txtWarnMsg"
+                    style="@style/ZMTextView.Instructions.ChatWarn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/panelE2EHint"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@color/zm_message_hint_bg"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/txtE2EHintMsg"
+                            style="@style/ZMTextView.Small.OnDark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/btnE2EHintClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:src="@drawable/zm_btn_chat_hint_closed" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/zm_toolbar_stopannotation_press" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/panelAtListHint"
+                    android:visibility="gone"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@color/zm_message_hint_bg"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/txtAtListHintMsg"
+                            style="@style/ZMTextView.Small.OnDark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/btnAtListHintClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:src="@drawable/zm_btn_chat_hint_closed" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/zm_toolbar_stopannotation_press" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/panelMsgContextEmptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtMsgContextLoadingError"
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/zm_lbl_content_load_error"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtMsgContextContentLoading"
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/zm_ic_conent_loading"
+                    android:gravity="center"
+                    android:text="@string/zm_lbl_pull_down_refresh_list_loading" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/panelDoComment"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/zm_ui_kit_color_gray_747487"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/zm_white"
+                android:paddingTop="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:lines="1"
+                android:ellipsize="end"
+                style="@style/UIKitTextView.SecondaryText.Small.Dimmed"
+                android:id="@+id/threadSender"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/zm_white"
+                android:lines="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:ellipsize="end"
+                style="@style/UIKitTextView.PrimaryText.Normal"
+                android:id="@+id/threadBody"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/zm_dim"/>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:id="@+id/txtDisableMsg"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:enabled="false"
+            android:padding="5dp"
+            style="@style/ZMEditText.Small"
+            android:textColorHint="@color/zm_text_deep_grey"
+            />
+
+
+        <TextView android:id="@+id/txtAnnouncement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.Small.Gray"
+            android:background="@color/zm_ui_kit_color_gray_F7F7FA"
+            android:paddingTop="27dp"
+            android:paddingBottom="35dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:text="@string/zm_msg_announcements_tip_108966" />
+
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:id="@+id/btnInviteE2EChat"
+            android:background="#f0f0f0"
+            android:visibility="gone"
+            style="@style/ZMButton.TitleBar.Small"/>
+
+        <LinearLayout
+            android:id="@+id/panelCannotChat"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:background="@color/zm_ui_kit_color_gray_F7F7FC"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_marginTop="19dp"
+                android:id="@+id/txtCannotChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/zm_ui_kit_text_size_13sp"
+                android:textColor="@color/zm_v2_txt_secondary"
+                />
+
+            <TextView
+                android:id="@+id/btnCannotChat"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/zm_ui_kit_text_size_13sp"
+                android:textColor="@color/zm_v2_blue_on_dark"
+                android:text="@string/zm_btn_add_contact"/>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/panelActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.zipow.videobox.view.mm.VoiceRecordView
+        android:id="@+id/panelVoiceRcdHint"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ViewStub
+        android:id="@+id/tipsViewStub"
+        android:inflatedId="@+id/tipsInflate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/zm_mm_im_tips"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/panelSearch"/>
+</FrameLayout>

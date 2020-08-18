@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <View
+        android:layout_width="@dimen/zm_sip_income_avatar_bg1_size"
+        android:layout_height="@dimen/zm_sip_income_avatar_bg1_size"
+        android:background="@drawable/zm_sip_income_avatar_ondark_bg1"
+        android:layout_centerInParent="true"
+        android:id="@+id/bg1"
+        android:importantForAccessibility="no"/>
+
+    <View
+        android:layout_width="@dimen/zm_sip_income_avatar_bg2_size"
+        android:layout_height="@dimen/zm_sip_income_avatar_bg2_size"
+        android:background="@drawable/zm_sip_income_avatar_ondark_bg2"
+        android:layout_centerInParent="true"
+        android:id="@+id/bg2"
+        android:importantForAccessibility="no"/>
+
+    <ImageView
+        android:layout_width="@dimen/zm_sip_income_avatar_content_size"
+        android:layout_height="@dimen/zm_sip_income_avatar_content_size"
+        android:layout_centerInParent="true"
+        android:id="@+id/content"
+        android:importantForAccessibility="no"
+        />
+</RelativeLayout>

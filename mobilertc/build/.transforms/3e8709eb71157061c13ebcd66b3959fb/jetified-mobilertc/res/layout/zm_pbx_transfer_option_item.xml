@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+              android:paddingRight="24dp"
+              android:paddingLeft="24dp"
+              android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/txtLabel"
+        style="@style/UIKitTextView.CellTitle.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textStyle="bold"
+        tools:text="Name"/>
+
+    <TextView
+        android:id="@+id/txtSubLabel"
+        style="@style/UIKitTextView.SecondaryText.Medium.Dimmed.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        tools:text="(+86)88888"/>
+
+</LinearLayout>

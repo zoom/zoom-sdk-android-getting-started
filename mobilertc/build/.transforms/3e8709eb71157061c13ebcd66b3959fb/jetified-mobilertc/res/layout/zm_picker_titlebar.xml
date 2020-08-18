@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panelTitleBar"
+    style="@style/ZMTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zm_picker_titlebar_height"
+    zoom:zm_leftButton="@+id/btnBack"
+    zoom:zm_rightButton="@+id/btnSend"
+    zoom:zm_title="@+id/txtTitle" >
+
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/ZMBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:contentDescription="@string/zm_btn_back" />
+
+    <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+        android:id="@+id/txtTitle"
+        style="@style/ZMTextView.Title"
+        android:textStyle="normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="Reed Yang" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/zm_picker_round_btn_green_bg"
+        android:text="@string/zm_picker_done_with_count"
+        android:textColor="@color/zm_picker_btn_text_color"
+        android:enabled="true"
+        android:textSize="@dimen/zm_picker_text_size_small"
+        android:id="@+id/btnSend"/>
+
+</us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>

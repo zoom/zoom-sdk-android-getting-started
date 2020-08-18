@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height">
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            zoom:zm_leftButton="@+id/btnClose"
+            zoom:zm_rightButton="@+id/btnSend"
+            zoom:zm_title="@+id/txtTitle">
+
+            <Button
+                android:id="@+id/btnClose"
+                style="@style/ZMButton.TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_close" />
+
+            <Button
+                android:id="@+id/btnSend"
+                style="@style/ZMButton.TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_send" />
+
+            <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                android:id="@+id/txtTitle"
+                style="@style/ZMTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/zm_btn_report_147675" />
+
+
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/zm_meeting_report_issues_content" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zm_sip_dialpad_key_width">70dp</dimen>
+    <dimen name="zm_sip_dialpad_num_text_size">24sp</dimen>
+    <dimen name="zm_sip_dialpad_row_space">12dp</dimen>
+    <dimen name="zm_sip_register_num_text_size">12sp</dimen>
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:paddingLeft="12dp">
+    <!--android:layout_height="@dimen/zm_sip_phone_call_item_height"-->
+
+    <CheckBox
+        android:id="@+id/checkDeleteItem"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/zm_sip_check_state"
+        android:button="@null" />
+
+    <ImageView
+        android:id="@+id/imgOutCall"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/zm_ic_outgoing_call" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtBuddyName"
+                                style="@style/UIKitTextView.BuddyName.Normal"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/zm_ui_kit_text_size_16sp"/>
+
+                            <TextView
+                                android:id="@+id/txtCallNo"
+                                style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:singleLine="true"
+                                android:textColor="@color/zm_ui_kit_color_gray_747487"
+                                tools:text="12343124" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/txtDate"
+                                style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:maxLines="1"
+                                android:textColor="@color/zm_ui_kit_color_gray_747487"
+                                android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                                tools:text="yesterday" />
+
+                            <TextView
+                                android:id="@+id/txtTime"
+                                style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:visibility="visible"
+                                android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                                tools:text="6:22 PM" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtEmergencyInfo"
+                    style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:singleLine="false"
+                    android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                    tools:text="Emergency Info bbb  bbbfdszfdsb xvxzsdfszczv bbb  e bbbb x z  z z x    bccc bbfsdzfds bbbb bbb bxxxx   xxxxx xxxxxxxxxxx"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="-4dp"
+                    android:paddingBottom="6dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/recordingPanel"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:paddingEnd="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="2dp"
+                            android:src="@drawable/zm_ic_play_recording"/>
+                        <TextView
+                            android:id="@+id/txtRecording"
+                            style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/zm_ui_kit_color_gray_747487"
+                            android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                            android:visibility="visible"
+                            tools:text="00:36 " />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtSlaInfo"
+                        style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="6dp"
+                        android:singleLine="true"
+                        android:textColor="@color/zm_ui_kit_color_gray_747487"
+                        android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                        tools:text="Answered by Zaire Swanson for Eric Yuan"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/showDialog"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6dp"
+                android:contentDescription="@string/zm_sip_accessbility_detail_61381"
+                android:scaleType="centerInside"
+                android:src="@drawable/zm_sip_history_list_more_action" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/zm_line_divider" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:zoom="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/zm_white" >
+    <FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+	<us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+		android:id="@+id/vTitleBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="@dimen/zm_titlebar_height"
+		android:orientation="horizontal"
+		android:gravity="center_vertical"
+		style="@style/ZMTitleBar.Light"
+		zoom:zm_leftButton="@+id/btnSignIn"
+		zoom:zm_rightButton="@+id/btnLeave"
+		zoom:zm_title="@+id/txtMeetingNumber" >
+		<Button
+			style="@style/ZMButton.TitleBar"
+			android:id="@+id/btnSignIn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/zm_ui_kit_normal_blue_btn_text_color"
+			android:text="@string/zm_btn_login"/>
+
+
+		<Button
+			style="@style/ZMButton.TitleBar.Warning"
+			android:id="@+id/btnLeave"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/zm_btn_leave_meeting"/>
+
+		<TextView
+			android:id="@+id/txtMeetingNumber"
+			style="@style/ZMTextView.Medium.OnLight"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:text="111-111-1111" />
+	</us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+	<com.zipow.videobox.view.panel.ZmLeaveCancelPanel
+		android:id="@+id/zmWaitRoomLeaveCancelPanel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		/>
+	</FrameLayout>
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@drawable/zm_list_divider"	/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:id="@+id/panelDescriptionView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:orientation="vertical" >
+
+			<TextView
+				android:id="@+id/txtTitle"
+				style="@style/ZMTextView.ExtremLarge.OnLight"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10dp"
+				android:gravity="center"
+				android:text="Please wait, The host will let you in soon" />
+
+			<ImageView
+				android:id="@+id/imgTitleIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:src="@drawable/zm_ic_setting_zoom"/>
+
+			<TextView
+				android:id="@+id/meetingTopic"
+				style="@style/ZMTextView"
+				android:textColor="@color/zm_text_dim"
+				android:textSize="24sp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:paddingBottom="20dp"
+				android:gravity="center"
+				android:text="@string/zm_msg_you_are_in_silent_mode"/>
+
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minHeight="50dp">
+				<TextView
+					android:id="@+id/txtDescription"
+					style="@style/ZMTextView.Normal.Dimmed"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="left" />
+			</ScrollView>
+		</LinearLayout>
+
+		<FrameLayout
+			android:id="@+id/buttonChat"
+			android:layout_width="75dp"
+			android:layout_height="75dp"
+			android:layout_marginBottom="58dp"
+			android:layout_gravity="center_horizontal|bottom"
+			android:background="@drawable/icon_bg_waiting_room_chat">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:contentDescription="@string/zm_accessibility_waiting_room_chat_button_46304"
+				android:src="@drawable/icon_waiting_room_chat" />
+
+			<TextView
+				android:id="@+id/txtBubble"
+				style="@style/ZMTextView.UnreadMessageCount.Small"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				android:layout_gravity="top|end"
+				android:gravity="center"
+				android:duplicateParentState="true"
+				android:text="9" />
+		</FrameLayout>
+	</FrameLayout>
+
+</LinearLayout>

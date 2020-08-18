@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item android:state_selected="true">
+    <shape>
+      <corners android:radius="8dp" />
+      <stroke android:color="@color/zm_picker_item_photo_border_selected"
+          android:width="1dip"/>
+    </shape>
+  </item>
+
+  <item>
+    <shape>
+      <corners android:radius="8dp"/>
+      <stroke android:color="#C8C7CB"
+          android:width="1dip"/>
+    </shape>
+  </item>
+
+
+</selector>

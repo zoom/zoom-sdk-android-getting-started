@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        android:gravity="center_vertical"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle">
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_lbl_meeting_reaction_skin_tone_122373" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:id="@+id/panelOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg">
+
+        <us.zoom.androidlib.widget.ZMSettingsLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp">
+
+            <us.zoom.androidlib.widget.ZMSettingsCategory
+                android:id="@+id/panel_auto_connect_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/panel_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d" />
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_default_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panel_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d_1f3fb" />
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_light_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panel_medium_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d_1f3fc" />
+
+                    <TextView
+                        android:id="@+id/txt_call_me"
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_medium_light_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_medium_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panel_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d_1f3fd" />
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_medium_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panel_medium_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d_1f3fe" />
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_medium_dark_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_medium_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panel_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ZMSettingOptionIcon"
+                        android:src="@drawable/reaction_1f44d_1f3ff" />
+
+                    <TextView
+                        style="@style/ZMTextView.SettingsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_meeting_reaction_skin_tone_dark_122373" />
+
+                    <ImageView
+                        android:id="@+id/img_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/zm_setting_item_padding_right"
+                        android:contentDescription="@string/zm_accessibility_icon_item_selected_19247"
+                        android:src="@drawable/zm_group_type_select"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+        </us.zoom.androidlib.widget.ZMSettingsLayout>
+    </ScrollView>
+
+</LinearLayout>

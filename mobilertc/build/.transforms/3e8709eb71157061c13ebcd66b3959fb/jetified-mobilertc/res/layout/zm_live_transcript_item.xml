@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="left|center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="6dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="top"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:id="@+id/txtScreenName"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/zm_gray_10"
+            tools:text="@string/boxsdk_common_name" />
+        
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:text="00:00:00"
+            android:textColor="@color/zm_live_edit_message_time_82883"
+            android:textSize="11sp"
+            android:focusable="false"
+            android:visibility="visible"/>
+
+        <us.zoom.androidlib.widget.ZMTextView
+            android:id="@+id/txtMessage"
+            style="@style/ZMTextView.MMMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="left|center_vertical"
+            tools:text=""
+            app:showLink="true" />
+        
+    </LinearLayout>
+
+
+</LinearLayout>

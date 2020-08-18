@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hostSecurityPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txtSecurity"
+        style="@style/ZMTextView.SettingsItemDesc.MeetingSetting"
+        android:text="@string/zm_lbl_in_meeting_settings_security_147675" />
+    <!--lock meeting option-->
+    <us.zoom.androidlib.widget.ZMSettingsCategory
+        android:id="@+id/panelOptionLockMeeting"
+        zoom:zm_showTopDivider="false"
+        zoom:zm_dividerHeight="1px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+            <TextView
+                android:id="@+id/txtLockMeeting"
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/zm_mi_lock_meeting" />
+
+            <us.zoom.androidlib.widget.ZMCheckedTextView
+                android:id="@+id/chkLockMeeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="@drawable/zm_btn_toggle_default"
+                android:clickable="false" />
+        </LinearLayout>
+    </us.zoom.androidlib.widget.ZMSettingsCategory>
+    <!--waiting room option-->
+    <us.zoom.androidlib.widget.ZMSettingsCategory
+        android:id="@+id/optionEnableWaitingRoom"
+        zoom:zm_showTopDivider="false"
+        zoom:zm_dividerHeight="1px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/zm_setting_item_padding_right">
+
+            <TextView
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/zm_lbl_in_meeting_settings_enable_waiting_room_150183" />
+
+            <us.zoom.androidlib.widget.ZMCheckedTextView
+                android:id="@+id/chkEnableWaitingRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="@drawable/zm_btn_toggle_default"
+                android:clickable="false" />
+        </LinearLayout>
+    </us.zoom.androidlib.widget.ZMSettingsCategory>
+
+
+    <!--participant/panelist sub-option-->
+    <include
+        layout="@layout/zm_in_meeting_settings_allow_participants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--attendee sub-option-->
+    <include
+        layout="@layout/zm_in_meeting_settings_allow_attendees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

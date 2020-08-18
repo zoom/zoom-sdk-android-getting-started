@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zm_white"
+    tools:context="com.zipow.videobox.StarredMessageActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_titlebar_height">
+
+        <ImageView
+            android:id="@+id/zm_starred_message_title_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:contentDescription="@string/zm_btn_back"
+            android:src="@drawable/zm_mm_starred_title_bar_back"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/zm_starred_title_name"
+            style="@style/UIKitTextView.LargeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_mme_starred_message_title_name_65147"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/zm_starred_message_fragment_container">
+
+    </LinearLayout>
+</LinearLayout>

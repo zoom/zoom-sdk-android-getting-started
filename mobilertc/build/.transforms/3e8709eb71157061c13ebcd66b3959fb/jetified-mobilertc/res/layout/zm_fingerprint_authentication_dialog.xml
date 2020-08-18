@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="24dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+    <ImageView
+        android:id="@+id/fingerprint_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zm_ic_fingerprint"
+        android:contentDescription="@string/zm_title_fingerprint_login_22438"
+        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="19dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/ZMTextView.SettingsItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="0dp"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_horizontal"
+        android:text="@string/zm_title_fingerprint_login_22438" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        style="@style/ZMTextView.SettingsItem.Small"
+        android:paddingTop="11dp"
+        android:lineSpacingExtra="8sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/zm_desc_fingerprint_login_22438" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="@dimen/zm_setting_item_min_height"
+        android:layout_marginTop="11dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/ZMMaterialDefaultButton.Normal"
+            android:id="@+id/btn_enter_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/zm_btn_enter_passwd_22438"
+            android:textColor="@drawable/zm_button_text_color"
+            android:minWidth="64dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+        <TextView
+            style="@style/ZMMaterialDefaultButton.Normal"
+            android:id="@+id/btn_cancel"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="64dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@drawable/zm_button_text_color"
+            android:text="@string/zm_btn_cancel"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

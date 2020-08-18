@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/panelKey"
+        android:layout_width="@dimen/zm_sip_dialpad_key_width"
+        android:layout_height="@dimen/zm_sip_dialpad_key_width"
+        android:background="@drawable/zm_sip_dialpad_key_bg"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNum"
+            style="@style/ZMTextView.Dialpad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2"
+            android:layout_marginTop="-8dp"
+            android:importantForAccessibility="no"/>
+
+        <ImageView
+            android:id="@+id/imgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:importantForAccessibility="no"/>
+
+        <ImageView
+            android:id="@+id/imgNumDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="-4dp"
+            android:importantForAccessibility="no"/>
+
+        <TextView
+            android:id="@+id/txtNumDes"
+            style="@style/ZMTextView.Dialpad.Des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:textStyle="bold"
+            tools:text="abc"
+            android:importantForAccessibility="no"/>
+    </LinearLayout>
+
+</LinearLayout>

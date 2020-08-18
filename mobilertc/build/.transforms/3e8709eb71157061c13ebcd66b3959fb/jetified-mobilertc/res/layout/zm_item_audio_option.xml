@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        style="@style/ZMTextView.SettingsItemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/zm_lbl_audio_connection_19247" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAudioOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_settings_category_background" />
+
+    <TextView
+        style="@style/ZMTextView.SettingsItemDesc"
+        android:id="@+id/txtDialInSelectDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="24dp"
+        android:text="@string/zm_lbl_select_dial_in_countries_127873" />
+
+</LinearLayout>

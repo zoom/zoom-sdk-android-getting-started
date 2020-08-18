@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="189dp"
+        android:layout_height="56dp">
+
+        <TextView
+            android:id="@+id/line2Btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/zm_anno_line_2_wb"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/zm_accessibility_2_pixcels_81493"/>
+
+        <TextView
+            android:id="@+id/line4Btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/zm_anno_line_4_wb"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/zm_accessibility_4_pixcels_81493"/>
+        <TextView
+            android:id="@+id/line8Btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/zm_anno_line_8_wb"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/zm_accessibility_8_pixcels_81493"/>
+        <TextView
+            android:id="@+id/line12Btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/zm_anno_line_12_wb"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/zm_accessibility_12_pixcels_81493"/>
+    </LinearLayout>
+
+</ScrollView>

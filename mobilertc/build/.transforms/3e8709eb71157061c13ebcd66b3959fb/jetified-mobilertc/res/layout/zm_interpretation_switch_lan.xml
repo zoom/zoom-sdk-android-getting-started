@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zipow.videobox.view.ConfInterpretationLanguageBtn xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="112dp"
+    android:layout_height="44dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/zm_corner_bg_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    tools:showIn="@layout/zm_confview_interpretation_switch">
+
+    <ImageView
+        android:id="@+id/showLanguageImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/zm_lan_unitedstates" />
+
+    <TextView
+        android:id="@+id/showLanguageName"
+        style="@style/ZMTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:duplicateParentState="true"
+        android:focusable="false"
+        android:text="@string/zm_language_english_88102" />
+
+
+</com.zipow.videobox.view.ConfInterpretationLanguageBtn>

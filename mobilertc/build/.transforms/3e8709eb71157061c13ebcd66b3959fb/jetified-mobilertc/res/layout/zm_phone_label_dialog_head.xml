@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/labelTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hana Song"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="#000000"
+        android:textSize="@dimen/zm_ui_kit_text_size_20sp" />
+
+    <TextView
+        android:id="@+id/phoneTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="1sp"
+        android:text="+911"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="#747487"
+        android:textSize="13sp" />
+</LinearLayout>

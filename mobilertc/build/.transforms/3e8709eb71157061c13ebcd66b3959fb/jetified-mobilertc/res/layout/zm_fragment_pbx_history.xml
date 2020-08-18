@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/layout_filter"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        tools:visibility="visible"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/zm_sip_ic_keyboard"
+            android:id="@+id/ivKeyboard"
+            android:contentDescription="@string/zm_sip_keypad_desc_117773"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.SecondaryText.Medium.Dimmed.Bold"
+            tools:text="All Inboxes"
+            android:layout_marginRight="12dp"
+            android:drawableRight="@drawable/zm_sip_ic_outbound_dropdown"
+            android:gravity="center_vertical|right"
+            android:drawablePadding="8dp"
+            android:singleLine="true"
+            android:id="@+id/btnFilter"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider"
+        android:importantForAccessibility="no"/>
+
+    <com.zipow.videobox.view.sip.PhonePBXHistoryListView
+        android:id="@+id/listviewAllCalls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/panelEmptyView"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/zm_pt_titlebar_height"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtEmptyViewTitle"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/zm_ui_kit_color_black_232333"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_lbl_call_history_empty_14480"/>
+        <TextView
+            android:id="@+id/txtEmptyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:textColor="@color/zm_ui_kit_color_gray_747487"
+            android:layout_gravity="center"
+            android:text="@string/zm_sip_call_mail_empty_view_61381"/>
+    </LinearLayout>
+
+</LinearLayout>

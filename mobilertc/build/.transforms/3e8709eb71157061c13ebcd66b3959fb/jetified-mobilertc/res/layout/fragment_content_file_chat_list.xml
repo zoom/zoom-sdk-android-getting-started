@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_im_search_bg"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/zm_title_bar_dark_bg"
+        android:layout_height="@dimen/zm_titlebar_height">
+
+        <ImageView
+            android:id="@+id/zm_file_chat_list_title_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            style="@style/ZMBackButton"
+            android:contentDescription="@string/zm_btn_back"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/zm_file_chat_list_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/zm_white"
+            android:text="@string/zm_content_file_list_title_text_89710"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/content_file_list_view"
+        android:background="@drawable/zm_listview_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

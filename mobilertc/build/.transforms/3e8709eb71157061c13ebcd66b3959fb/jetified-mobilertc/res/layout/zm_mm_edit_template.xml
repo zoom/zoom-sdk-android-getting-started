@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        style="@style/ZMTitleBar.Light"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            style="@style/ZMButton.NoBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:paddingLeft="13dp"
+            android:text="@string/zm_btn_cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/zm_mm_edit_message_19884"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btn_done"
+            style="@style/ZMButton.NoBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="7dp"
+            android:enabled="false"
+            android:text="@string/zm_btn_save" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/zm_mm_edit_message_divider" />
+
+    <EditText
+        android:id="@+id/ext_content"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLength="4096"
+        android:padding="13dp" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panelMsgLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="3dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="3dp">
+
+    <TextView
+        android:id="@+id/txtScreenName"
+        style="@style/ZMTextView.ExSmall.Dimmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:text="@string/zm_lbl_content_you" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:layout_marginRight="8dp"
+            app:zm_avatarBorderSize="0dp" />
+
+        <LinearLayout
+            android:id="@+id/panelMessage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_chatto_bg_voice"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zm_chatfrom_voice" />
+
+            <TextView
+                android:id="@+id/txtVoicelength"
+                style="@style/ZMTextView.Normal.OnLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:text="30&quot;" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@style/ZMProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp" />
+
+        <ImageView
+            android:id="@+id/zm_mm_starred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/zm_mm_starred_message_icon"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/zm_description_mm_msg_failed"
+            android:src="@drawable/zm_mm_msg_state_fail" />
+    </LinearLayout>
+    <include
+        layout="@layout/zm_message_reaction_labels_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp" />
+
+</LinearLayout>

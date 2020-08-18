@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/zm_padding_small"
+    android:paddingLeft="@dimen/zm_padding_small"
+    android:paddingRight="@dimen/zm_padding_normal"
+    android:paddingBottom="@dimen/zm_padding_small"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/txtTime"
+        style="@style/ZMTextView.Small.Dimmed.OnDark"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|right"
+        android:textColor="@color/zm_text_deep_grey"
+        android:text="09:00\nAM" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/zm_padding_small"
+        android:paddingRight="@dimen/zm_padding_small">
+
+        <TextView
+            android:id="@+id/txtTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_margin_small"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Topic"
+            android:textColor="@color/zm_text_light_dark"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+        <TextView
+            android:id="@+id/txtMeetingId"
+            style="@style/ZMTextView.Small.Dimmed.OnDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_margin_small"
+            android:layout_marginTop="@dimen/zm_margin_smallest"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/zm_text_deep_grey"
+            android:text="Meeting Id" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/ZMButton.BlueRect"
+        android:background="@drawable/zm_btn_blue_r6_rect_state_bg"
+        android:duplicateParentState="false"
+        android:minWidth="@dimen/zm_btn_width_48dp"
+        android:minHeight="@dimen/zm_btn_height_24dp"
+        android:text="@string/zm_btn_start" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:src="@drawable/zm_next_arrow"
+        android:visibility="gone" />
+</LinearLayout>

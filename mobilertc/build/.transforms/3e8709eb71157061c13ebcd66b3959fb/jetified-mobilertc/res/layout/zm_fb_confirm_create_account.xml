@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:duplicateParentState="true"
+             />
+
+        <TextView
+            android:id="@+id/txtHi"
+            style="@style/ZMTextView.Large.DialogTitle"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zm_msg_confirm_hi_create_account_31350" />
+
+        <TextView
+            style="@style/ZMTextView.Normal.Dimmed"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_msg_confirm_create_account_31350" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            style="@style/ZMTextView.Normal.OnLight"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+             />
+
+        <TextView
+            android:id="@+id/txtTerms"
+            style="@style/ZMTextView.Normal.Dimmed"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_msg_confirm_terms_create_account_31350" />
+
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        style="@style/ZMButton.HappyPath2"
+        android:id="@+id/btnCreateAccount"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/zm_btn_create_account_31350" />
+</LinearLayout>

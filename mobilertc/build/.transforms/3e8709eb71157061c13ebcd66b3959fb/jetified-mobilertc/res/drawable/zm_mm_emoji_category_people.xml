@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:drawable="@drawable/zm_mm_emoji_category_person_selected"/>
+    <item android:drawable="@drawable/zm_mm_emoji_category_person_normal"/>
+</selector>

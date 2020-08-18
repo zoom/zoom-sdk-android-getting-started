@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/txtDirectNumber"
+          style="@style/UIKitTextView.SecondaryText.Dimmed"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:clickable="false"
+          android:duplicateParentState="true"
+          android:focusable="false"
+          android:gravity="right"
+          android:text="@string/zm_intergeated_phone_not_set_31439"
+          android:ellipsize="start"
+          android:singleLine="true"
+          android:layout_marginTop="3dp"
+          android:layout_marginBottom="3dp"
+
+    />

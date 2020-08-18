@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/zm_white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/zm_preview_width_margin"
+    android:paddingRight="@dimen/zm_preview_width_margin"
+    >
+
+    <RelativeLayout
+        android:id="@+id/panelTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/btnLeave"
+            style="@style/ZMTextView.Title.OnLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/zm_btn_leave_conf"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="-1dp"
+            android:src="@drawable/zm_btn_close" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title.OnLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/zm_dialog_margin_21dp"
+            android:paddingBottom="4dp"
+            android:layout_below="@id/btnLeave"
+            android:layout_alignParentLeft="true"
+            android:text="@string/zm_title_video_preview_95788" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/panelSurfaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/zm_transparent"
+        android:visibility="visible">
+
+        <SurfaceView
+            android:id="@+id/svPreview"
+            android:layout_width="match_parent"
+            android:layout_height="360dp" />
+        <LinearLayout
+            android:id="@+id/optionTurnOnVideoWithoutPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/zm_preview_translucent_black"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            >
+
+            <TextView
+                style="@style/ZMTextView.SettingsItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="0dp"
+                android:paddingTop="4dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/zm_lbl_turn_on_video_without_preview_95788"
+                android:textColor="@color/zm_white"
+                android:textSize="@dimen/zm_font_size_medium"
+                />
+
+            <us.zoom.androidlib.widget.ZMCheckedTextView
+                android:id="@+id/chkTurnOnVideoWithoutPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="@drawable/zm_btn_toggle_default"
+                android:clickable="false" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/panelBottom"
+        android:paddingTop="16dp"
+        android:background="@color/zm_white"
+        android:focusable="false"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnJoinWithVideo"
+            style="@style/ZMButton.HappyPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_join_with_video_95788"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+        <Button
+            android:id="@+id/btnJoinWithoutVideo"
+            style="@style/ZMButton.HappyPath.Gray"
+            android:textStyle="normal"
+            android:textColor="@color/zm_text_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:layout_marginTop="12dp"
+            android:text="@string/zm_btn_join_without_video_95788"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

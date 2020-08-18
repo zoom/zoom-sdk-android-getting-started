@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/zm_gradual_step"
+                android:left="@dimen/zm_gradual_step"
+                android:right="@dimen/zm_gradual_step"
+                android:top="@dimen/zm_gradual_step" />
+            <solid android:color="#0DCCCCCC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/zm_gradual_step"
+                android:left="@dimen/zm_gradual_step"
+                android:right="@dimen/zm_gradual_step"
+                android:top="@dimen/zm_gradual_step" />
+            <solid android:color="#10CCCCCC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/zm_gradual_step"
+                android:left="@dimen/zm_gradual_step"
+                android:right="@dimen/zm_gradual_step"
+                android:top="@dimen/zm_gradual_step" />
+            <solid android:color="#15CCCCCC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/zm_gradual_step"
+                android:left="@dimen/zm_gradual_step"
+                android:right="@dimen/zm_gradual_step"
+                android:top="@dimen/zm_gradual_step" />
+            <solid android:color="#20CCCCCC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="@dimen/zm_gradual_step"
+                android:left="@dimen/zm_gradual_step"
+                android:right="@dimen/zm_gradual_step"
+                android:top="@dimen/zm_gradual_step" />
+            <solid android:color="#30CCCCCC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>

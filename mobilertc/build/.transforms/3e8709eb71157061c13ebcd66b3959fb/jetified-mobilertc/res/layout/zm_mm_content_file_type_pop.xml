@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minWidth="180dp"
+    android:background="@drawable/zm_pop_menu_bg">
+    
+    <LinearLayout
+        android:id="@+id/panelTypeFiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/ZMTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/zm_lbl_file_type_files_51946" />
+
+        <ImageView
+            android:id="@+id/imgTypeFiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zm_group_type_select"
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/zm_line_divider"
+        />
+    <LinearLayout
+        android:id="@+id/panelTypeImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/ZMTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/zm_lbl_file_type_images" />
+
+        <ImageView
+            android:id="@+id/imgTypeImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zm_group_type_select"
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

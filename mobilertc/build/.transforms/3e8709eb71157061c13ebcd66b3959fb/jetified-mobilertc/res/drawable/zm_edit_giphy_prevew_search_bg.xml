@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="20dp"></corners>
+    <solid android:color="@color/zm_white"></solid>
+    <stroke android:color="@color/zm_mm_giphy_preview_border" android:width="0.5dp"></stroke>
+    <size android:width="295dp" android:height="35dp"></size>
+</shape>

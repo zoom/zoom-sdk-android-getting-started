@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_centerVertical="true"
+    android:background="@drawable/zm_im_search_bar_bg">
+
+    <ImageView
+        android:id="@+id/searchBarImgSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/zm_ic_im_search_new" />
+
+    <EditText
+        style="@style/ZMEditText.GlobalSearch"
+        android:id="@+id/searchBarEditText"
+        android:layout_toRightOf="@+id/searchBarImgSearch"
+        android:layout_toLeftOf="@+id/searchBarClearBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:hint="@string/zm_hint_search_im_18680"
+        android:textColorHint="@color/zm_im_search_text_hint"
+        android:imeOptions="actionDone"
+        />
+
+    <Button
+        android:id="@+id/searchBarClearBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/zm_btn_clear_search_view"
+        android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+        android:visibility="gone"
+        />
+</RelativeLayout>

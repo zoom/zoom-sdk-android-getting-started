@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:state_pressed="true">
+        <shape  android:shape="rectangle">
+            <corners
+                android:radius="@dimen/zm_toolbar_big_radius">
+            </corners>
+            <gradient
+                android:angle="0"
+                android:startColor="@color/zm_ui_kit_color_yellow_FF742E_press"
+                android:endColor="@color/zm_ui_kit_color_yellow_FF742E_press">
+            </gradient>
+        </shape>
+    </item>
+
+    <item  android:state_focused="true">
+        <shape  android:shape="rectangle">
+            <corners
+                android:radius="@dimen/zm_toolbar_big_radius">
+            </corners>
+            <gradient
+                android:angle="0"
+                android:startColor="@color/zm_ui_kit_color_yellow_FF742E_press"
+                android:endColor="@color/zm_ui_kit_color_yellow_FF742E_press">
+            </gradient>
+        </shape>
+    </item>
+
+    <item  android:state_enabled="false">
+        <shape  android:shape="rectangle">
+            <corners
+                android:radius="@dimen/zm_toolbar_big_radius">
+            </corners>
+            <gradient
+                android:angle="0"
+                android:startColor="@color/zm_ui_kit_color_yellow_FF742E_disable"
+                android:endColor="@color/zm_ui_kit_color_yellow_FF742E_disable">
+            </gradient>
+        </shape>
+    </item>
+
+    <item >
+        <shape  android:shape="rectangle">
+            <corners
+                android:radius="@dimen/zm_toolbar_big_radius">
+            </corners>
+            <gradient
+                android:angle="0"
+                android:startColor="@color/zm_ui_kit_color_yellow_FF742E_press"
+                android:endColor="@color/zm_ui_kit_color_yellow_FF742E_press">
+            </gradient>
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/zm_height_36dp"
+            android:layout_height="@dimen/zm_height_36dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/zm_launcher" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:id="@+id/call_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+                android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/call_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Notification.Line2"
+                android:textSize="@dimen/zm_ui_kit_text_size_13sp"
+                tools:text="" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btnDecline"
+            style="@style/ZMButton.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="@string/zm_btn_decline"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/zm_ui_kit_text_size_20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/btnAccept"
+            style="@style/ZMButton.Green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="@string/zm_btn_accept"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/zm_ui_kit_text_size_20sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/btnClose"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/zm_simple_anim_close_size"
+          android:background="@drawable/zm_round_12dp_gray_bg_selector"
+          android:drawableLeft="@drawable/zm_icon_close_ss_selector"
+          android:gravity="center"
+          android:paddingRight="@dimen/zm_simple_anim_close_radius"
+          android:singleLine="true"
+          android:text="@string/zm_btn_close"
+          android:textColor="@color/zm_text_color_white_selector"
+          android:textSize="14sp"/>

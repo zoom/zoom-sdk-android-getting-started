@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        android:weightSum="1"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnRefresh"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zm_btn_back" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_refresh" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_tab_content_meetings_52777" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <TextView
+        android:id="@+id/txtCalAuthExpiredMsg"
+        style="@style/ZMTextView.Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_lbl_calendar_auth_expired_111420"
+        android:textSize="@dimen/zm_ui_kit_text_size_13sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <com.zipow.videobox.view.ScheduledMeetingsView
+        android:id="@+id/scheduledMeetingsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+</LinearLayout>
