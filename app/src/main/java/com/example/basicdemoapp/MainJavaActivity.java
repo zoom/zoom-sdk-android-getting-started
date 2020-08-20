@@ -1,10 +1,14 @@
 package com.example.basicdemoapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
@@ -26,8 +30,7 @@ public class MainJavaActivity extends AppCompatActivity {
         findViewById(R.id.join_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: Enter meeting number and password
-                joinMeeting(MainJavaActivity.this, "", "");
+                createJoinMeetingDialog();
             }
         });
 
@@ -52,9 +55,12 @@ public class MainJavaActivity extends AppCompatActivity {
         // TODO: Add functionality to this listener (e.g. logs for debugging)
         ZoomSDKInitializeListener listener = new ZoomSDKInitializeListener() {
             @Override
-            public void onZoomSDKInitializeResult(int i, int i1) {}
+            public void onZoomSDKInitializeResult(int i, int i1) {
+            }
+
             @Override
-            public void onZoomAuthIdentityExpired() {}
+            public void onZoomAuthIdentityExpired() {
+            }
         };
         sdk.initialize(context, listener, params);
     }
@@ -80,5 +86,26 @@ public class MainJavaActivity extends AppCompatActivity {
             StartMeetingOptions options = new StartMeetingOptions();
             meetingService.startInstantMeeting(context, options);
         }
+    }
+
+    private void createJoinMeetingDialog() {
+        new AlertDialog.Builder(this)
+                .setView(R.layout.dialog_join_meeting)
+                .setPositiveButton("Join", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        AlertDialog dialog = (AlertDialog) dialogInterface;
+                        TextInputEditText numberInput = dialog.findViewById(R.id.meeting_no_input);
+                        TextInputEditText passwordInput = dialog.findViewById(R.id.password_input);
+                        if (numberInput != null && numberInput.getText() != null && passwordInput != null && passwordInput.getText() != null) {
+                            String meetingNumber = numberInput.getText().toString();
+                            String password = passwordInput.getText().toString();
+                            if (meetingNumber.trim().length() > 0 && password.trim().length() > 0) {
+                                joinMeeting(MainJavaActivity.this, meetingNumber, password);
+                            }
+                        }
+                    }
+                })
+                .show();
     }
 }
