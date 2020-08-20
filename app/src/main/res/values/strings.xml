@@ -3,4 +3,7 @@
     <string name="join_start_meeting">Join/Start Meeting</string>
     <string name="email">email</string>
     <string name="password">password</string>
+    <string name="meeting_number">Meeting Number</string>
+    <string name="meeting_password">Meeting Password</string>
+    <string name="join">Join</string>
 </resources>

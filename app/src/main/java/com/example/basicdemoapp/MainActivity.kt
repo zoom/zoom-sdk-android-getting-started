@@ -3,6 +3,8 @@ package com.example.basicdemoapp
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_main.*
 import us.zoom.sdk.*
 
@@ -14,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         initializeSdk(this)
 
         join_button.setOnClickListener {
-            joinMeeting(this, "", "") // TODO: Enter meeting number and password
+            createJoinMeetingDialog()
         }
 
         start_button.setOnClickListener {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Initialize the SDK with your credentials. This is required before joining
      */
-    fun initializeSdk(context: Context) {
+    private fun initializeSdk(context: Context) {
         val sdk = ZoomSDK.getInstance()
 
         // TODO: Do not use hard-coded values for your key/secret in your app in production!
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Join a meeting without any login/authentication with the meeting's number & password
      */
-    fun joinMeeting(context: Context, meetingNumber: String, pw: String) {
+    private fun joinMeeting(context: Context, meetingNumber: String, pw: String) {
         val meetingService = ZoomSDK.getInstance().meetingService
         val options = JoinMeetingOptions()
         val params = JoinMeetingParams().apply {
@@ -59,19 +61,37 @@ class MainActivity : AppCompatActivity() {
         meetingService.joinMeetingWithParams(context, params, options)
     }
 
-    fun login(username: String, password: String) {
+    private fun login(username: String, password: String) {
         ZoomSDK.getInstance().loginWithZoom(username, password)
     }
 
     /**
      * Start an instant meeting as a logged-in user
      */
-    fun startMeeting(context: Context) {
+    private fun startMeeting(context: Context) {
         val zoomSdk = ZoomSDK.getInstance()
         if (zoomSdk.isLoggedIn) {
             val meetingService = zoomSdk.meetingService
             val options = StartMeetingOptions()
             meetingService.startInstantMeeting(context, options)
         }
+    }
+
+    private fun createJoinMeetingDialog() {
+        AlertDialog.Builder(this)
+            .setView(R.layout.dialog_join_meeting)
+            .setPositiveButton("Join") { dialog, _ ->
+                dialog as AlertDialog
+                val numberInput = dialog.findViewById<TextInputEditText>(R.id.meeting_no_input)
+                val passwordInput = dialog.findViewById<TextInputEditText>(R.id.password_input)
+                val meetingNumber = numberInput?.text?.toString()
+                val password = passwordInput?.text?.toString()
+                meetingNumber?.takeIf { it.isNotEmpty() }?.let { meetingNo ->
+                    password?.takeIf { it.isNotEmpty() }?.let { pw ->
+                        joinMeeting(this@MainActivity, meetingNo, pw)
+                    }
+                }
+            }
+            .show()
     }
 }
