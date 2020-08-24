@@ -14,16 +14,34 @@ import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.StartMeetingOptions;
+import us.zoom.sdk.ZoomApiError;
+import us.zoom.sdk.ZoomAuthenticationError;
 import us.zoom.sdk.ZoomSDK;
+import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
 
 public class MainJavaActivity extends AppCompatActivity {
+    private ZoomSDKAuthenticationListener authListener = new ZoomSDKAuthenticationListener() {
+        @Override
+        public void onZoomSDKLoginResult(long result) {
+            if (result == ZoomAuthenticationError.ZOOM_AUTH_ERROR_SUCCESS) {
+                startMeeting(MainJavaActivity.this);
+            }
+        }
+
+        @Override
+        public void onZoomSDKLogoutResult(long l) { }
+        @Override
+        public void onZoomIdentityExpired() { }
+        @Override
+        public void onZoomAuthIdentityExpired() { }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_java);
+        setContentView(R.layout.activity_main);
 
         initializeSdk(this);
 
@@ -37,7 +55,6 @@ public class MainJavaActivity extends AppCompatActivity {
         findViewById(R.id.login_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: Enter email and password
                 createLoginDialog();
             }
         });
@@ -49,7 +66,7 @@ public class MainJavaActivity extends AppCompatActivity {
         ZoomSDKInitParams params = new ZoomSDKInitParams();
         params.appKey = ""; // TODO: Retrieve your SDK key and enter it here
         params.appSecret = ""; // TODO: Retrieve your SDK secret and enter it here
-        params.domain = "";
+        params.domain = "zoom.us";
         params.enableLog = true;
         // TODO: Add functionality to this listener (e.g. logs for debugging)
         ZoomSDKInitializeListener listener = new ZoomSDKInitializeListener() {
@@ -75,7 +92,11 @@ public class MainJavaActivity extends AppCompatActivity {
     }
 
     public void login(String username, String password) {
-        ZoomSDK.getInstance().loginWithZoom(username, password);
+        int result = ZoomSDK.getInstance().loginWithZoom(username, password);
+        if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
+            // Request executed, listen for result to start meeting
+            ZoomSDK.getInstance().addAuthenticationListener(authListener);
+        }
     }
 
     public void startMeeting(Context context) {
@@ -109,6 +130,23 @@ public class MainJavaActivity extends AppCompatActivity {
     }
 
     private void createLoginDialog() {
-
+        new AlertDialog.Builder(this)
+                .setView(R.layout.dialog_login)
+                .setPositiveButton("Log in", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        AlertDialog dialog = (AlertDialog) dialogInterface;
+                        TextInputEditText emailInput = dialog.findViewById(R.id.email_input);
+                        TextInputEditText passwordInput = dialog.findViewById(R.id.pw_input);
+                        if (emailInput != null && emailInput.getText() != null && passwordInput != null && passwordInput.getText() != null) {
+                            String email = emailInput.getText().toString();
+                            String password = passwordInput.getText().toString();
+                            if (email.trim().length() > 0 && password.trim().length() > 0) {
+                                login(email, password);
+                            }
+                        }
+                    }
+                })
+                .show();
     }
 }
