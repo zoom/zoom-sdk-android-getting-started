@@ -34,12 +34,11 @@ public class MainJavaActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.start_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.login_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // TODO: Enter email and password
-                login("", "");
-                startMeeting(MainJavaActivity.this);
+                createLoginDialog();
             }
         });
     }
@@ -107,5 +106,9 @@ public class MainJavaActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+    }
+
+    private void createLoginDialog() {
+
     }
 }

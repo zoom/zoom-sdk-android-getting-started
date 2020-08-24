@@ -3,12 +3,25 @@ package com.example.basicdemoapp
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_main.*
 import us.zoom.sdk.*
 
 class MainActivity : AppCompatActivity() {
+    private val authListener = object : ZoomSDKAuthenticationListener {
+        override fun onZoomSDKLoginResult(result: Long) {
+            if (result.toInt() == ZoomAuthenticationError.ZOOM_AUTH_ERROR_SUCCESS) {
+                startMeeting(this@MainActivity)
+            }
+        }
+        override fun onZoomIdentityExpired() = Unit
+        override fun onZoomSDKLogoutResult(p0: Long) = Unit
+        override fun onZoomAuthIdentityExpired() = Unit
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,9 +32,8 @@ class MainActivity : AppCompatActivity() {
             createJoinMeetingDialog()
         }
 
-        start_button.setOnClickListener {
-            login("", "") // TODO: Enter email and password
-            startMeeting(this)
+        login_button.setOnClickListener {
+            createLoginDialog()
         }
     }
 
@@ -62,7 +74,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login(username: String, password: String) {
-        ZoomSDK.getInstance().loginWithZoom(username, password)
+        val result = ZoomSDK.getInstance().loginWithZoom(username, password)
+        if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
+            // Request executed, listen for result to start meeting
+            ZoomSDK.getInstance().addAuthenticationListener(authListener)
+        }
     }
 
     /**
@@ -93,5 +109,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             .show()
+    }
+
+    private fun createLoginDialog() {
+        AlertDialog.Builder(this)
+            .setView(R.layout.dialog_login)
+            .setPositiveButton("Log in") { dialog, _ ->
+                dialog as AlertDialog
+                val emailInput = dialog.findViewById<TextInputEditText>(R.id.email_input)
+                val passwordInput = dialog.findViewById<TextInputEditText>(R.id.pw_input)
+                val email = emailInput?.text?.toString()
+                val password = passwordInput?.text?.toString()
+                email?.takeIf { it.isNotEmpty() }?.let { emailAddress ->
+                    password?.takeIf { it.isNotEmpty() }?.let { pw ->
+                        login(emailAddress, pw)
+                    }
+                }
+            }.show()
     }
 }
