@@ -3,8 +3,6 @@ package com.example.basicdemoapp
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_main.*
@@ -12,8 +10,13 @@ import us.zoom.sdk.*
 
 class MainActivity : AppCompatActivity() {
     private val authListener = object : ZoomSDKAuthenticationListener {
+        /**
+         * This callback is invoked when a result from the SDK's request to the auth server is
+         * received.
+         */
         override fun onZoomSDKLoginResult(result: Long) {
             if (result.toInt() == ZoomAuthenticationError.ZOOM_AUTH_ERROR_SUCCESS) {
+                // Once we verify that the request was successful, we may start the meeting
                 startMeeting(this@MainActivity)
             }
         }
@@ -27,18 +30,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initializeSdk(this)
-
-        join_button.setOnClickListener {
-            createJoinMeetingDialog()
-        }
-
-        login_button.setOnClickListener {
-            createLoginDialog()
-        }
+        initViews()
     }
 
     /**
-     * Initialize the SDK with your credentials. This is required before joining
+     * Initialize the SDK with your credentials. This is required before accessing any of the
+     * SDK's meeting-related functionality.
      */
     private fun initializeSdk(context: Context) {
         val sdk = ZoomSDK.getInstance()
@@ -50,13 +47,27 @@ class MainActivity : AppCompatActivity() {
             domain = "zoom.us"
             enableLog = true // Optional: enable logging for debugging
         }
-        // TODO: Add functionality to this listener (e.g. logs for debugging)
+        // TODO (optional): Add functionality to this listener (e.g. logs for debugging)
         val listener = object : ZoomSDKInitializeListener {
-            override fun onZoomSDKInitializeResult(p0: Int, p1: Int) = Unit
+            /**
+             * If the [errorCode] is [ZoomError.ZOOM_ERROR_SUCCESS], the SDK was initialized and can
+             * now be used to join/start a meeting.
+             */
+            override fun onZoomSDKInitializeResult(errorCode: Int, internalErrorCode: Int) = Unit
             override fun onZoomAuthIdentityExpired() = Unit
         }
 
         sdk.initialize(context, listener, params)
+    }
+
+    private fun initViews() {
+        join_button.setOnClickListener {
+            createJoinMeetingDialog()
+        }
+
+        login_button.setOnClickListener {
+            createLoginDialog()
+        }
     }
 
     /**
@@ -73,6 +84,10 @@ class MainActivity : AppCompatActivity() {
         meetingService.joinMeetingWithParams(context, params, options)
     }
 
+    /**
+     * Log into a Zoom account through the SDK using your email and password. For more information,
+     * see [ZoomSDKAuthenticationListener.onZoomSDKLoginResult] in the [authListener].
+     */
     private fun login(username: String, password: String) {
         val result = ZoomSDK.getInstance().loginWithZoom(username, password)
         if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
@@ -82,7 +97,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Start an instant meeting as a logged-in user
+     * Start an instant meeting as a logged-in user. An instant meeting has a meeting number and
+     * password generated when it is created.
      */
     private fun startMeeting(context: Context) {
         val zoomSdk = ZoomSDK.getInstance()
@@ -93,6 +109,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Prompt the user to input the meeting number and password and uses the Zoom SDK to join the
+     * meeting.
+     */
     private fun createJoinMeetingDialog() {
         AlertDialog.Builder(this)
             .setView(R.layout.dialog_join_meeting)
@@ -103,7 +123,7 @@ class MainActivity : AppCompatActivity() {
                 val meetingNumber = numberInput?.text?.toString()
                 val password = passwordInput?.text?.toString()
                 meetingNumber?.takeIf { it.isNotEmpty() }?.let { meetingNo ->
-                    password?.takeIf { it.isNotEmpty() }?.let { pw ->
+                    password?.let { pw ->
                         joinMeeting(this@MainActivity, meetingNo, pw)
                     }
                 }
@@ -111,6 +131,10 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
+    /**
+     * Prompts the user to input their account email and password and uses the Zoom SDK to login.
+     * See [ZoomSDKAuthenticationListener.onZoomSDKLoginResult] in the [authListener] for more information.
+     */
     private fun createLoginDialog() {
         AlertDialog.Builder(this)
             .setView(R.layout.dialog_login)

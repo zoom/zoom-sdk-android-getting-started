@@ -23,9 +23,14 @@ import us.zoom.sdk.ZoomSDKInitializeListener;
 
 public class MainJavaActivity extends AppCompatActivity {
     private ZoomSDKAuthenticationListener authListener = new ZoomSDKAuthenticationListener() {
+        /**
+         * This callback is invoked when a result from the SDK's request to the auth server is
+         * received.
+         */
         @Override
         public void onZoomSDKLoginResult(long result) {
             if (result == ZoomAuthenticationError.ZOOM_AUTH_ERROR_SUCCESS) {
+                // Once we verify that the request was successful, we may start the meeting
                 startMeeting(MainJavaActivity.this);
             }
         }
@@ -44,7 +49,36 @@ public class MainJavaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initializeSdk(this);
+        initViews();
+    }
 
+    /**
+     * Initialize the SDK with your credentials. This is required before accessing any of the
+     * SDK's meeting-related functionality.
+     */
+    public void initializeSdk(Context context) {
+        ZoomSDK sdk = ZoomSDK.getInstance();
+        // TODO: Do not use hard-coded values for your key/secret in your app in production!
+        ZoomSDKInitParams params = new ZoomSDKInitParams();
+        params.appKey = ""; // TODO: Retrieve your SDK key and enter it here
+        params.appSecret = ""; // TODO: Retrieve your SDK secret and enter it here
+        params.domain = "zoom.us";
+        params.enableLog = true;
+        // TODO: Add functionality to this listener (e.g. logs for debugging)
+        ZoomSDKInitializeListener listener = new ZoomSDKInitializeListener() {
+            /**
+             * @param errorCode {@link us.zoom.sdk.ZoomError#ZOOM_ERROR_SUCCESS} if the SDK has been initialized successfully.
+             */
+            @Override
+            public void onZoomSDKInitializeResult(int errorCode, int internalErrorCode) { }
+
+            @Override
+            public void onZoomAuthIdentityExpired() { }
+        };
+        sdk.initialize(context, listener, params);
+    }
+
+    private void initViews() {
         findViewById(R.id.join_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,27 +94,9 @@ public class MainJavaActivity extends AppCompatActivity {
         });
     }
 
-    public void initializeSdk(Context context) {
-        ZoomSDK sdk = ZoomSDK.getInstance();
-        // TODO: Do not use hard-coded values for your key/secret in your app in production!
-        ZoomSDKInitParams params = new ZoomSDKInitParams();
-        params.appKey = ""; // TODO: Retrieve your SDK key and enter it here
-        params.appSecret = ""; // TODO: Retrieve your SDK secret and enter it here
-        params.domain = "zoom.us";
-        params.enableLog = true;
-        // TODO: Add functionality to this listener (e.g. logs for debugging)
-        ZoomSDKInitializeListener listener = new ZoomSDKInitializeListener() {
-            @Override
-            public void onZoomSDKInitializeResult(int i, int i1) {
-            }
-
-            @Override
-            public void onZoomAuthIdentityExpired() {
-            }
-        };
-        sdk.initialize(context, listener, params);
-    }
-
+    /**
+     * Join a meeting without any login/authentication with the meeting's number & password
+     */
     public void joinMeeting(Context context, String meetingNumber, String password) {
         MeetingService meetingService = ZoomSDK.getInstance().getMeetingService();
         JoinMeetingOptions options = new JoinMeetingOptions();
@@ -91,6 +107,10 @@ public class MainJavaActivity extends AppCompatActivity {
         meetingService.joinMeetingWithParams(context, params, options);
     }
 
+    /**
+     * Log into a Zoom account through the SDK using your email and password. For more information,
+     * see {@link ZoomSDKAuthenticationListener#onZoomSDKLoginResult} in the {@link #authListener}.
+     */
     public void login(String username, String password) {
         int result = ZoomSDK.getInstance().loginWithZoom(username, password);
         if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
@@ -99,6 +119,10 @@ public class MainJavaActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Start an instant meeting as a logged-in user. An instant meeting has a meeting number and
+     * password generated when it is created.
+     */
     public void startMeeting(Context context) {
         ZoomSDK sdk = ZoomSDK.getInstance();
         if (sdk.isLoggedIn()) {
@@ -108,6 +132,10 @@ public class MainJavaActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Prompt the user to input the meeting number and password and uses the Zoom SDK to join the
+     * meeting.
+     */
     private void createJoinMeetingDialog() {
         new AlertDialog.Builder(this)
                 .setView(R.layout.dialog_join_meeting)
@@ -129,6 +157,10 @@ public class MainJavaActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * Prompts the user to input their account email and password and uses the Zoom SDK to login.
+     * See {@link ZoomSDKAuthenticationListener#onZoomSDKLoginResult} in the {@link #authListener} for more information.
+     */
     private void createLoginDialog() {
         new AlertDialog.Builder(this)
                 .setView(R.layout.dialog_login)

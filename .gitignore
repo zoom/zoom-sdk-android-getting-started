@@ -12,3 +12,7 @@
 /captures
 .externalNativeBuild
 .cxx
+/commonlib
+/mobilertc
+/app/release
+/.idea
