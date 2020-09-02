@@ -127,6 +127,7 @@ class MainActivity : AppCompatActivity() {
                         joinMeeting(this@MainActivity, meetingNo, pw)
                     }
                 }
+                dialog.dismiss()
             }
             .show()
     }
@@ -149,6 +150,7 @@ class MainActivity : AppCompatActivity() {
                         login(emailAddress, pw)
                     }
                 }
+                dialog.dismiss()
             }.show()
     }
 }

@@ -152,6 +152,7 @@ public class MainJavaActivity extends AppCompatActivity {
                                 joinMeeting(MainJavaActivity.this, meetingNumber, password);
                             }
                         }
+                        dialog.dismiss();
                     }
                 })
                 .show();
@@ -177,6 +178,7 @@ public class MainJavaActivity extends AppCompatActivity {
                                 login(email, password);
                             }
                         }
+                        dialog.dismiss();
                     }
                 })
                 .show();
