@@ -89,7 +89,11 @@ public class MainJavaActivity extends AppCompatActivity {
         findViewById(R.id.login_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                createLoginDialog();
+                if (ZoomSDK.getInstance().isLoggedIn()) {
+                    startMeeting(MainJavaActivity.this);
+                } else {
+                    createLoginDialog();
+                }
             }
         });
     }

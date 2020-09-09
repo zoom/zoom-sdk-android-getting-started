@@ -66,7 +66,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         login_button.setOnClickListener {
-            createLoginDialog()
+            if (ZoomSDK.getInstance().isLoggedIn) {
+                startMeeting(this)
+            } else {
+                createLoginDialog()
+            }
         }
     }
 
