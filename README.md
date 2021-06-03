@@ -42,3 +42,7 @@ Should you run into any problems while using the SDK, follow these verification 
 3. If joining a meeting, verify that your meeting number and password are correct
 4. If starting a meeting, verify that your email and password are correct
 5. Uninstall and reinstall the app on your device
+
+## Need help?
+
+If you're looking for help, try [Developer Support](https://devsupport.zoom.us) or our [Developer Forum](https://devforum.zoom.us). Priority support is also available with [Premier Developer Support](https://zoom.us/docs/en-us/developer-support-plans.html) plans.
