@@ -1,4 +1,7 @@
 # Android Sample App
+
+Use of this sample app is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
+
 This repository contains a sample app to accompany the "Build an App" section from our documentation. In this app, we cover the most basic functionality of the Zoom SDK by demonstrating how to join a meeting anonymously and start an instant meeting as an authenticated user.
 
 (_Note_: The sample app includes two Activities: one in Java and one in Kotlin. Only one activity is required for this app to run, so you may choose the language you are more comfortable with.)
