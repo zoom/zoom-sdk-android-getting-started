@@ -6,4 +6,7 @@
     <string name="meeting_number">Meeting Number</string>
     <string name="meeting_password">Meeting Password</string>
     <string name="join">Join</string>
+    <string name="join_meeting">join meeting</string>
+    <string name="start_meeting">start meeting</string>
+    <string name="zak">ZAK Token</string>
 </resources>

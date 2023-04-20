@@ -9,21 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import us.zoom.sdk.*
 
 class MainActivity : AppCompatActivity() {
-    private val authListener = object : ZoomSDKAuthenticationListener {
-        /**
-         * This callback is invoked when a result from the SDK's request to the auth server is
-         * received.
-         */
-        override fun onZoomSDKLoginResult(result: Long) {
-            if (result.toInt() == ZoomAuthenticationError.ZOOM_AUTH_ERROR_SUCCESS) {
-                // Once we verify that the request was successful, we may start the meeting
-                startMeeting(this@MainActivity)
-            }
-        }
-        override fun onZoomIdentityExpired() = Unit
-        override fun onZoomSDKLogoutResult(p0: Long) = Unit
-        override fun onZoomAuthIdentityExpired() = Unit
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,12 +50,8 @@ class MainActivity : AppCompatActivity() {
             createJoinMeetingDialog()
         }
 
-        login_button.setOnClickListener {
-            if (ZoomSDK.getInstance().isLoggedIn) {
-                startMeeting(this)
-            } else {
-                createLoginDialog()
-            }
+        start_meeting_button.setOnClickListener {
+            createStartMeetingDialog()
         }
     }
 
@@ -89,28 +70,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Log into a Zoom account through the SDK using your email and password. For more information,
-     * see [ZoomSDKAuthenticationListener.onZoomSDKLoginResult] in the [authListener].
+     * Start a meeting as an authenticated user. For more information on Zoom user authentication,
+     * see https://marketplace.zoom.us/docs/sdk/native-sdks/android/build-an-app/pkce/.
      */
-    private fun login(username: String, password: String) {
-        val result = ZoomSDK.getInstance().loginWithZoom(username, password)
-        if (result == ZoomApiError.ZOOM_API_ERROR_SUCCESS) {
-            // Request executed, listen for result to start meeting
-            ZoomSDK.getInstance().addAuthenticationListener(authListener)
-        }
-    }
-
-    /**
-     * Start an instant meeting as a logged-in user. An instant meeting has a meeting number and
-     * password generated when it is created.
-     */
-    private fun startMeeting(context: Context) {
+    private fun startMeeting(context: Context, meetingNumber: String, zak: String) {
         val zoomSdk = ZoomSDK.getInstance()
-        if (zoomSdk.isLoggedIn) {
-            val meetingService = zoomSdk.meetingService
-            val options = StartMeetingOptions()
-            meetingService.startInstantMeeting(context, options)
+        val startParams = StartMeetingParamsWithoutLogin().apply {
+            meetingNo = meetingNumber
+            zoomAccessToken = zak
         }
+        val meetingService = zoomSdk.meetingService
+        val options = StartMeetingOptions()
+        meetingService.startMeetingWithParams(context, startParams, options)
     }
 
     /**
@@ -137,21 +108,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Prompts the user to input their account email and password and uses the Zoom SDK to login.
-     * See [ZoomSDKAuthenticationListener.onZoomSDKLoginResult] in the [authListener] for more information.
+     * Prompts the user to input the meeting number and ZAK and uses the Zoom SDK to start a meeting.
+     * For information on how to obtain a ZAK token, see https://marketplace.zoom.us/docs/sdk/native-sdks/android/build-an-app/pkce/.
      */
-    private fun createLoginDialog() {
+    private fun createStartMeetingDialog() {
         AlertDialog.Builder(this)
-            .setView(R.layout.dialog_login)
-            .setPositiveButton("Log in") { dialog, _ ->
+            .setView(R.layout.dialog_start_meeting_zak)
+            .setPositiveButton("Start") { dialog, _ ->
                 dialog as AlertDialog
-                val emailInput = dialog.findViewById<TextInputEditText>(R.id.email_input)
-                val passwordInput = dialog.findViewById<TextInputEditText>(R.id.pw_input)
-                val email = emailInput?.text?.toString()
-                val password = passwordInput?.text?.toString()
-                email?.takeIf { it.isNotEmpty() }?.let { emailAddress ->
-                    password?.takeIf { it.isNotEmpty() }?.let { pw ->
-                        login(emailAddress, pw)
+                val meetingNumberInput =
+                    dialog.findViewById<TextInputEditText>(R.id.meeting_number_input)
+                val zakInput = dialog.findViewById<TextInputEditText>(R.id.zak_input)
+                val meetingNumber = meetingNumberInput?.text?.toString()
+                val zak = zakInput?.text?.toString()
+                meetingNumber?.takeIf { it.isNotEmpty() }?.let { meetingNum ->
+                    zak?.takeIf { it.isNotEmpty() }?.let { zakToken ->
+                        startMeeting(this@MainActivity, meetingNum, zakToken)
                     }
                 }
                 dialog.dismiss()

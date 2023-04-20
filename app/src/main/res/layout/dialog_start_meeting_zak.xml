@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_input"
+            android:id="@+id/meeting_number_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"/>
+            android:hint="@string/meeting_number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/email_layout">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pw_input"
+            android:id="@+id/zak_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="@string/password"/>
+            android:hint="@string/zak"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
