@@ -29,7 +29,7 @@ This repository contains a sample app to accompany the "Build an App" section fr
 7. Connect your device, ensure it's selected, and click the `Run app` button in the top toolbar.
 
 ## Features
-* Join a meeting: Using the meeting number and password (if one exists) for a scheduled or previously created meeting, this will start a new Activity with the default meeting UI created within the Zoomm SDK.
+* Join a meeting: Using the meeting number and password (if one exists) for a scheduled or previously created meeting, this will start a new Activity with the default meeting UI created within the Zoom SDK.
 * Start an instant meeting: After successfully logging in using your Zoom account email and password, a meeting number and password will be generated and the meeting will start. This also uses the default meeting UI.
 
 ## Troubleshooting
